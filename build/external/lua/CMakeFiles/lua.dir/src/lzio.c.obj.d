@@ -1,0 +1,30 @@
+external/lua/CMakeFiles/lua.dir/src/lzio.c.obj: \
+ Z:/dev/cpp/Vladot/external/lua/src/lzio.c \
+ Z:/dev/cpp/Vladot/external/lua/src/lprefix.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/string.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/crtdefs.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/corecrt.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/_mingw.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/_mingw_mac.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/vadefs.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ Z:/dev/cpp/Vladot/external/lua/src/lua.h \
+ C:/Users/danya/gcc/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdarg.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/stdarg.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+ C:/Users/danya/gcc/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/stddef.h \
+ Z:/dev/cpp/Vladot/external/lua/src/luaconf.h \
+ C:/Users/danya/gcc/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h \
+ C:/Users/danya/gcc/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/limits.h \
+ Z:/dev/cpp/Vladot/external/lua/src/llimits.h \
+ Z:/dev/cpp/Vladot/external/lua/src/lmem.h \
+ Z:/dev/cpp/Vladot/external/lua/src/lstate.h \
+ Z:/dev/cpp/Vladot/external/lua/src/lobject.h \
+ Z:/dev/cpp/Vladot/external/lua/src/ltm.h \
+ Z:/dev/cpp/Vladot/external/lua/src/lzio.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/signal.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/pthread_signal.h

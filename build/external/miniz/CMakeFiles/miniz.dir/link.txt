@@ -1,0 +1,2 @@
+C:/Users/danya/gcc/bin/ar.exe qc libminiz.a CMakeFiles/miniz.dir/miniz.c.obj
+C:/Users/danya/gcc/bin/ranlib.exe libminiz.a

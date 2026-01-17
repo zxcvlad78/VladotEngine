@@ -1,15 +1,9 @@
 cmake_minimum_required(VERSION 4.0.2 FATAL_ERROR)
 
 set(PROJECT_NAME VladotEngine)
-
 project(${PROJECT_NAME})
 
-
-add_executable(${PROJECT_NAME} 
-    src/main.cpp
-    )
-
-target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_17)
+add_definitions(-DLUA_VERSION_NUM=504) 
 
 set(GLFW_BUILDS_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILDS_TESTS OFF CACHE BOOL "" FORCE)
@@ -18,24 +12,46 @@ set(GLFW_INSTALL OFF CACHE BOOL "" FORCE)
 
 #SubDirs
 add_subdirectory(external/glfw)
-target_link_libraries(${PROJECT_NAME} glfw)
-
 add_subdirectory(external/glad)
-target_link_libraries(${PROJECT_NAME} glad)
-
 add_subdirectory(external/freetype)
-target_link_libraries(${PROJECT_NAME} freetype)
+add_subdirectory(external/lua)
+add_subdirectory(external/miniz) 
 ##
 
+##Exec
+add_executable(${PROJECT_NAME} 
+    src/main.cpp
+    src/resource/ResourceAPI.cpp
+    src/resource/Resource.cpp
+    src/virtual_fs/VirtualFS.cpp
+    src/mod_loader/ModLoader.cpp
+)
+##
+
+target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_17)
+
+target_link_libraries(${PROJECT_NAME} 
+    glfw 
+    glad 
+    freetype
+    lua
+    opengl32
+    miniz 
+)
+
 #INCLUDE DIRS
-target_include_directories(${PROJECT_NAME} PRIVATE ${glm_SOURCE_DIR})
 target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/src
     ${CMAKE_SOURCE_DIR}/external/glad/include
     ${CMAKE_SOURCE_DIR}/external/freetype/include
     ${CMAKE_SOURCE_DIR}/external/glm
     ${CMAKE_SOURCE_DIR}/external/stb
+    ${CMAKE_SOURCE_DIR}/external/sol2/include
+    ${CMAKE_SOURCE_DIR}/external/lua
+    ${CMAKE_SOURCE_DIR}/external/json/include
+    ${CMAKE_SOURCE_DIR}/external/miniz
 )
+##
 
 set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/)
 

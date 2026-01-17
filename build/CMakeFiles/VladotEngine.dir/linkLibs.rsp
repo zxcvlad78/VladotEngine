@@ -1,0 +1,1 @@
+ external/glfw/src/libglfw3.a external/glad/libglad.a external/freetype/libfreetyped.a external/lua/liblua.a -lopengl32 external/miniz/libminiz.a -lpthread -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

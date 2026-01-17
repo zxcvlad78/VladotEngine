@@ -1,0 +1,14 @@
+{
+	"InstallScripts" : 
+	[
+		"Z:/dev/cpp/Vladot/build/cmake_install.cmake",
+		"Z:/dev/cpp/Vladot/build/external/glfw/cmake_install.cmake",
+		"Z:/dev/cpp/Vladot/build/external/glfw/src/cmake_install.cmake",
+		"Z:/dev/cpp/Vladot/build/external/glfw/docs/cmake_install.cmake",
+		"Z:/dev/cpp/Vladot/build/external/glad/cmake_install.cmake",
+		"Z:/dev/cpp/Vladot/build/external/freetype/cmake_install.cmake",
+		"Z:/dev/cpp/Vladot/build/external/lua/cmake_install.cmake",
+		"Z:/dev/cpp/Vladot/build/external/miniz/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

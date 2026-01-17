@@ -1,0 +1,6 @@
+{
+    "name": "plasma_monsters",
+    "version": "1.0.0",
+    "author": "zxcvlxd",
+    "dependencies": ["base"]
+}
