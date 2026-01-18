@@ -279,6 +279,30 @@ miniz/fast:
 	$(MAKE) $(MAKESILENT) -f external/miniz/CMakeFiles/miniz.dir/build.make external/miniz/CMakeFiles/miniz.dir/build
 .PHONY : miniz/fast
 
+src/lua_binder/LuaBinder.obj: src/lua_binder/LuaBinder.cpp.obj
+.PHONY : src/lua_binder/LuaBinder.obj
+
+# target to build an object file
+src/lua_binder/LuaBinder.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.obj
+.PHONY : src/lua_binder/LuaBinder.cpp.obj
+
+src/lua_binder/LuaBinder.i: src/lua_binder/LuaBinder.cpp.i
+.PHONY : src/lua_binder/LuaBinder.i
+
+# target to preprocess a source file
+src/lua_binder/LuaBinder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.i
+.PHONY : src/lua_binder/LuaBinder.cpp.i
+
+src/lua_binder/LuaBinder.s: src/lua_binder/LuaBinder.cpp.s
+.PHONY : src/lua_binder/LuaBinder.s
+
+# target to generate assembly for a file
+src/lua_binder/LuaBinder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.s
+.PHONY : src/lua_binder/LuaBinder.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -327,53 +351,173 @@ src/mod_loader/ModLoader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/mod_loader/ModLoader.cpp.s
 .PHONY : src/mod_loader/ModLoader.cpp.s
 
-src/resource/Resource.obj: src/resource/Resource.cpp.obj
-.PHONY : src/resource/Resource.obj
+src/object/Object.obj: src/object/Object.cpp.obj
+.PHONY : src/object/Object.obj
 
 # target to build an object file
-src/resource/Resource.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/resource/Resource.cpp.obj
-.PHONY : src/resource/Resource.cpp.obj
+src/object/Object.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/Object.cpp.obj
+.PHONY : src/object/Object.cpp.obj
 
-src/resource/Resource.i: src/resource/Resource.cpp.i
-.PHONY : src/resource/Resource.i
+src/object/Object.i: src/object/Object.cpp.i
+.PHONY : src/object/Object.i
 
 # target to preprocess a source file
-src/resource/Resource.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/resource/Resource.cpp.i
-.PHONY : src/resource/Resource.cpp.i
+src/object/Object.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/Object.cpp.i
+.PHONY : src/object/Object.cpp.i
 
-src/resource/Resource.s: src/resource/Resource.cpp.s
-.PHONY : src/resource/Resource.s
+src/object/Object.s: src/object/Object.cpp.s
+.PHONY : src/object/Object.s
 
 # target to generate assembly for a file
-src/resource/Resource.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/resource/Resource.cpp.s
-.PHONY : src/resource/Resource.cpp.s
+src/object/Object.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/Object.cpp.s
+.PHONY : src/object/Object.cpp.s
 
-src/resource/ResourceAPI.obj: src/resource/ResourceAPI.cpp.obj
-.PHONY : src/resource/ResourceAPI.obj
+src/object/game_object/GameObject.obj: src/object/game_object/GameObject.cpp.obj
+.PHONY : src/object/game_object/GameObject.obj
 
 # target to build an object file
-src/resource/ResourceAPI.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/resource/ResourceAPI.cpp.obj
-.PHONY : src/resource/ResourceAPI.cpp.obj
+src/object/game_object/GameObject.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.obj
+.PHONY : src/object/game_object/GameObject.cpp.obj
 
-src/resource/ResourceAPI.i: src/resource/ResourceAPI.cpp.i
-.PHONY : src/resource/ResourceAPI.i
+src/object/game_object/GameObject.i: src/object/game_object/GameObject.cpp.i
+.PHONY : src/object/game_object/GameObject.i
 
 # target to preprocess a source file
-src/resource/ResourceAPI.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/resource/ResourceAPI.cpp.i
-.PHONY : src/resource/ResourceAPI.cpp.i
+src/object/game_object/GameObject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.i
+.PHONY : src/object/game_object/GameObject.cpp.i
 
-src/resource/ResourceAPI.s: src/resource/ResourceAPI.cpp.s
-.PHONY : src/resource/ResourceAPI.s
+src/object/game_object/GameObject.s: src/object/game_object/GameObject.cpp.s
+.PHONY : src/object/game_object/GameObject.s
 
 # target to generate assembly for a file
-src/resource/ResourceAPI.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/resource/ResourceAPI.cpp.s
-.PHONY : src/resource/ResourceAPI.cpp.s
+src/object/game_object/GameObject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.s
+.PHONY : src/object/game_object/GameObject.cpp.s
+
+src/object/game_object/game_object_2d/GameObject2D.obj: src/object/game_object/game_object_2d/GameObject2D.cpp.obj
+.PHONY : src/object/game_object/game_object_2d/GameObject2D.obj
+
+# target to build an object file
+src/object/game_object/game_object_2d/GameObject2D.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.obj
+.PHONY : src/object/game_object/game_object_2d/GameObject2D.cpp.obj
+
+src/object/game_object/game_object_2d/GameObject2D.i: src/object/game_object/game_object_2d/GameObject2D.cpp.i
+.PHONY : src/object/game_object/game_object_2d/GameObject2D.i
+
+# target to preprocess a source file
+src/object/game_object/game_object_2d/GameObject2D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.i
+.PHONY : src/object/game_object/game_object_2d/GameObject2D.cpp.i
+
+src/object/game_object/game_object_2d/GameObject2D.s: src/object/game_object/game_object_2d/GameObject2D.cpp.s
+.PHONY : src/object/game_object/game_object_2d/GameObject2D.s
+
+# target to generate assembly for a file
+src/object/game_object/game_object_2d/GameObject2D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.s
+.PHONY : src/object/game_object/game_object_2d/GameObject2D.cpp.s
+
+src/object/game_object/game_object_2d/sprite_2d/Sprite2D.obj: src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.obj
+.PHONY : src/object/game_object/game_object_2d/sprite_2d/Sprite2D.obj
+
+# target to build an object file
+src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.obj
+.PHONY : src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.obj
+
+src/object/game_object/game_object_2d/sprite_2d/Sprite2D.i: src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.i
+.PHONY : src/object/game_object/game_object_2d/sprite_2d/Sprite2D.i
+
+# target to preprocess a source file
+src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.i
+.PHONY : src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.i
+
+src/object/game_object/game_object_2d/sprite_2d/Sprite2D.s: src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.s
+.PHONY : src/object/game_object/game_object_2d/sprite_2d/Sprite2D.s
+
+# target to generate assembly for a file
+src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.s
+.PHONY : src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.s
+
+src/object/resource/shader_resource/ShaderResource.obj: src/object/resource/shader_resource/ShaderResource.cpp.obj
+.PHONY : src/object/resource/shader_resource/ShaderResource.obj
+
+# target to build an object file
+src/object/resource/shader_resource/ShaderResource.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/resource/shader_resource/ShaderResource.cpp.obj
+.PHONY : src/object/resource/shader_resource/ShaderResource.cpp.obj
+
+src/object/resource/shader_resource/ShaderResource.i: src/object/resource/shader_resource/ShaderResource.cpp.i
+.PHONY : src/object/resource/shader_resource/ShaderResource.i
+
+# target to preprocess a source file
+src/object/resource/shader_resource/ShaderResource.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/resource/shader_resource/ShaderResource.cpp.i
+.PHONY : src/object/resource/shader_resource/ShaderResource.cpp.i
+
+src/object/resource/shader_resource/ShaderResource.s: src/object/resource/shader_resource/ShaderResource.cpp.s
+.PHONY : src/object/resource/shader_resource/ShaderResource.s
+
+# target to generate assembly for a file
+src/object/resource/shader_resource/ShaderResource.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/resource/shader_resource/ShaderResource.cpp.s
+.PHONY : src/object/resource/shader_resource/ShaderResource.cpp.s
+
+src/object/resource/texture_resource/TextureResource.obj: src/object/resource/texture_resource/TextureResource.cpp.obj
+.PHONY : src/object/resource/texture_resource/TextureResource.obj
+
+# target to build an object file
+src/object/resource/texture_resource/TextureResource.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/resource/texture_resource/TextureResource.cpp.obj
+.PHONY : src/object/resource/texture_resource/TextureResource.cpp.obj
+
+src/object/resource/texture_resource/TextureResource.i: src/object/resource/texture_resource/TextureResource.cpp.i
+.PHONY : src/object/resource/texture_resource/TextureResource.i
+
+# target to preprocess a source file
+src/object/resource/texture_resource/TextureResource.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/resource/texture_resource/TextureResource.cpp.i
+.PHONY : src/object/resource/texture_resource/TextureResource.cpp.i
+
+src/object/resource/texture_resource/TextureResource.s: src/object/resource/texture_resource/TextureResource.cpp.s
+.PHONY : src/object/resource/texture_resource/TextureResource.s
+
+# target to generate assembly for a file
+src/object/resource/texture_resource/TextureResource.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/resource/texture_resource/TextureResource.cpp.s
+.PHONY : src/object/resource/texture_resource/TextureResource.cpp.s
+
+src/object/scene_tree/SceneTree.obj: src/object/scene_tree/SceneTree.cpp.obj
+.PHONY : src/object/scene_tree/SceneTree.obj
+
+# target to build an object file
+src/object/scene_tree/SceneTree.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/scene_tree/SceneTree.cpp.obj
+.PHONY : src/object/scene_tree/SceneTree.cpp.obj
+
+src/object/scene_tree/SceneTree.i: src/object/scene_tree/SceneTree.cpp.i
+.PHONY : src/object/scene_tree/SceneTree.i
+
+# target to preprocess a source file
+src/object/scene_tree/SceneTree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/scene_tree/SceneTree.cpp.i
+.PHONY : src/object/scene_tree/SceneTree.cpp.i
+
+src/object/scene_tree/SceneTree.s: src/object/scene_tree/SceneTree.cpp.s
+.PHONY : src/object/scene_tree/SceneTree.s
+
+# target to generate assembly for a file
+src/object/scene_tree/SceneTree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/scene_tree/SceneTree.cpp.s
+.PHONY : src/object/scene_tree/SceneTree.cpp.s
 
 src/virtual_fs/VirtualFS.obj: src/virtual_fs/VirtualFS.cpp.obj
 .PHONY : src/virtual_fs/VirtualFS.obj
@@ -421,18 +565,36 @@ help:
 	@echo "... glfw"
 	@echo "... lua"
 	@echo "... miniz"
+	@echo "... src/lua_binder/LuaBinder.obj"
+	@echo "... src/lua_binder/LuaBinder.i"
+	@echo "... src/lua_binder/LuaBinder.s"
 	@echo "... src/main.obj"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/mod_loader/ModLoader.obj"
 	@echo "... src/mod_loader/ModLoader.i"
 	@echo "... src/mod_loader/ModLoader.s"
-	@echo "... src/resource/Resource.obj"
-	@echo "... src/resource/Resource.i"
-	@echo "... src/resource/Resource.s"
-	@echo "... src/resource/ResourceAPI.obj"
-	@echo "... src/resource/ResourceAPI.i"
-	@echo "... src/resource/ResourceAPI.s"
+	@echo "... src/object/Object.obj"
+	@echo "... src/object/Object.i"
+	@echo "... src/object/Object.s"
+	@echo "... src/object/game_object/GameObject.obj"
+	@echo "... src/object/game_object/GameObject.i"
+	@echo "... src/object/game_object/GameObject.s"
+	@echo "... src/object/game_object/game_object_2d/GameObject2D.obj"
+	@echo "... src/object/game_object/game_object_2d/GameObject2D.i"
+	@echo "... src/object/game_object/game_object_2d/GameObject2D.s"
+	@echo "... src/object/game_object/game_object_2d/sprite_2d/Sprite2D.obj"
+	@echo "... src/object/game_object/game_object_2d/sprite_2d/Sprite2D.i"
+	@echo "... src/object/game_object/game_object_2d/sprite_2d/Sprite2D.s"
+	@echo "... src/object/resource/shader_resource/ShaderResource.obj"
+	@echo "... src/object/resource/shader_resource/ShaderResource.i"
+	@echo "... src/object/resource/shader_resource/ShaderResource.s"
+	@echo "... src/object/resource/texture_resource/TextureResource.obj"
+	@echo "... src/object/resource/texture_resource/TextureResource.i"
+	@echo "... src/object/resource/texture_resource/TextureResource.s"
+	@echo "... src/object/scene_tree/SceneTree.obj"
+	@echo "... src/object/scene_tree/SceneTree.i"
+	@echo "... src/object/scene_tree/SceneTree.s"
 	@echo "... src/virtual_fs/VirtualFS.obj"
 	@echo "... src/virtual_fs/VirtualFS.i"
 	@echo "... src/virtual_fs/VirtualFS.s"

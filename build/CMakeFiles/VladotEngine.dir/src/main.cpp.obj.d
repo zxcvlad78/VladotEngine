@@ -1,10 +1,9 @@
 CMakeFiles/VladotEngine.dir/src/main.cpp.obj: \
  Z:/dev/cpp/Vladot/src/main.cpp \
- Z:/dev/cpp/Vladot/external/sol2/include/sol/sol.hpp \
- Z:/dev/cpp/Vladot/external/sol2/include/sol/version.hpp \
- Z:/dev/cpp/Vladot/external/sol2/include/sol/config.hpp \
- C:/Users/danya/gcc/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
- C:/Users/danya/gcc/x86_64-w64-mingw32/include/stddef.h \
+ Z:/dev/cpp/Vladot/external/glad/include/glad/glad.h \
+ Z:/dev/cpp/Vladot/external/glad/include/KHR/khrplatform.h \
+ C:/Users/danya/gcc/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/stdint.h \
  C:/Users/danya/gcc/x86_64-w64-mingw32/include/crtdefs.h \
  C:/Users/danya/gcc/x86_64-w64-mingw32/include/corecrt.h \
  C:/Users/danya/gcc/x86_64-w64-mingw32/include/_mingw.h \
@@ -12,8 +11,12 @@ CMakeFiles/VladotEngine.dir/src/main.cpp.obj: \
  C:/Users/danya/gcc/x86_64-w64-mingw32/include/_mingw_secapi.h \
  C:/Users/danya/gcc/x86_64-w64-mingw32/include/vadefs.h \
  C:/Users/danya/gcc/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
- C:/Users/danya/gcc/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
- C:/Users/danya/gcc/x86_64-w64-mingw32/include/stdint.h \
+ C:/Users/danya/gcc/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/stddef.h \
+ Z:/dev/cpp/Vladot/external/glfw/include/GLFW/glfw3.h \
+ Z:/dev/cpp/Vladot/external/sol2/include/sol/sol.hpp \
+ Z:/dev/cpp/Vladot/external/sol2/include/sol/version.hpp \
+ Z:/dev/cpp/Vladot/external/sol2/include/sol/config.hpp \
  C:/Users/danya/gcc/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h \
  C:/Users/danya/gcc/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h \
  C:/Users/danya/gcc/x86_64-w64-mingw32/include/limits.h \
@@ -341,29 +344,178 @@ CMakeFiles/VladotEngine.dir/src/main.cpp.obj: \
  Z:/dev/cpp/Vladot/external/sol2/include/sol/variadic_args.hpp \
  Z:/dev/cpp/Vladot/external/sol2/include/sol/variadic_results.hpp \
  Z:/dev/cpp/Vladot/external/sol2/include/sol/as_returns.hpp \
- Z:/dev/cpp/Vladot/external/glfw/include/GLFW/glfw3.h \
- C:/Users/danya/gcc/x86_64-w64-mingw32/include/GL/gl.h \
- Z:/dev/cpp/Vladot/src/mod_loader/ModLoader.hpp \
- C:/Users/danya/gcc/include/c++/14.2.0/filesystem \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/fs_fwd.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/chrono \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/chrono.h \
  C:/Users/danya/gcc/include/c++/14.2.0/ratio \
+ Z:/dev/cpp/Vladot/src/object/resource/ResourceLoader.hpp \
+ C:/Users/danya/gcc/include/c++/14.2.0/map \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_tree.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_map.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_multimap.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/typeindex \
+ Z:/dev/cpp/Vladot/src/object/resource/Resource.hpp \
+ Z:/dev/cpp/Vladot/src/object/ref_counted/RefCounted.hpp \
+ Z:/dev/cpp/Vladot/src/object/Object.hpp \
+ Z:/dev/cpp/Vladot/src/lua_binder/LuaBinder.hpp \
+ Z:/dev/cpp/Vladot/src/virtual_fs/VirtualFS.hpp \
+ C:/Users/danya/gcc/include/c++/14.2.0/filesystem \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/fs_fwd.h \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/fs_path.h \
  C:/Users/danya/gcc/include/c++/14.2.0/iomanip \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/quoted_string.h \
  C:/Users/danya/gcc/include/c++/14.2.0/codecvt \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/fs_dir.h \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/fs_ops.h \
- C:/Users/danya/gcc/include/c++/14.2.0/map \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_tree.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_map.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_multimap.h \
  C:/Users/danya/gcc/include/c++/14.2.0/fstream \
  C:/Users/danya/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h \
  C:/Users/danya/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/fstream.tcc \
- Z:/dev/cpp/Vladot/src/virtual_fs/VirtualFS.hpp \
  Z:/dev/cpp/Vladot/external/miniz/miniz.h \
+ Z:/dev/cpp/Vladot/src/object/scene_tree/SceneTree.hpp \
+ Z:/dev/cpp/Vladot/src/object/game_object/GameObject.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/glm.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/_fixes.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/setup.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/simd/platform.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/climits \
+ C:/Users/danya/gcc/include/c++/14.2.0/cfloat \
+ C:/Users/danya/gcc/lib/gcc/x86_64-w64-mingw32/14.2.0/include/float.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/float.h \
+ Z:/dev/cpp/Vladot/external/glm/glm/fwd.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/qualifier.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/setup.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/vec2.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_bool2.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_vec2.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_vec2.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/compute_vector_relational.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_bool2_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_float2.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_float2_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_double2.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_double2_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_int2.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_int2_sized.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/scalar_int_sized.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/setup.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_uint2.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_uint2_sized.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/scalar_uint_sized.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/vec3.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_bool3.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_vec3.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_vec3.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_bool3_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_float3.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_float3_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_double3.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_double3_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_int3.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_int3_sized.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_uint3.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_uint3_sized.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/vec4.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_bool4.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_vec4.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_vec4.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_bool4_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_float4.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_float4_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_double4.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_double4_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_int4.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_int4_sized.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_uint4.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_uint4_sized.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/mat2x2.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_double2x2.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_mat2x2.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_mat2x2.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/matrix.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/mat2x3.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_double2x3.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_mat2x3.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_mat2x3.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_double2x3_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_float2x3.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_float2x3_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/mat2x4.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_double2x4.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_mat2x4.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_mat2x4.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_double2x4_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_float2x4.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_float2x4_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/mat3x2.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_double3x2.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_mat3x2.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_mat3x2.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_double3x2_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_float3x2.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_float3x2_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/mat3x3.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_double3x3.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_mat3x3.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_mat3x3.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_double3x3_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_float3x3.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_float3x3_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/mat3x4.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_double3x4.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_mat3x4.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_mat3x4.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_double3x4_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_float3x4.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_float3x4_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/mat4x2.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_double4x2.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_mat4x2.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_mat4x2.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_double4x2_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_float4x2.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_float4x2_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/mat4x3.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_double4x3.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_mat4x3.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_mat4x3.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_double4x3_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_float4x3.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_float4x3_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/mat4x4.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_double4x4.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_mat4x4.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_mat4x4.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_double4x4_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_float4x4.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_float4x4_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/func_matrix.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/geometric.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/func_geometric.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/exponential.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_vec1.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_vec1.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/func_exponential.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/vector_relational.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/func_vector_relational.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/_vectorize.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/common.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/func_common.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/compute_common.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_double2x2_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_float2x2.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_float2x2_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/trigonometric.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/func_trigonometric.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/packing.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/func_packing.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_half.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_half.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/integer.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/func_integer.inl \
+ Z:/dev/cpp/Vladot/src/mod_loader/ModLoader.hpp \
+ C:/Users/danya/gcc/include/c++/14.2.0/set \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_set.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_multiset.h \
  Z:/dev/cpp/Vladot/external/json/include/nlohmann/json.hpp \
  Z:/dev/cpp/Vladot/external/json/include/nlohmann/adl_serializer.hpp \
  Z:/dev/cpp/Vladot/external/json/include/nlohmann/detail/abi_macros.hpp \
@@ -426,4 +578,56 @@ CMakeFiles/VladotEngine.dir/src/main.cpp.obj: \
  Z:/dev/cpp/Vladot/external/json/include/nlohmann/detail/macro_unscope.hpp \
  Z:/dev/cpp/Vladot/external/json/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
  Z:/dev/cpp/Vladot/src/engine_api/EngineAPI.hpp \
- Z:/dev/cpp/Vladot/src/lua_binder/LuaBinder.hpp
+ Z:/dev/cpp/Vladot/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.hpp \
+ Z:/dev/cpp/Vladot/src/object/game_object/game_object_2d/GameObject2D.hpp \
+ Z:/dev/cpp/Vladot/src/object/resource/texture_resource/TextureResource.hpp \
+ Z:/dev/cpp/Vladot/src/object/resource/shader_resource/ShaderResource.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/gtc/type_ptr.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/gtc/quaternion.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/gtc/constants.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/scalar_constants.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/scalar_constants.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/gtc/constants.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/gtc/matrix_transform.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_projection.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_projection.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_clip_space.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_clip_space.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_transform.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_transform.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/gtc/matrix_transform.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_relational.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_relational.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_float.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_common.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_geometric.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_geometric.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_common.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_float.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_quat.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_relational.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_relational.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/type_quat.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_float_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_double.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_double_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_trigonometric.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_trigonometric.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_transform.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_transform.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/gtc/quaternion.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/gtc/epsilon.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/detail/setup.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/gtc/epsilon.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/gtc/vec1.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_bool1.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_bool1_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_float1.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_float1_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_double1.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_double1_precision.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_int1.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_int1_sized.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_uint1.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_uint1_sized.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/gtc/type_ptr.inl

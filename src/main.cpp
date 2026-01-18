@@ -1,87 +1,82 @@
 #define SOL_ALL_SAFETIES_ON 1
-#include <sol/sol.hpp>
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include "mod_loader/ModLoader.hpp"
-#include <map>
+#include <sol/sol.hpp>
 #include <iostream>
+#include <chrono>
+
+#include "object/resource/ResourceLoader.hpp"
+#include "object/scene_tree/SceneTree.hpp"
+#include "mod_loader/ModLoader.hpp"
 #include "lua_binder/LuaBinder.hpp"
+#include "virtual_fs/VirtualFS.hpp"
+
+#include "object/game_object/game_object_2d/sprite_2d/Sprite2D.hpp"
 
 namespace Settings {
-    const int TARGET_TICK_RATE = 60; 
-    const int PHYSICS_TICK_RATE = 60; 
-    const float FIXED_DELTA_TIME = 1.0f / static_cast<float>(TARGET_TICK_RATE);
+    const float FIXED_DELTA_TIME = 1.0f / 60.0f;
 }
 
 class Game : public Engine::IRegistry, public Engine::IGameplayAPI {
     Engine::EventSystem eventSystem;
-
 public:
-    Game() = default;
-    ~Game() = default;
-
-    void register_prototype(sol::table config) override { /* Registration logic */ }
-
+    void register_prototype(sol::table config) override { }
     Engine::EventSystem* get_event_system() { return &eventSystem; }
-
-    void tick(float delta) {
-        eventSystem.emit("on_tick", delta);
-    }
-    
-    void physics_tick(float delta) {
-         eventSystem.emit("on_physics_tick", delta);
-    }
+    void ready() { eventSystem.emit("ready"); }
+    void tick(float delta) { eventSystem.emit("on_tick", delta); }
 };
-
 
 int main() {
     if (!glfwInit()) return -1;
-    GLFWwindow* window = glfwCreateWindow(800, 600, "Vladot Engine", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(800, 600, "Vladot Engine 2026", NULL, NULL);
+    if (!window) return -1;
     glfwMakeContextCurrent(window);
+    gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 
+    // 1. Инициализация Lua и Биндингов
     sol::state lua;
-    lua.open_libraries(sol::lib::base, sol::lib::package, sol::lib::math);
+    lua.open_libraries(sol::lib::base, sol::lib::package, sol::lib::math, sol::lib::table);
     LuaBinder::bind_all(lua);
 
-    Game game;
-
+    // 2. Инициализация VFS и Ресурсов
     VirtualFS vfs;
-    vfs.mount_recursive("./mods"); 
-    
+    vfs.mount("./res", VirtualFS::FOLDER);
+    ResourceLoader::initialize(&vfs);
+
+    // 3. Загрузка Модов
+    Game game;
     ModLoader modLoader;
-
-    modLoader.scan_mods("./mods");
-
+    modLoader.scan_mods("./mods", &vfs);
     modLoader.load_data_stage(lua, &game, &vfs);
     modLoader.load_control_stage(lua, &game, game.get_event_system(), &vfs);
-    
-    std::cout << "--- Hello from VladotEngine ---" << std::endl;
-    
+
+    game.ready();
+    Ref<Sprite2D> sp = Ref<Sprite2D>(new Sprite2D()); 
+    sp->set_texture(ResourceLoader::load<TextureResource>("icon.jpg")); 
+    sp->set_shader(ResourceLoader::load<ShaderResource>("shaders/sprite.glsl"));
+
+    SceneTree::get_singleton()->add_child(sp);
+
     auto last_time = std::chrono::high_resolution_clock::now();
-    float time_accumulator = 0.0f;
+    float accumulator = 0.0f;
 
     while (!glfwWindowShouldClose(window)) {
         auto current_time = std::chrono::high_resolution_clock::now();
-        float delta_time = std::chrono::duration<float>(current_time - last_time).count();
+        float delta = std::chrono::duration<float>(current_time - last_time).count();
         last_time = current_time;
+        accumulator += std::min(delta, 0.25f);
 
-        if (delta_time > 0.25f) {
-            delta_time = 0.25f;
-        }
-        time_accumulator += delta_time;
-
-        while (time_accumulator >= Settings::FIXED_DELTA_TIME) {
-            game.tick(Settings::FIXED_DELTA_TIME); 
-            game.physics_tick(Settings::FIXED_DELTA_TIME); 
-            
-            game.get_event_system()->emit("on_game_tick", Settings::FIXED_DELTA_TIME);
-
-            time_accumulator -= Settings::FIXED_DELTA_TIME;
+        while (accumulator >= Settings::FIXED_DELTA_TIME) {
+            game.tick(Settings::FIXED_DELTA_TIME);
+            SceneTree::get_singleton()->update(Settings::FIXED_DELTA_TIME);
+            accumulator -= Settings::FIXED_DELTA_TIME;
         }
 
-        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+        glClearColor(0.1f, 0.1f, 0.12f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         
-        float interpolation_alpha = time_accumulator / Settings::FIXED_DELTA_TIME;
+        SceneTree::get_singleton()->update(Settings::FIXED_DELTA_TIME);
+        SceneTree::get_singleton()->render();
 
         glfwSwapBuffers(window);
         glfwPollEvents();

@@ -21,10 +21,16 @@ add_subdirectory(external/miniz)
 ##Exec
 add_executable(${PROJECT_NAME} 
     src/main.cpp
-    src/resource/ResourceAPI.cpp
-    src/resource/Resource.cpp
     src/virtual_fs/VirtualFS.cpp
+    src/lua_binder/LuaBinder.cpp
     src/mod_loader/ModLoader.cpp
+    src/object/Object.cpp
+    src/object/scene_tree/SceneTree.cpp
+    src/object/game_object/GameObject.cpp
+    src/object/game_object/game_object_2d/GameObject2D.cpp
+    src/object/resource/texture_resource/TextureResource.cpp
+    src/object/resource/shader_resource/ShaderResource.cpp
+    src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp
 )
 ##
 

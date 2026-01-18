@@ -87,41 +87,11 @@ CMakeFiles/VladotEngine.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VladotEngine.dir/src/main.cpp.s"
 	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S Z:/dev/cpp/Vladot/src/main.cpp -o CMakeFiles/VladotEngine.dir/src/main.cpp.s
 
-CMakeFiles/VladotEngine.dir/src/resource/ResourceAPI.cpp.obj: CMakeFiles/VladotEngine.dir/flags.make
-CMakeFiles/VladotEngine.dir/src/resource/ResourceAPI.cpp.obj: CMakeFiles/VladotEngine.dir/includes_CXX.rsp
-CMakeFiles/VladotEngine.dir/src/resource/ResourceAPI.cpp.obj: Z:/dev/cpp/Vladot/src/resource/ResourceAPI.cpp
-CMakeFiles/VladotEngine.dir/src/resource/ResourceAPI.cpp.obj: CMakeFiles/VladotEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/VladotEngine.dir/src/resource/ResourceAPI.cpp.obj"
-	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VladotEngine.dir/src/resource/ResourceAPI.cpp.obj -MF CMakeFiles/VladotEngine.dir/src/resource/ResourceAPI.cpp.obj.d -o CMakeFiles/VladotEngine.dir/src/resource/ResourceAPI.cpp.obj -c Z:/dev/cpp/Vladot/src/resource/ResourceAPI.cpp
-
-CMakeFiles/VladotEngine.dir/src/resource/ResourceAPI.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VladotEngine.dir/src/resource/ResourceAPI.cpp.i"
-	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E Z:/dev/cpp/Vladot/src/resource/ResourceAPI.cpp > CMakeFiles/VladotEngine.dir/src/resource/ResourceAPI.cpp.i
-
-CMakeFiles/VladotEngine.dir/src/resource/ResourceAPI.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VladotEngine.dir/src/resource/ResourceAPI.cpp.s"
-	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S Z:/dev/cpp/Vladot/src/resource/ResourceAPI.cpp -o CMakeFiles/VladotEngine.dir/src/resource/ResourceAPI.cpp.s
-
-CMakeFiles/VladotEngine.dir/src/resource/Resource.cpp.obj: CMakeFiles/VladotEngine.dir/flags.make
-CMakeFiles/VladotEngine.dir/src/resource/Resource.cpp.obj: CMakeFiles/VladotEngine.dir/includes_CXX.rsp
-CMakeFiles/VladotEngine.dir/src/resource/Resource.cpp.obj: Z:/dev/cpp/Vladot/src/resource/Resource.cpp
-CMakeFiles/VladotEngine.dir/src/resource/Resource.cpp.obj: CMakeFiles/VladotEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VladotEngine.dir/src/resource/Resource.cpp.obj"
-	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VladotEngine.dir/src/resource/Resource.cpp.obj -MF CMakeFiles/VladotEngine.dir/src/resource/Resource.cpp.obj.d -o CMakeFiles/VladotEngine.dir/src/resource/Resource.cpp.obj -c Z:/dev/cpp/Vladot/src/resource/Resource.cpp
-
-CMakeFiles/VladotEngine.dir/src/resource/Resource.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VladotEngine.dir/src/resource/Resource.cpp.i"
-	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E Z:/dev/cpp/Vladot/src/resource/Resource.cpp > CMakeFiles/VladotEngine.dir/src/resource/Resource.cpp.i
-
-CMakeFiles/VladotEngine.dir/src/resource/Resource.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VladotEngine.dir/src/resource/Resource.cpp.s"
-	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S Z:/dev/cpp/Vladot/src/resource/Resource.cpp -o CMakeFiles/VladotEngine.dir/src/resource/Resource.cpp.s
-
 CMakeFiles/VladotEngine.dir/src/virtual_fs/VirtualFS.cpp.obj: CMakeFiles/VladotEngine.dir/flags.make
 CMakeFiles/VladotEngine.dir/src/virtual_fs/VirtualFS.cpp.obj: CMakeFiles/VladotEngine.dir/includes_CXX.rsp
 CMakeFiles/VladotEngine.dir/src/virtual_fs/VirtualFS.cpp.obj: Z:/dev/cpp/Vladot/src/virtual_fs/VirtualFS.cpp
 CMakeFiles/VladotEngine.dir/src/virtual_fs/VirtualFS.cpp.obj: CMakeFiles/VladotEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/VladotEngine.dir/src/virtual_fs/VirtualFS.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/VladotEngine.dir/src/virtual_fs/VirtualFS.cpp.obj"
 	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VladotEngine.dir/src/virtual_fs/VirtualFS.cpp.obj -MF CMakeFiles/VladotEngine.dir/src/virtual_fs/VirtualFS.cpp.obj.d -o CMakeFiles/VladotEngine.dir/src/virtual_fs/VirtualFS.cpp.obj -c Z:/dev/cpp/Vladot/src/virtual_fs/VirtualFS.cpp
 
 CMakeFiles/VladotEngine.dir/src/virtual_fs/VirtualFS.cpp.i: cmake_force
@@ -132,11 +102,26 @@ CMakeFiles/VladotEngine.dir/src/virtual_fs/VirtualFS.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VladotEngine.dir/src/virtual_fs/VirtualFS.cpp.s"
 	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S Z:/dev/cpp/Vladot/src/virtual_fs/VirtualFS.cpp -o CMakeFiles/VladotEngine.dir/src/virtual_fs/VirtualFS.cpp.s
 
+CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.obj: CMakeFiles/VladotEngine.dir/flags.make
+CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.obj: CMakeFiles/VladotEngine.dir/includes_CXX.rsp
+CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.obj: Z:/dev/cpp/Vladot/src/lua_binder/LuaBinder.cpp
+CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.obj: CMakeFiles/VladotEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.obj"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.obj -MF CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.obj.d -o CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.obj -c Z:/dev/cpp/Vladot/src/lua_binder/LuaBinder.cpp
+
+CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.i"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E Z:/dev/cpp/Vladot/src/lua_binder/LuaBinder.cpp > CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.i
+
+CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.s"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S Z:/dev/cpp/Vladot/src/lua_binder/LuaBinder.cpp -o CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.s
+
 CMakeFiles/VladotEngine.dir/src/mod_loader/ModLoader.cpp.obj: CMakeFiles/VladotEngine.dir/flags.make
 CMakeFiles/VladotEngine.dir/src/mod_loader/ModLoader.cpp.obj: CMakeFiles/VladotEngine.dir/includes_CXX.rsp
 CMakeFiles/VladotEngine.dir/src/mod_loader/ModLoader.cpp.obj: Z:/dev/cpp/Vladot/src/mod_loader/ModLoader.cpp
 CMakeFiles/VladotEngine.dir/src/mod_loader/ModLoader.cpp.obj: CMakeFiles/VladotEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/VladotEngine.dir/src/mod_loader/ModLoader.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/VladotEngine.dir/src/mod_loader/ModLoader.cpp.obj"
 	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VladotEngine.dir/src/mod_loader/ModLoader.cpp.obj -MF CMakeFiles/VladotEngine.dir/src/mod_loader/ModLoader.cpp.obj.d -o CMakeFiles/VladotEngine.dir/src/mod_loader/ModLoader.cpp.obj -c Z:/dev/cpp/Vladot/src/mod_loader/ModLoader.cpp
 
 CMakeFiles/VladotEngine.dir/src/mod_loader/ModLoader.cpp.i: cmake_force
@@ -147,22 +132,139 @@ CMakeFiles/VladotEngine.dir/src/mod_loader/ModLoader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VladotEngine.dir/src/mod_loader/ModLoader.cpp.s"
 	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S Z:/dev/cpp/Vladot/src/mod_loader/ModLoader.cpp -o CMakeFiles/VladotEngine.dir/src/mod_loader/ModLoader.cpp.s
 
+CMakeFiles/VladotEngine.dir/src/object/Object.cpp.obj: CMakeFiles/VladotEngine.dir/flags.make
+CMakeFiles/VladotEngine.dir/src/object/Object.cpp.obj: CMakeFiles/VladotEngine.dir/includes_CXX.rsp
+CMakeFiles/VladotEngine.dir/src/object/Object.cpp.obj: Z:/dev/cpp/Vladot/src/object/Object.cpp
+CMakeFiles/VladotEngine.dir/src/object/Object.cpp.obj: CMakeFiles/VladotEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/VladotEngine.dir/src/object/Object.cpp.obj"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VladotEngine.dir/src/object/Object.cpp.obj -MF CMakeFiles/VladotEngine.dir/src/object/Object.cpp.obj.d -o CMakeFiles/VladotEngine.dir/src/object/Object.cpp.obj -c Z:/dev/cpp/Vladot/src/object/Object.cpp
+
+CMakeFiles/VladotEngine.dir/src/object/Object.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VladotEngine.dir/src/object/Object.cpp.i"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E Z:/dev/cpp/Vladot/src/object/Object.cpp > CMakeFiles/VladotEngine.dir/src/object/Object.cpp.i
+
+CMakeFiles/VladotEngine.dir/src/object/Object.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VladotEngine.dir/src/object/Object.cpp.s"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S Z:/dev/cpp/Vladot/src/object/Object.cpp -o CMakeFiles/VladotEngine.dir/src/object/Object.cpp.s
+
+CMakeFiles/VladotEngine.dir/src/object/scene_tree/SceneTree.cpp.obj: CMakeFiles/VladotEngine.dir/flags.make
+CMakeFiles/VladotEngine.dir/src/object/scene_tree/SceneTree.cpp.obj: CMakeFiles/VladotEngine.dir/includes_CXX.rsp
+CMakeFiles/VladotEngine.dir/src/object/scene_tree/SceneTree.cpp.obj: Z:/dev/cpp/Vladot/src/object/scene_tree/SceneTree.cpp
+CMakeFiles/VladotEngine.dir/src/object/scene_tree/SceneTree.cpp.obj: CMakeFiles/VladotEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/VladotEngine.dir/src/object/scene_tree/SceneTree.cpp.obj"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VladotEngine.dir/src/object/scene_tree/SceneTree.cpp.obj -MF CMakeFiles/VladotEngine.dir/src/object/scene_tree/SceneTree.cpp.obj.d -o CMakeFiles/VladotEngine.dir/src/object/scene_tree/SceneTree.cpp.obj -c Z:/dev/cpp/Vladot/src/object/scene_tree/SceneTree.cpp
+
+CMakeFiles/VladotEngine.dir/src/object/scene_tree/SceneTree.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VladotEngine.dir/src/object/scene_tree/SceneTree.cpp.i"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E Z:/dev/cpp/Vladot/src/object/scene_tree/SceneTree.cpp > CMakeFiles/VladotEngine.dir/src/object/scene_tree/SceneTree.cpp.i
+
+CMakeFiles/VladotEngine.dir/src/object/scene_tree/SceneTree.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VladotEngine.dir/src/object/scene_tree/SceneTree.cpp.s"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S Z:/dev/cpp/Vladot/src/object/scene_tree/SceneTree.cpp -o CMakeFiles/VladotEngine.dir/src/object/scene_tree/SceneTree.cpp.s
+
+CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.obj: CMakeFiles/VladotEngine.dir/flags.make
+CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.obj: CMakeFiles/VladotEngine.dir/includes_CXX.rsp
+CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.obj: Z:/dev/cpp/Vladot/src/object/game_object/GameObject.cpp
+CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.obj: CMakeFiles/VladotEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.obj"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.obj -MF CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.obj.d -o CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.obj -c Z:/dev/cpp/Vladot/src/object/game_object/GameObject.cpp
+
+CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.i"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E Z:/dev/cpp/Vladot/src/object/game_object/GameObject.cpp > CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.i
+
+CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.s"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S Z:/dev/cpp/Vladot/src/object/game_object/GameObject.cpp -o CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.s
+
+CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.obj: CMakeFiles/VladotEngine.dir/flags.make
+CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.obj: CMakeFiles/VladotEngine.dir/includes_CXX.rsp
+CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.obj: Z:/dev/cpp/Vladot/src/object/game_object/game_object_2d/GameObject2D.cpp
+CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.obj: CMakeFiles/VladotEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.obj"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.obj -MF CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.obj.d -o CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.obj -c Z:/dev/cpp/Vladot/src/object/game_object/game_object_2d/GameObject2D.cpp
+
+CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.i"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E Z:/dev/cpp/Vladot/src/object/game_object/game_object_2d/GameObject2D.cpp > CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.i
+
+CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.s"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S Z:/dev/cpp/Vladot/src/object/game_object/game_object_2d/GameObject2D.cpp -o CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.s
+
+CMakeFiles/VladotEngine.dir/src/object/resource/texture_resource/TextureResource.cpp.obj: CMakeFiles/VladotEngine.dir/flags.make
+CMakeFiles/VladotEngine.dir/src/object/resource/texture_resource/TextureResource.cpp.obj: CMakeFiles/VladotEngine.dir/includes_CXX.rsp
+CMakeFiles/VladotEngine.dir/src/object/resource/texture_resource/TextureResource.cpp.obj: Z:/dev/cpp/Vladot/src/object/resource/texture_resource/TextureResource.cpp
+CMakeFiles/VladotEngine.dir/src/object/resource/texture_resource/TextureResource.cpp.obj: CMakeFiles/VladotEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/VladotEngine.dir/src/object/resource/texture_resource/TextureResource.cpp.obj"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VladotEngine.dir/src/object/resource/texture_resource/TextureResource.cpp.obj -MF CMakeFiles/VladotEngine.dir/src/object/resource/texture_resource/TextureResource.cpp.obj.d -o CMakeFiles/VladotEngine.dir/src/object/resource/texture_resource/TextureResource.cpp.obj -c Z:/dev/cpp/Vladot/src/object/resource/texture_resource/TextureResource.cpp
+
+CMakeFiles/VladotEngine.dir/src/object/resource/texture_resource/TextureResource.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VladotEngine.dir/src/object/resource/texture_resource/TextureResource.cpp.i"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E Z:/dev/cpp/Vladot/src/object/resource/texture_resource/TextureResource.cpp > CMakeFiles/VladotEngine.dir/src/object/resource/texture_resource/TextureResource.cpp.i
+
+CMakeFiles/VladotEngine.dir/src/object/resource/texture_resource/TextureResource.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VladotEngine.dir/src/object/resource/texture_resource/TextureResource.cpp.s"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S Z:/dev/cpp/Vladot/src/object/resource/texture_resource/TextureResource.cpp -o CMakeFiles/VladotEngine.dir/src/object/resource/texture_resource/TextureResource.cpp.s
+
+CMakeFiles/VladotEngine.dir/src/object/resource/shader_resource/ShaderResource.cpp.obj: CMakeFiles/VladotEngine.dir/flags.make
+CMakeFiles/VladotEngine.dir/src/object/resource/shader_resource/ShaderResource.cpp.obj: CMakeFiles/VladotEngine.dir/includes_CXX.rsp
+CMakeFiles/VladotEngine.dir/src/object/resource/shader_resource/ShaderResource.cpp.obj: Z:/dev/cpp/Vladot/src/object/resource/shader_resource/ShaderResource.cpp
+CMakeFiles/VladotEngine.dir/src/object/resource/shader_resource/ShaderResource.cpp.obj: CMakeFiles/VladotEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/VladotEngine.dir/src/object/resource/shader_resource/ShaderResource.cpp.obj"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VladotEngine.dir/src/object/resource/shader_resource/ShaderResource.cpp.obj -MF CMakeFiles/VladotEngine.dir/src/object/resource/shader_resource/ShaderResource.cpp.obj.d -o CMakeFiles/VladotEngine.dir/src/object/resource/shader_resource/ShaderResource.cpp.obj -c Z:/dev/cpp/Vladot/src/object/resource/shader_resource/ShaderResource.cpp
+
+CMakeFiles/VladotEngine.dir/src/object/resource/shader_resource/ShaderResource.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VladotEngine.dir/src/object/resource/shader_resource/ShaderResource.cpp.i"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E Z:/dev/cpp/Vladot/src/object/resource/shader_resource/ShaderResource.cpp > CMakeFiles/VladotEngine.dir/src/object/resource/shader_resource/ShaderResource.cpp.i
+
+CMakeFiles/VladotEngine.dir/src/object/resource/shader_resource/ShaderResource.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VladotEngine.dir/src/object/resource/shader_resource/ShaderResource.cpp.s"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S Z:/dev/cpp/Vladot/src/object/resource/shader_resource/ShaderResource.cpp -o CMakeFiles/VladotEngine.dir/src/object/resource/shader_resource/ShaderResource.cpp.s
+
+CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.obj: CMakeFiles/VladotEngine.dir/flags.make
+CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.obj: CMakeFiles/VladotEngine.dir/includes_CXX.rsp
+CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.obj: Z:/dev/cpp/Vladot/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp
+CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.obj: CMakeFiles/VladotEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.obj"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.obj -MF CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.obj.d -o CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.obj -c Z:/dev/cpp/Vladot/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp
+
+CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.i"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E Z:/dev/cpp/Vladot/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp > CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.i
+
+CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.s"
+	C:/Users/danya/gcc/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S Z:/dev/cpp/Vladot/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp -o CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.s
+
 # Object files for target VladotEngine
 VladotEngine_OBJECTS = \
 "CMakeFiles/VladotEngine.dir/src/main.cpp.obj" \
-"CMakeFiles/VladotEngine.dir/src/resource/ResourceAPI.cpp.obj" \
-"CMakeFiles/VladotEngine.dir/src/resource/Resource.cpp.obj" \
 "CMakeFiles/VladotEngine.dir/src/virtual_fs/VirtualFS.cpp.obj" \
-"CMakeFiles/VladotEngine.dir/src/mod_loader/ModLoader.cpp.obj"
+"CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.obj" \
+"CMakeFiles/VladotEngine.dir/src/mod_loader/ModLoader.cpp.obj" \
+"CMakeFiles/VladotEngine.dir/src/object/Object.cpp.obj" \
+"CMakeFiles/VladotEngine.dir/src/object/scene_tree/SceneTree.cpp.obj" \
+"CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.obj" \
+"CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.obj" \
+"CMakeFiles/VladotEngine.dir/src/object/resource/texture_resource/TextureResource.cpp.obj" \
+"CMakeFiles/VladotEngine.dir/src/object/resource/shader_resource/ShaderResource.cpp.obj" \
+"CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.obj"
 
 # External object files for target VladotEngine
 VladotEngine_EXTERNAL_OBJECTS =
 
 bin/VladotEngine.exe: CMakeFiles/VladotEngine.dir/src/main.cpp.obj
-bin/VladotEngine.exe: CMakeFiles/VladotEngine.dir/src/resource/ResourceAPI.cpp.obj
-bin/VladotEngine.exe: CMakeFiles/VladotEngine.dir/src/resource/Resource.cpp.obj
 bin/VladotEngine.exe: CMakeFiles/VladotEngine.dir/src/virtual_fs/VirtualFS.cpp.obj
+bin/VladotEngine.exe: CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.obj
 bin/VladotEngine.exe: CMakeFiles/VladotEngine.dir/src/mod_loader/ModLoader.cpp.obj
+bin/VladotEngine.exe: CMakeFiles/VladotEngine.dir/src/object/Object.cpp.obj
+bin/VladotEngine.exe: CMakeFiles/VladotEngine.dir/src/object/scene_tree/SceneTree.cpp.obj
+bin/VladotEngine.exe: CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.obj
+bin/VladotEngine.exe: CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.obj
+bin/VladotEngine.exe: CMakeFiles/VladotEngine.dir/src/object/resource/texture_resource/TextureResource.cpp.obj
+bin/VladotEngine.exe: CMakeFiles/VladotEngine.dir/src/object/resource/shader_resource/ShaderResource.cpp.obj
+bin/VladotEngine.exe: CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.obj
 bin/VladotEngine.exe: CMakeFiles/VladotEngine.dir/build.make
 bin/VladotEngine.exe: external/glfw/src/libglfw3.a
 bin/VladotEngine.exe: external/glad/libglad.a
@@ -171,7 +273,7 @@ bin/VladotEngine.exe: external/lua/liblua.a
 bin/VladotEngine.exe: external/miniz/libminiz.a
 bin/VladotEngine.exe: CMakeFiles/VladotEngine.dir/linkLibs.rsp
 bin/VladotEngine.exe: CMakeFiles/VladotEngine.dir/objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable bin/VladotEngine.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable bin/VladotEngine.exe"
 	"C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/VladotEngine.dir/objects.a
 	C:/Users/danya/gcc/bin/ar.exe qc CMakeFiles/VladotEngine.dir/objects.a @CMakeFiles/VladotEngine.dir/objects1.rsp
 	C:/Users/danya/gcc/bin/g++.exe -g -Wl,--whole-archive CMakeFiles/VladotEngine.dir/objects.a -Wl,--no-whole-archive -o bin/VladotEngine.exe -Wl,--out-implib,libVladotEngine.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/VladotEngine.dir/linkLibs.rsp

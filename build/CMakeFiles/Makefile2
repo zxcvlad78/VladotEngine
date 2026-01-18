@@ -240,13 +240,13 @@ external/miniz/clean: external/miniz/CMakeFiles/miniz.dir/clean
 
 # All Build rule for target.
 CMakeFiles/VladotEngine.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
-CMakeFiles/VladotEngine.dir/all: external/freetype/CMakeFiles/freetype.dir/all
 CMakeFiles/VladotEngine.dir/all: external/glad/CMakeFiles/glad.dir/all
-CMakeFiles/VladotEngine.dir/all: external/lua/CMakeFiles/lua.dir/all
+CMakeFiles/VladotEngine.dir/all: external/freetype/CMakeFiles/freetype.dir/all
 CMakeFiles/VladotEngine.dir/all: external/miniz/CMakeFiles/miniz.dir/all
+CMakeFiles/VladotEngine.dir/all: external/lua/CMakeFiles/lua.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target VladotEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target VladotEngine"
 .PHONY : CMakeFiles/VladotEngine.dir/all
 
 # Build rule for subdir invocation for target.
@@ -263,7 +263,7 @@ VladotEngine: CMakeFiles/VladotEngine.dir/rule
 # codegen rule for target.
 CMakeFiles/VladotEngine.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=1,2,3,4,5 "Finished codegen for target VladotEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Finished codegen for target VladotEngine"
 .PHONY : CMakeFiles/VladotEngine.dir/codegen
 
 # clean rule for target.
@@ -278,12 +278,12 @@ CMakeFiles/VladotEngine.dir/clean:
 external/glfw/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68 "Built target glfw"
 .PHONY : external/glfw/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/src/CMakeFiles/glfw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start Z:/dev/cpp/Vladot/build/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start Z:/dev/cpp/Vladot/build/CMakeFiles 18
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/src/CMakeFiles/glfw.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start Z:/dev/cpp/Vladot/build/CMakeFiles 0
 .PHONY : external/glfw/src/CMakeFiles/glfw.dir/rule
@@ -295,7 +295,7 @@ glfw: external/glfw/src/CMakeFiles/glfw.dir/rule
 # codegen rule for target.
 external/glfw/src/CMakeFiles/glfw.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67 "Finished codegen for target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68 "Finished codegen for target glfw"
 .PHONY : external/glfw/src/CMakeFiles/glfw.dir/codegen
 
 # clean rule for target.
@@ -342,7 +342,7 @@ external/glfw/src/CMakeFiles/update_mappings.dir/clean:
 external/glad/CMakeFiles/glad.dir/all:
 	$(MAKE) $(MAKESILENT) -f external/glad/CMakeFiles/glad.dir/build.make external/glad/CMakeFiles/glad.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glad/CMakeFiles/glad.dir/build.make external/glad/CMakeFiles/glad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=46,47 "Built target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=49,50 "Built target glad"
 .PHONY : external/glad/CMakeFiles/glad.dir/all
 
 # Build rule for subdir invocation for target.
@@ -359,7 +359,7 @@ glad: external/glad/CMakeFiles/glad.dir/rule
 # codegen rule for target.
 external/glad/CMakeFiles/glad.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f external/glad/CMakeFiles/glad.dir/build.make external/glad/CMakeFiles/glad.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=46,47 "Finished codegen for target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=49,50 "Finished codegen for target glad"
 .PHONY : external/glad/CMakeFiles/glad.dir/codegen
 
 # clean rule for target.
@@ -374,12 +374,12 @@ external/glad/CMakeFiles/glad.dir/clean:
 external/freetype/CMakeFiles/freetype.dir/all:
 	$(MAKE) $(MAKESILENT) -f external/freetype/CMakeFiles/freetype.dir/build.make external/freetype/CMakeFiles/freetype.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/freetype/CMakeFiles/freetype.dir/build.make external/freetype/CMakeFiles/freetype.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45 "Built target freetype"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48 "Built target freetype"
 .PHONY : external/freetype/CMakeFiles/freetype.dir/all
 
 # Build rule for subdir invocation for target.
 external/freetype/CMakeFiles/freetype.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start Z:/dev/cpp/Vladot/build/CMakeFiles 40
+	$(CMAKE_COMMAND) -E cmake_progress_start Z:/dev/cpp/Vladot/build/CMakeFiles 38
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/freetype/CMakeFiles/freetype.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start Z:/dev/cpp/Vladot/build/CMakeFiles 0
 .PHONY : external/freetype/CMakeFiles/freetype.dir/rule
@@ -391,7 +391,7 @@ freetype: external/freetype/CMakeFiles/freetype.dir/rule
 # codegen rule for target.
 external/freetype/CMakeFiles/freetype.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f external/freetype/CMakeFiles/freetype.dir/build.make external/freetype/CMakeFiles/freetype.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45 "Finished codegen for target freetype"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48 "Finished codegen for target freetype"
 .PHONY : external/freetype/CMakeFiles/freetype.dir/codegen
 
 # clean rule for target.
@@ -406,12 +406,12 @@ external/freetype/CMakeFiles/freetype.dir/clean:
 external/lua/CMakeFiles/lua.dir/all:
 	$(MAKE) $(MAKESILENT) -f external/lua/CMakeFiles/lua.dir/build.make external/lua/CMakeFiles/lua.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/lua/CMakeFiles/lua.dir/build.make external/lua/CMakeFiles/lua.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97 "Built target lua"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97 "Built target lua"
 .PHONY : external/lua/CMakeFiles/lua.dir/all
 
 # Build rule for subdir invocation for target.
 external/lua/CMakeFiles/lua.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start Z:/dev/cpp/Vladot/build/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start Z:/dev/cpp/Vladot/build/CMakeFiles 29
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/lua/CMakeFiles/lua.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start Z:/dev/cpp/Vladot/build/CMakeFiles 0
 .PHONY : external/lua/CMakeFiles/lua.dir/rule
@@ -423,7 +423,7 @@ lua: external/lua/CMakeFiles/lua.dir/rule
 # codegen rule for target.
 external/lua/CMakeFiles/lua.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f external/lua/CMakeFiles/lua.dir/build.make external/lua/CMakeFiles/lua.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97 "Finished codegen for target lua"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=Z:/dev/cpp/Vladot/build/CMakeFiles --progress-num=69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97 "Finished codegen for target lua"
 .PHONY : external/lua/CMakeFiles/lua.dir/codegen
 
 # clean rule for target.
