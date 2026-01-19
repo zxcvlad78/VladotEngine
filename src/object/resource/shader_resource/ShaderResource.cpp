@@ -3,8 +3,6 @@
 #include <iostream>
 #include <sstream>
 
-REGISTER_RESOURCE_TYPE(ShaderResource)
-
 ShaderResource::ShaderResource(std::string p_path) : Resource(std::move(p_path)) {}
 
 ShaderResource::~ShaderResource() {
@@ -31,7 +29,6 @@ bool ShaderResource::load_from_data(const std::vector<unsigned char>& data) {
         return false;
     }
 
-    // Извлечение исходного кода
     if (vPos < fPos) {
         vertexSource = source.substr(vPos + vTag.length(), fPos - (vPos + vTag.length()));
         fragmentSource = source.substr(fPos + fTag.length());
@@ -40,13 +37,11 @@ bool ShaderResource::load_from_data(const std::vector<unsigned char>& data) {
         vertexSource = source.substr(vPos + vTag.length());
     }
 
-    // Компиляция
     uint32_t vs = _compile_shader(GL_VERTEX_SHADER, vertexSource);
     uint32_t fs = _compile_shader(GL_FRAGMENT_SHADER, fragmentSource);
 
     if (vs == 0 || fs == 0) return false;
 
-    // Линковка программы
     rid = glCreateProgram();
     glAttachShader(rid, vs);
     glAttachShader(rid, fs);
@@ -82,6 +77,7 @@ uint32_t ShaderResource::_compile_shader(unsigned int type, const std::string& s
         glDeleteShader(id);
         return 0;
     }
+    std::cout << "[ShaderResource] Compile Success! '" << id << "'" << std::endl;
     return id;
 }
 

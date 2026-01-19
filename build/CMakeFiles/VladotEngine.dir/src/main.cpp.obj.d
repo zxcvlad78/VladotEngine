@@ -347,32 +347,6 @@ CMakeFiles/VladotEngine.dir/src/main.cpp.obj: \
  C:/Users/danya/gcc/include/c++/14.2.0/chrono \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/chrono.h \
  C:/Users/danya/gcc/include/c++/14.2.0/ratio \
- Z:/dev/cpp/Vladot/src/object/resource/ResourceLoader.hpp \
- C:/Users/danya/gcc/include/c++/14.2.0/map \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_tree.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_map.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_multimap.h \
- C:/Users/danya/gcc/include/c++/14.2.0/typeindex \
- Z:/dev/cpp/Vladot/src/object/resource/Resource.hpp \
- Z:/dev/cpp/Vladot/src/object/ref_counted/RefCounted.hpp \
- Z:/dev/cpp/Vladot/src/object/Object.hpp \
- Z:/dev/cpp/Vladot/src/lua_binder/LuaBinder.hpp \
- Z:/dev/cpp/Vladot/src/virtual_fs/VirtualFS.hpp \
- C:/Users/danya/gcc/include/c++/14.2.0/filesystem \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/fs_fwd.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/fs_path.h \
- C:/Users/danya/gcc/include/c++/14.2.0/iomanip \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/quoted_string.h \
- C:/Users/danya/gcc/include/c++/14.2.0/codecvt \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/fs_dir.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/fs_ops.h \
- C:/Users/danya/gcc/include/c++/14.2.0/fstream \
- C:/Users/danya/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h \
- C:/Users/danya/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/fstream.tcc \
- Z:/dev/cpp/Vladot/external/miniz/miniz.h \
- Z:/dev/cpp/Vladot/src/object/scene_tree/SceneTree.hpp \
- Z:/dev/cpp/Vladot/src/object/game_object/GameObject.hpp \
  Z:/dev/cpp/Vladot/external/glm/glm/glm.hpp \
  Z:/dev/cpp/Vladot/external/glm/glm/detail/_fixes.hpp \
  Z:/dev/cpp/Vladot/external/glm/glm/detail/setup.hpp \
@@ -512,6 +486,43 @@ CMakeFiles/VladotEngine.dir/src/main.cpp.obj: \
  Z:/dev/cpp/Vladot/external/glm/glm/detail/type_half.inl \
  Z:/dev/cpp/Vladot/external/glm/glm/integer.hpp \
  Z:/dev/cpp/Vladot/external/glm/glm/detail/func_integer.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/gtc/matrix_transform.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_projection.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/gtc/constants.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/scalar_constants.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/scalar_constants.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/gtc/constants.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_projection.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_clip_space.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_clip_space.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_transform.hpp \
+ Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_transform.inl \
+ Z:/dev/cpp/Vladot/external/glm/glm/gtc/matrix_transform.inl \
+ Z:/dev/cpp/Vladot/src/virtual_fs/VirtualFS.hpp \
+ C:/Users/danya/gcc/include/c++/14.2.0/filesystem \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/fs_fwd.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/fs_path.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/iomanip \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/quoted_string.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/codecvt \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/fs_dir.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/fs_ops.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/fstream \
+ C:/Users/danya/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/fstream.tcc \
+ Z:/dev/cpp/Vladot/external/miniz/miniz.h \
+ Z:/dev/cpp/Vladot/src/object/resource/ResourceLoader.hpp \
+ C:/Users/danya/gcc/include/c++/14.2.0/map \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_tree.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_map.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_multimap.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/typeindex \
+ Z:/dev/cpp/Vladot/src/object/resource/Resource.hpp \
+ Z:/dev/cpp/Vladot/src/object/ref_counted/RefCounted.hpp \
+ Z:/dev/cpp/Vladot/src/object/Object.hpp \
+ Z:/dev/cpp/Vladot/src/object/scene_tree/SceneTree.hpp \
+ Z:/dev/cpp/Vladot/src/object/game_object/GameObject.hpp \
  Z:/dev/cpp/Vladot/src/mod_loader/ModLoader.hpp \
  C:/Users/danya/gcc/include/c++/14.2.0/set \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_set.h \
@@ -578,56 +589,4 @@ CMakeFiles/VladotEngine.dir/src/main.cpp.obj: \
  Z:/dev/cpp/Vladot/external/json/include/nlohmann/detail/macro_unscope.hpp \
  Z:/dev/cpp/Vladot/external/json/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
  Z:/dev/cpp/Vladot/src/engine_api/EngineAPI.hpp \
- Z:/dev/cpp/Vladot/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.hpp \
- Z:/dev/cpp/Vladot/src/object/game_object/game_object_2d/GameObject2D.hpp \
- Z:/dev/cpp/Vladot/src/object/resource/texture_resource/TextureResource.hpp \
- Z:/dev/cpp/Vladot/src/object/resource/shader_resource/ShaderResource.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/gtc/type_ptr.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/gtc/quaternion.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/gtc/constants.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/scalar_constants.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/scalar_constants.inl \
- Z:/dev/cpp/Vladot/external/glm/glm/gtc/constants.inl \
- Z:/dev/cpp/Vladot/external/glm/glm/gtc/matrix_transform.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_projection.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_projection.inl \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_clip_space.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_clip_space.inl \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_transform.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/matrix_transform.inl \
- Z:/dev/cpp/Vladot/external/glm/glm/gtc/matrix_transform.inl \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_relational.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_relational.inl \
- Z:/dev/cpp/Vladot/external/glm/glm/detail/type_float.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_common.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_geometric.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_geometric.inl \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_common.inl \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_float.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/detail/type_quat.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_relational.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_relational.inl \
- Z:/dev/cpp/Vladot/external/glm/glm/detail/type_quat.inl \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_float_precision.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_double.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_double_precision.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_trigonometric.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_trigonometric.inl \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_transform.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/quaternion_transform.inl \
- Z:/dev/cpp/Vladot/external/glm/glm/gtc/quaternion.inl \
- Z:/dev/cpp/Vladot/external/glm/glm/gtc/epsilon.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/detail/setup.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/gtc/epsilon.inl \
- Z:/dev/cpp/Vladot/external/glm/glm/gtc/vec1.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_bool1.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_bool1_precision.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_float1.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_float1_precision.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_double1.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_double1_precision.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_int1.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_int1_sized.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_uint1.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_uint1_sized.hpp \
- Z:/dev/cpp/Vladot/external/glm/glm/gtc/type_ptr.inl
+ Z:/dev/cpp/Vladot/src/lua_binder/LuaBinder.hpp

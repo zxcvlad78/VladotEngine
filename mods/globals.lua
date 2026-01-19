@@ -1,57 +1,84 @@
 -- ==========================================
--- VladotEngine: Global Definitions
+-- ОСНОВНЫЕ ГЛОБАЛЬНЫЕ СИСТЕМЫ
 -- ==========================================
 
--- 1. Упрощение создания векторов
--- Теперь можно писать просто: pos = vec(10, 20)
-function vec(x, y)
-    return vec2.new(x or 0, y or 0)
+-- Синглтоны (сокращения для удобства)
+SceneTreeSingleton = SceneTree.get_singleton()
+
+-- Математические обертки (если vec2 был привязан как класс)
+-- Позволяет писать v = vec2(10, 20) вместо vec2.new(10, 20)
+setmetatable(_G, {
+    __index = function(t, key)
+        if key == "vec2" then
+            return function(x, y) return vec2.new(x or 0, y or 0) end
+        end
+    end
+})
+
+-- ==========================================
+-- ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ (API для модов)
+-- ==========================================
+
+--- Создает спрайт и сразу добавляет его в мир (опционально)
+--- @param texture_path string Путь к текстуре
+--- @param pos table (vec2) Позиция
+function spawn_sprite(texture_path, pos)
+    local sprite = Sprite2D.new()
+    local tex = ResourceLoader.load_texture(texture_path)
+    
+    if tex then
+        sprite:set_texture(tex)
+    else
+        print("[Lua Error] Failed to load texture: " .. texture_path)
+    end
+    
+    if pos then
+        sprite:set_position(pos)
+    end
+    
+    World:add_child(sprite)
+    return sprite
 end
 
--- 2. Коды клавиш (стандарт GLFW)
--- Соответствуют значениям из GLFW/glfw3.h
-Input = {
-    KEY_W = 87,
-    KEY_A = 65,
-    KEY_S = 83,
-    KEY_D = 68,
-    KEY_SPACE = 32,
-    KEY_ESCAPE = 256,
-    KEY_LEFT  = 263,
-    KEY_RIGHT = 262,
-    KEY_UP    = 265,
-    KEY_DOWN  = 264,
+--- Глобальная таблица данных (то, что заполняет data_extend)
+data = {
+    prototypes = {}
 }
 
--- Заглушка для проверки нажатий (если C++ еще не пробросил Input.is_key_pressed)
-if not Input.is_key_pressed then
-    Input.is_key_pressed = function(key) 
-        -- Эта функция будет переопределена из C++
-        return false 
+--- Функция для регистрации прототипов (используется в data.lua модов)
+function data_extend(table_list)
+    for _, item in ipairs(table_list) do
+        if item.type and item.name then
+            data.prototypes[item.name] = item
+            print("[Data] Registered prototype: " .. item.type .. " -> " .. item.name)
+        end
     end
 end
 
--- 3. Константы экрана (соответствуют Settings в main.cpp)
-Screen = {
-    WIDTH = 800,
-    HEIGHT = 600,
-    CENTER = vec(400, 300)
-}
+-- ==========================================
+-- СИСТЕМА СОБЫТИЙ (Улучшенная)
+-- ==========================================
+local _listeners = {}
 
--- 4. Математические помощники
-Math = {
-    lerp = function(a, b, t) return a + (b - a) * t end,
-    clamp = function(v, min, max) return math.max(min, math.min(max, v)) end
-}
-
--- 5. Системные события
--- Если event_system не проброшен, создаем пустой объект во избежание вылетов
-if not event_system then
-    event_system = {
-        on = function(self, name, func) 
-            print("[Warning] EventSystem not found in C++ for event: " .. name) 
-        end
-    }
+--- Подписка на событие
+function subscribe(event_name, callback)
+    if not _listeners[event_name] then
+        _listeners[event_name] = {}
+    end
+    table.insert(_listeners[event_name], callback)
 end
 
-print("[Globals] Base definitions loaded.")
+--- Вызов события из C++ (движок дергает эту функцию)
+function emit_event(event_name, ...)
+    local callbacks = _listeners[event_name]
+    if callbacks then
+        for _, cb in ipairs(callbacks) do
+            local status, err = pcall(cb, ...)
+            if not status then
+                print("[Event Error] " .. event_name .. ": " .. tostring(err))
+            end
+        end
+    end
+end
+
+print("[Globals] Base API initialized.")

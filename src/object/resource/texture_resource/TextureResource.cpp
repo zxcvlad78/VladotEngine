@@ -2,14 +2,11 @@
 #include "object/resource/ResourceLoader.hpp"
 #include <iostream>
 
-// Используем обертку, чтобы избежать дублирования реализации stb_image
 #ifndef STB_IMAGE_IMPLEMENTATION
 #define STB_IMAGE_IMPLEMENTATION
 #endif
 #include "stb_image.h"
 
-// Регистрация в Godot-style системе
-REGISTER_RESOURCE_TYPE(TextureResource)
 
 TextureResource::TextureResource(std::string p_path) : Resource(std::move(p_path)) {
     m_width = 0;
@@ -26,7 +23,6 @@ TextureResource::~TextureResource() {
 bool TextureResource::load_from_data(const std::vector<unsigned char>& data) {
     if (data.empty()) return false;
 
-    // OpenGL ожидает Y-координату снизу вверх
     stbi_set_flip_vertically_on_load(true);
     
     int w, h, ch;
@@ -44,7 +40,6 @@ bool TextureResource::load_from_data(const std::vector<unsigned char>& data) {
     glGenTextures(1, &rid);
     glBindTexture(GL_TEXTURE_2D, rid);
 
-    // Базовые параметры фильтрации
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);

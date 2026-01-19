@@ -2,10 +2,7 @@
 #include <set>
 #include <algorithm>
 
-/**
- * Сканирование папки модов.
- * Монтирует папки в VFS и подготавливает список для сортировки.
- */
+
 void ModLoader::scan_mods(const std::filesystem::path& folder, VirtualFS* vfs) {
     if (!std::filesystem::exists(folder)) {
         std::cerr << "[ModLoader] Folder not found: " << folder << std::endl;
@@ -23,7 +20,7 @@ void ModLoader::scan_mods(const std::filesystem::path& folder, VirtualFS* vfs) {
                     ModEntry m;
                     m.name = data["name"];
                     m.version = data["version"];
-                    m.path = entry.path(); // Сохраняем физический путь к папке мода
+                    m.path = entry.path();
                     
                     if (data.contains("dependencies")) {
                         m.dependencies = data["dependencies"].get<std::vector<std::string>>();
@@ -31,7 +28,6 @@ void ModLoader::scan_mods(const std::filesystem::path& folder, VirtualFS* vfs) {
                     
                     availableMods[m.name] = m;
                     
-                    // Монтируем папку мода в корень VFS для доступа к ассетам (текстурам и т.д.)
                     vfs->mount(entry.path().string(), VirtualFS::FOLDER);
                     
                     std::cout << "[ModLoader] Found Mod: " << m.name << " v" << m.version << std::endl;
@@ -42,13 +38,9 @@ void ModLoader::scan_mods(const std::filesystem::path& folder, VirtualFS* vfs) {
         }
     }
 
-    // Выстраиваем порядок загрузки на основе зависимостей
     resolve_dependencies();
 }
 
-/**
- * Топологическая сортировка (алгоритм поиска в глубину)
- */
 void ModLoader::resolve_dependencies() {
     sortedLoadOrder.clear();
     std::set<std::string> visited;
@@ -80,23 +72,17 @@ void ModLoader::resolve_dependencies() {
     }
 }
 
-/**
- * Этап загрузки прототипов (data.lua)
- */
 void ModLoader::load_data_stage(sol::state& lua, Engine::IRegistry* registry, VirtualFS* vfs) {
-    auto data_table = lua.create_table();
+    auto data_table = lua.create_named_table("data");
     data_table["extend"] = [registry](sol::table config) { 
-        registry->register_prototype(config); 
+        if (registry) registry->register_prototype(config); 
     };
-    lua["data"] = data_table;
 
     for (auto* mod : sortedLoadOrder) {
-        // Загружаем data.lua напрямую через путь мода
-        std::filesystem::path dataScriptPath = mod->path / "data.lua";
-        
-        if (std::filesystem::exists(dataScriptPath)) {
+        std::filesystem::path scriptPath = mod->path / "data.lua";
+        if (std::filesystem::exists(scriptPath)) {
             std::cout << "[ModLoader] Loading data.lua for: " << mod->name << std::endl;
-            sol::protected_function_result result = lua.do_file(dataScriptPath.string());
+            auto result = lua.safe_script_file(scriptPath.string(), sol::script_default_on_error);
             if (!result.valid()) {
                 sol::error err = result;
                 std::cerr << "[Lua Error Data Stage] " << mod->name << ": " << err.what() << std::endl;
@@ -105,36 +91,19 @@ void ModLoader::load_data_stage(sol::state& lua, Engine::IRegistry* registry, Vi
     }
 }
 
-/**
- * Этап загрузки игровой логики (control.lua)
- */
-void ModLoader::load_control_stage(sol::state& lua, Engine::IGameplayAPI* gameplay, Engine::EventSystem* events, VirtualFS* vfs) {
-    auto events_table = lua.create_table();
+void ModLoader::load_control_stage(sol::state& lua, Engine::EventSystem* events, VirtualFS* vfs) {
+    lua["event_system"] = events; 
     
-    // Поддержка event_system:on("event", function)
-    events_table["on"] = [events](sol::table self, const std::string& eventName, sol::function callback) {
-        events->subscribe(eventName, std::move(callback));
-    };
-    
-    lua["event_system"] = events_table;
-
     for (auto* mod : sortedLoadOrder) {
-        // Загружаем control.lua напрямую через путь мода
-        std::filesystem::path controlScriptPath = mod->path / "control.lua";
+        std::string script = vfs->read_file_string("control.lua");
         
-        if (std::filesystem::exists(controlScriptPath)) {
+        if (!script.empty()) {
             std::cout << "[ModLoader] Loading control.lua for: " << mod->name << std::endl;
-            
-            // Запускаем скрипт
-            sol::protected_function_result result = lua.do_file(controlScriptPath.string());
-            
+            auto result = lua.safe_script(script, sol::script_default_on_error);
             if (!result.valid()) {
                 sol::error err = result;
                 std::cerr << "[Lua Error Control Stage] " << mod->name << ": " << err.what() << std::endl;
             }
-        } else {
-            // Если файла нет, это нормально (мод может быть только на ассеты или данные)
-            std::cout << "[ModLoader] Skipping control.lua for " << mod->name << " (not found)" << std::endl;
         }
     }
 }

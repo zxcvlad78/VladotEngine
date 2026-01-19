@@ -1,5 +1,22 @@
 #include "VirtualFS.hpp"
+#include <fstream>
+#include <iostream>
+#include <algorithm>
+
 namespace fs = std::filesystem;
+
+std::string normalize_path(std::string path) {
+    std::replace(path.begin(), path.end(), '\\', '/');
+    return path;
+}
+
+std::string VirtualFS::read_file_string(const std::string& virtualPath) {
+    std::vector<unsigned char> data = read_file(virtualPath);
+    if (!data.empty()) {
+        return std::string(reinterpret_cast<char*>(data.data()), data.size());
+    }
+    return "";
+}
 
 void VirtualFS::mount(const std::string& physicalPath, Type type) {
     DataSource ds;
@@ -16,25 +33,12 @@ void VirtualFS::mount(const std::string& physicalPath, Type type) {
     std::cout << "VFS Mounted: " << physicalPath << std::endl;
 }
 
-void VirtualFS::mount_recursive(const std::string& rootPath) {
-    if (!fs::exists(rootPath)) return;
-
-    for (const auto& entry : fs::recursive_directory_iterator(rootPath)) {
-        if (entry.is_directory()) {
-            // Монтируем каждую найденную папку как потенциальный источник
-            this->mount(entry.path().string(), Type::FOLDER);
-        } 
-        else if (entry.path().extension() == ".zip") {
-            // Монтируем ZIP-архивы
-            this->mount(entry.path().string(), Type::ZIP);
-        }
-    }
-}
-
 std::vector<unsigned char> VirtualFS::read_file(const std::string& virtualPath) {
-    for (int i = sources.size() - 1; i >= 0; --i) {
+    std::string normPath = normalize_path(virtualPath);
+    for (int i = (int)sources.size() - 1; i >= 0; --i) {
         if (sources[i].type == Type::FOLDER) {
-            std::string fullPath = sources[i].physicalPath + "/" + virtualPath;
+            fs::path fullPath = fs::path(sources[i].physicalPath) / normPath;
+            
             std::ifstream file(fullPath, std::ios::binary | std::ios::ate);
             if (file.is_open()) {
                 std::streamsize size = file.tellg();
@@ -46,22 +50,13 @@ std::vector<unsigned char> VirtualFS::read_file(const std::string& virtualPath) 
         } else if (sources[i].type == Type::ZIP) {
             mz_zip_archive* zip = &sources[i].zipArchive;
             size_t uncompressed_size;
-            void* p = mz_zip_reader_extract_file_to_heap(zip, virtualPath.c_str(), &uncompressed_size, 0);
+            void* p = mz_zip_reader_extract_file_to_heap(zip, normPath.c_str(), &uncompressed_size, 0);
             if (p) {
-                std::vector<unsigned char> data(static_cast<unsigned char*>(p), static_cast<unsigned char*>(p) + uncompressed_size);
+                std::vector<unsigned char> data((unsigned char*)p, (unsigned char*)p + uncompressed_size);
                 mz_free(p);
                 return data;
             }
         }
     }
-    std::cerr << "VFS Error: File not found: " << virtualPath << std::endl;
     return {};
-}
-
-std::string VirtualFS::read_file_string(const std::string& virtualPath) {
-    std::vector<unsigned char> data = read_file(virtualPath);
-    if (!data.empty()) {
-        return std::string(reinterpret_cast<char*>(data.data()), data.size());
-    }
-    return "";
 }

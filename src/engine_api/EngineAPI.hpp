@@ -1,37 +1,45 @@
 #pragma once
-#include <string>
 #include <sol/sol.hpp>
+#include <string>
+#include <vector>
+#include <map>
 #include <iostream>
 
 namespace Engine {
+
     class IRegistry {
     public:
         virtual ~IRegistry() = default;
-        virtual void register_prototype(sol::table config) = 0;
+        // Используем sol::table для автоматического управления ссылкой на таблицу
+        virtual void register_prototype(sol::table prototype) = 0;
     };
-    
+
     class IGameplayAPI {
     public:
         virtual ~IGameplayAPI() = default;
     };
 
     class EventSystem {
-    public:
-        // Key: Event Name (e.g., "on_player_click", "on_entity_die")
-        // Value: List of Lua functions (callbacks)
-        std::map<std::string, std::vector<sol::function>> listeners;
+        public:
+            std::map<std::string, std::vector<sol::function>> listeners;
 
-        void subscribe(const std::string& eventName, sol::function callback) {
-            listeners[eventName].push_back(std::move(callback));
-        }
+            // Метод 'on' для Lua
+            void on(const std::string& event_name, sol::function callback) {
+                listeners[event_name].push_back(std::move(callback));
+            }
 
-        template<typename... Args>
-        void emit(const std::string& eventName, Args&&... args) {
-            if (listeners.count(eventName)) {
-                for (auto& callback : listeners[eventName]) {
-                    callback(std::forward<Args>(args)...);
+            template<typename... Args>
+            void emit(const std::string& event_name, Args&&... args) {
+                auto it = listeners.find(event_name);
+                if (it != listeners.end()) {
+                    for (auto& func : it->second) {
+                        auto result = func(std::forward<Args>(args)...);
+                        if (!result.valid()) {
+                            sol::error err = result;
+                            std::cerr << "[Event Error] " << event_name << ": " << err.what() << std::endl;
+                        }
+                    }
                 }
             }
-        }
-    };
+        };
 }

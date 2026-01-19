@@ -180,4 +180,12 @@ CMakeFiles/VladotEngine.dir/src/virtual_fs/VirtualFS.cpp.obj: \
  Z:/dev/cpp/Vladot/external/miniz/miniz.h \
  C:/Users/danya/gcc/x86_64-w64-mingw32/include/assert.h \
  C:/Users/danya/gcc/x86_64-w64-mingw32/include/string.h \
- C:/Users/danya/gcc/x86_64-w64-mingw32/include/sec_api/string_s.h
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/algorithm \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_algo.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/algorithmfwd.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_heap.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/uniform_int_dist.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_tempbuf.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/pstl/glue_algorithm_defs.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/pstl/execution_defs.h

@@ -1,73 +1,118 @@
 CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.obj: \
  Z:/dev/cpp/Vladot/src/lua_binder/LuaBinder.cpp \
  Z:/dev/cpp/Vladot/src/lua_binder/LuaBinder.hpp \
- Z:/dev/cpp/Vladot/external/sol2/include/sol/sol.hpp \
- Z:/dev/cpp/Vladot/external/sol2/include/sol/version.hpp \
- Z:/dev/cpp/Vladot/external/sol2/include/sol/config.hpp \
+ Z:/dev/cpp/Vladot/external/lua/src/lua.hpp \
+ Z:/dev/cpp/Vladot/external/lua/src/lua.h \
+ C:/Users/danya/gcc/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdarg.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/stdarg.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/vadefs.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/_mingw.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/_mingw_mac.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
  C:/Users/danya/gcc/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
  C:/Users/danya/gcc/x86_64-w64-mingw32/include/stddef.h \
  C:/Users/danya/gcc/x86_64-w64-mingw32/include/crtdefs.h \
  C:/Users/danya/gcc/x86_64-w64-mingw32/include/corecrt.h \
- C:/Users/danya/gcc/x86_64-w64-mingw32/include/_mingw.h \
- C:/Users/danya/gcc/x86_64-w64-mingw32/include/_mingw_mac.h \
- C:/Users/danya/gcc/x86_64-w64-mingw32/include/_mingw_secapi.h \
- C:/Users/danya/gcc/x86_64-w64-mingw32/include/vadefs.h \
- C:/Users/danya/gcc/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
- C:/Users/danya/gcc/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
- C:/Users/danya/gcc/x86_64-w64-mingw32/include/stdint.h \
+ Z:/dev/cpp/Vladot/external/lua/src/luaconf.h \
  C:/Users/danya/gcc/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h \
  C:/Users/danya/gcc/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h \
  C:/Users/danya/gcc/x86_64-w64-mingw32/include/limits.h \
+ Z:/dev/cpp/Vladot/external/lua/src/lualib.h \
+ Z:/dev/cpp/Vladot/external/lua/src/lauxlib.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/stdio.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/_mingw_off_t.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/swprintf.inl \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/functional \
+ C:/Users/danya/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/os_defines.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/pstl/pstl_config.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_function.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/move.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/type_traits \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/version.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/backward/binders.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/tuple \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_pair.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/utility.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/uses_allocator.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/invoke.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/functional_hash.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/hash_bytes.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/refwrap.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/std_function.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/new \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/exception.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/typeinfo \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/functexcept.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/exception_defines.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/unordered_map \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/requires_hosted.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/initializer_list \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/unordered_map.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/hashtable.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/hashtable_policy.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_algobase.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/cpp_type_traits.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/ext/type_traits.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/ext/numeric_traits.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_iterator_base_types.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_iterator_base_funcs.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/concept_check.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/debug/assertions.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_iterator.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/ptr_traits.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/debug/debug.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/predefined_ops.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bit \
+ C:/Users/danya/gcc/include/c++/14.2.0/concepts \
+ C:/Users/danya/gcc/include/c++/14.2.0/ext/aligned_buffer.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/ext/alloc_traits.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/alloc_traits.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_construct.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/memoryfwd.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/allocator.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/new_allocator.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/enable_special_members.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/node_handle.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/range_access.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/erase_if.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/memory_resource.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/cstddef \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/uses_allocator_args.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/vector \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_uninitialized.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_vector.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_bvector.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/vector.tcc \
+ C:/Users/danya/gcc/include/c++/14.2.0/array \
+ C:/Users/danya/gcc/include/c++/14.2.0/compare \
+ Z:/dev/cpp/Vladot/external/sol2/include/sol/sol.hpp \
+ Z:/dev/cpp/Vladot/external/sol2/include/sol/version.hpp \
+ Z:/dev/cpp/Vladot/external/sol2/include/sol/config.hpp \
+ C:/Users/danya/gcc/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
+ C:/Users/danya/gcc/x86_64-w64-mingw32/include/stdint.h \
  Z:/dev/cpp/Vladot/external/sol2/include/sol/prologue.hpp \
  Z:/dev/cpp/Vladot/external/sol2/include/sol/epilogue.hpp \
  Z:/dev/cpp/Vladot/external/sol2/include/sol/detail/build_version.hpp \
  Z:/dev/cpp/Vladot/external/sol2/include/sol/forward.hpp \
  C:/Users/danya/gcc/include/c++/14.2.0/utility \
- C:/Users/danya/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
- C:/Users/danya/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/os_defines.h \
- C:/Users/danya/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
- C:/Users/danya/gcc/include/c++/14.2.0/pstl/pstl_config.h \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_relops.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_pair.h \
- C:/Users/danya/gcc/include/c++/14.2.0/type_traits \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/version.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/move.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/utility.h \
- C:/Users/danya/gcc/include/c++/14.2.0/initializer_list \
  C:/Users/danya/gcc/include/c++/14.2.0/string_view \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/char_traits.h \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/postypes.h \
  C:/Users/danya/gcc/include/c++/14.2.0/cwchar \
  C:/Users/danya/gcc/x86_64-w64-mingw32/include/wchar.h \
- C:/Users/danya/gcc/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  C:/Users/danya/gcc/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
- C:/Users/danya/gcc/x86_64-w64-mingw32/include/_mingw_off_t.h \
  C:/Users/danya/gcc/x86_64-w64-mingw32/include/_mingw_stat64.h \
- C:/Users/danya/gcc/x86_64-w64-mingw32/include/swprintf.inl \
  C:/Users/danya/gcc/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/functexcept.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/exception_defines.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/functional_hash.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/hash_bytes.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/range_access.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_iterator.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/cpp_type_traits.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_iterator_base_types.h \
- C:/Users/danya/gcc/include/c++/14.2.0/ext/type_traits.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/ptr_traits.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_algobase.h \
- C:/Users/danya/gcc/include/c++/14.2.0/ext/numeric_traits.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_iterator_base_funcs.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/concept_check.h \
- C:/Users/danya/gcc/include/c++/14.2.0/debug/assertions.h \
- C:/Users/danya/gcc/include/c++/14.2.0/debug/debug.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/predefined_ops.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bit \
- C:/Users/danya/gcc/include/c++/14.2.0/concepts \
  C:/Users/danya/gcc/include/c++/14.2.0/iosfwd \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/requires_hosted.h \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/stringfwd.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/memoryfwd.h \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/ostream_insert.h \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/cxxabi_forced.h \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/string_view.tcc \
@@ -75,34 +120,16 @@ CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.obj: \
  Z:/dev/cpp/Vladot/external/sol2/include/sol/traits.hpp \
  Z:/dev/cpp/Vladot/external/sol2/include/sol/tuple.hpp \
  Z:/dev/cpp/Vladot/external/sol2/include/sol/base_traits.hpp \
- C:/Users/danya/gcc/include/c++/14.2.0/tuple \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/uses_allocator.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/invoke.h \
- C:/Users/danya/gcc/include/c++/14.2.0/cstddef \
  Z:/dev/cpp/Vladot/external/sol2/include/sol/bind_traits.hpp \
  Z:/dev/cpp/Vladot/external/sol2/include/sol/pointer_like.hpp \
  C:/Users/danya/gcc/include/c++/14.2.0/memory \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/allocator.h \
- C:/Users/danya/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/new_allocator.h \
- C:/Users/danya/gcc/include/c++/14.2.0/new \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/exception.h \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_tempbuf.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_construct.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_uninitialized.h \
- C:/Users/danya/gcc/include/c++/14.2.0/ext/alloc_traits.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/alloc_traits.h \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_raw_storage_iter.h \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/align.h \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/unique_ptr.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_function.h \
- C:/Users/danya/gcc/include/c++/14.2.0/backward/binders.h \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/shared_ptr.h \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/shared_ptr_base.h \
- C:/Users/danya/gcc/include/c++/14.2.0/typeinfo \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/allocated_ptr.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/refwrap.h \
- C:/Users/danya/gcc/include/c++/14.2.0/ext/aligned_buffer.h \
  C:/Users/danya/gcc/include/c++/14.2.0/ext/atomicity.h \
  C:/Users/danya/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr.h \
  C:/Users/danya/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
@@ -134,8 +161,6 @@ CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.obj: \
  C:/Users/danya/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h \
  C:/Users/danya/gcc/include/c++/14.2.0/clocale \
  C:/Users/danya/gcc/x86_64-w64-mingw32/include/locale.h \
- C:/Users/danya/gcc/x86_64-w64-mingw32/include/stdio.h \
- C:/Users/danya/gcc/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
  C:/Users/danya/gcc/include/c++/14.2.0/cctype \
  C:/Users/danya/gcc/x86_64-w64-mingw32/include/ctype.h \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/basic_string.h \
@@ -144,23 +169,6 @@ CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.obj: \
  C:/Users/danya/gcc/include/c++/14.2.0/cerrno \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/charconv.h \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/basic_string.tcc \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/memory_resource.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/uses_allocator_args.h \
- C:/Users/danya/gcc/include/c++/14.2.0/functional \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/std_function.h \
- C:/Users/danya/gcc/include/c++/14.2.0/unordered_map \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/unordered_map.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/hashtable.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/hashtable_policy.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/enable_special_members.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/node_handle.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/erase_if.h \
- C:/Users/danya/gcc/include/c++/14.2.0/vector \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_vector.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_bvector.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/vector.tcc \
- C:/Users/danya/gcc/include/c++/14.2.0/array \
- C:/Users/danya/gcc/include/c++/14.2.0/compare \
  C:/Users/danya/gcc/include/c++/14.2.0/cstdint \
  C:/Users/danya/gcc/include/c++/14.2.0/iterator \
  C:/Users/danya/gcc/include/c++/14.2.0/bits/stream_iterator.h \
@@ -193,14 +201,6 @@ CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.obj: \
  Z:/dev/cpp/Vladot/external/sol2/include/sol/bytecode.hpp \
  Z:/dev/cpp/Vladot/external/sol2/include/sol/compatibility.hpp \
  Z:/dev/cpp/Vladot/external/sol2/include/sol/compatibility/lua_version.hpp \
- Z:/dev/cpp/Vladot/external/lua/src/lua.hpp \
- Z:/dev/cpp/Vladot/external/lua/src/lua.h \
- C:/Users/danya/gcc/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdarg.h \
- C:/Users/danya/gcc/x86_64-w64-mingw32/include/stdarg.h \
- C:/Users/danya/gcc/x86_64-w64-mingw32/include/_mingw_stdarg.h \
- Z:/dev/cpp/Vladot/external/lua/src/luaconf.h \
- Z:/dev/cpp/Vladot/external/lua/src/lualib.h \
- Z:/dev/cpp/Vladot/external/lua/src/lauxlib.h \
  Z:/dev/cpp/Vladot/external/sol2/include/sol/compatibility/compat-5.3.h \
  C:/Users/danya/gcc/x86_64-w64-mingw32/include/string.h \
  C:/Users/danya/gcc/x86_64-w64-mingw32/include/sec_api/string_s.h \
@@ -342,8 +342,6 @@ CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.obj: \
  Z:/dev/cpp/Vladot/external/sol2/include/sol/variadic_args.hpp \
  Z:/dev/cpp/Vladot/external/sol2/include/sol/variadic_results.hpp \
  Z:/dev/cpp/Vladot/external/sol2/include/sol/as_returns.hpp \
- Z:/dev/cpp/Vladot/src/object/Object.hpp \
- Z:/dev/cpp/Vladot/src/object/game_object/GameObject.hpp \
  Z:/dev/cpp/Vladot/external/glm/glm/glm.hpp \
  Z:/dev/cpp/Vladot/external/glm/glm/detail/_fixes.hpp \
  Z:/dev/cpp/Vladot/external/glm/glm/detail/setup.hpp \
@@ -483,11 +481,36 @@ CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.obj: \
  Z:/dev/cpp/Vladot/external/glm/glm/detail/type_half.inl \
  Z:/dev/cpp/Vladot/external/glm/glm/integer.hpp \
  Z:/dev/cpp/Vladot/external/glm/glm/detail/func_integer.inl \
- Z:/dev/cpp/Vladot/src/object/game_object/game_object_2d/GameObject2D.hpp \
- Z:/dev/cpp/Vladot/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.hpp \
- Z:/dev/cpp/Vladot/src/object/resource/texture_resource/TextureResource.hpp \
+ Z:/dev/cpp/Vladot/src/engine_api/EngineAPI.hpp \
+ C:/Users/danya/gcc/include/c++/14.2.0/map \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_tree.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_map.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_multimap.h \
+ Z:/dev/cpp/Vladot/src/object/Object.hpp \
+ Z:/dev/cpp/Vladot/src/object/resource/ResourceLoader.hpp \
+ C:/Users/danya/gcc/include/c++/14.2.0/typeindex \
  Z:/dev/cpp/Vladot/src/object/resource/Resource.hpp \
  Z:/dev/cpp/Vladot/src/object/ref_counted/RefCounted.hpp \
+ Z:/dev/cpp/Vladot/src/virtual_fs/VirtualFS.hpp \
+ C:/Users/danya/gcc/include/c++/14.2.0/filesystem \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/fs_fwd.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/chrono.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/ratio \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/fs_path.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/iomanip \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/quoted_string.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/codecvt \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/fs_dir.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/fs_ops.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/fstream \
+ C:/Users/danya/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h \
+ C:/Users/danya/gcc/include/c++/14.2.0/bits/fstream.tcc \
+ Z:/dev/cpp/Vladot/external/miniz/miniz.h \
+ Z:/dev/cpp/Vladot/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.hpp \
+ Z:/dev/cpp/Vladot/src/object/game_object/game_object_2d/GameObject2D.hpp \
+ Z:/dev/cpp/Vladot/src/object/game_object/GameObject.hpp \
+ Z:/dev/cpp/Vladot/src/object/resource/texture_resource/TextureResource.hpp \
  Z:/dev/cpp/Vladot/external/glad/include/glad/glad.h \
  Z:/dev/cpp/Vladot/external/glad/include/KHR/khrplatform.h \
  Z:/dev/cpp/Vladot/src/object/resource/shader_resource/ShaderResource.hpp \
@@ -540,26 +563,4 @@ CMakeFiles/VladotEngine.dir/src/lua_binder/LuaBinder.cpp.obj: \
  Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_uint1.hpp \
  Z:/dev/cpp/Vladot/external/glm/glm/ext/vector_uint1_sized.hpp \
  Z:/dev/cpp/Vladot/external/glm/glm/gtc/type_ptr.inl \
- Z:/dev/cpp/Vladot/src/object/scene_tree/SceneTree.hpp \
- Z:/dev/cpp/Vladot/src/object/resource/ResourceLoader.hpp \
- C:/Users/danya/gcc/include/c++/14.2.0/map \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_tree.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_map.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/stl_multimap.h \
- C:/Users/danya/gcc/include/c++/14.2.0/typeindex \
- Z:/dev/cpp/Vladot/src/virtual_fs/VirtualFS.hpp \
- C:/Users/danya/gcc/include/c++/14.2.0/filesystem \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/fs_fwd.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/chrono.h \
- C:/Users/danya/gcc/include/c++/14.2.0/ratio \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/fs_path.h \
- C:/Users/danya/gcc/include/c++/14.2.0/iomanip \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/quoted_string.h \
- C:/Users/danya/gcc/include/c++/14.2.0/codecvt \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/fs_dir.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/fs_ops.h \
- C:/Users/danya/gcc/include/c++/14.2.0/fstream \
- C:/Users/danya/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h \
- C:/Users/danya/gcc/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h \
- C:/Users/danya/gcc/include/c++/14.2.0/bits/fstream.tcc \
- Z:/dev/cpp/Vladot/external/miniz/miniz.h
+ Z:/dev/cpp/Vladot/src/object/scene_tree/SceneTree.hpp

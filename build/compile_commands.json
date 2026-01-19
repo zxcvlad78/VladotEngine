@@ -25,27 +25,9 @@
 },
 {
   "directory": "Z:/dev/cpp/Vladot/build",
-  "command": "C:/Users/danya/gcc/bin/g++.exe -DLUA_VERSION_NUM=504 @CMakeFiles/VladotEngine.dir/includes_CXX.rsp -g -o CMakeFiles/VladotEngine.dir/src/object/Object.cpp.obj -c Z:/dev/cpp/Vladot/src/object/Object.cpp",
-  "file": "Z:/dev/cpp/Vladot/src/object/Object.cpp",
-  "output": "CMakeFiles/VladotEngine.dir/src/object/Object.cpp.obj"
-},
-{
-  "directory": "Z:/dev/cpp/Vladot/build",
   "command": "C:/Users/danya/gcc/bin/g++.exe -DLUA_VERSION_NUM=504 @CMakeFiles/VladotEngine.dir/includes_CXX.rsp -g -o CMakeFiles/VladotEngine.dir/src/object/scene_tree/SceneTree.cpp.obj -c Z:/dev/cpp/Vladot/src/object/scene_tree/SceneTree.cpp",
   "file": "Z:/dev/cpp/Vladot/src/object/scene_tree/SceneTree.cpp",
   "output": "CMakeFiles/VladotEngine.dir/src/object/scene_tree/SceneTree.cpp.obj"
-},
-{
-  "directory": "Z:/dev/cpp/Vladot/build",
-  "command": "C:/Users/danya/gcc/bin/g++.exe -DLUA_VERSION_NUM=504 @CMakeFiles/VladotEngine.dir/includes_CXX.rsp -g -o CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.obj -c Z:/dev/cpp/Vladot/src/object/game_object/GameObject.cpp",
-  "file": "Z:/dev/cpp/Vladot/src/object/game_object/GameObject.cpp",
-  "output": "CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.obj"
-},
-{
-  "directory": "Z:/dev/cpp/Vladot/build",
-  "command": "C:/Users/danya/gcc/bin/g++.exe -DLUA_VERSION_NUM=504 @CMakeFiles/VladotEngine.dir/includes_CXX.rsp -g -o CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.obj -c Z:/dev/cpp/Vladot/src/object/game_object/game_object_2d/GameObject2D.cpp",
-  "file": "Z:/dev/cpp/Vladot/src/object/game_object/game_object_2d/GameObject2D.cpp",
-  "output": "CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.obj"
 },
 {
   "directory": "Z:/dev/cpp/Vladot/build",
@@ -64,6 +46,12 @@
   "command": "C:/Users/danya/gcc/bin/g++.exe -DLUA_VERSION_NUM=504 @CMakeFiles/VladotEngine.dir/includes_CXX.rsp -g -o CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.obj -c Z:/dev/cpp/Vladot/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp",
   "file": "Z:/dev/cpp/Vladot/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp",
   "output": "CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.obj"
+},
+{
+  "directory": "Z:/dev/cpp/Vladot/build",
+  "command": "C:/Users/danya/gcc/bin/g++.exe -DLUA_VERSION_NUM=504 @CMakeFiles/VladotEngine.dir/includes_CXX.rsp -g -o CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/custom_mesh/CustomMesh.cpp.obj -c Z:/dev/cpp/Vladot/src/object/game_object/game_object_2d/custom_mesh/CustomMesh.cpp",
+  "file": "Z:/dev/cpp/Vladot/src/object/game_object/game_object_2d/custom_mesh/CustomMesh.cpp",
+  "output": "CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/custom_mesh/CustomMesh.cpp.obj"
 },
 {
   "directory": "Z:/dev/cpp/Vladot/build/external/glfw/src",

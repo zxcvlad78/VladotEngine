@@ -5,7 +5,7 @@ events:
     kind: "message-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineSystem.cmake:205 (message)"
-      - "CMakeLists.txt:5 (project)"
+      - "CMakeLists.txt:4 (project)"
     message: |
       The system is: Windows - 10.0.26100 - AMD64
   -
@@ -14,7 +14,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:5 (project)"
+      - "CMakeLists.txt:4 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
       Compiler: C:/Users/danya/gcc/bin/gcc.exe 
@@ -36,7 +36,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:5 (project)"
+      - "CMakeLists.txt:4 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler: C:/Users/danya/gcc/bin/g++.exe 
@@ -57,12 +57,12 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:5 (project)"
+      - "CMakeLists.txt:4 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-lyl6qp"
-      binary: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-lyl6qp"
+      source: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-y3t3mj"
+      binary: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-y3t3mj"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -71,13 +71,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-lyl6qp'
+        Change Dir: 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-y3t3mj'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/danya/gcc/bin/make.exe -f Makefile cmTC_6a5f5/fast
-        C:/Users/danya/gcc/bin/make.exe  -f CMakeFiles/cmTC_6a5f5.dir/build.make CMakeFiles/cmTC_6a5f5.dir/build
-        make[1]: Entering directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-lyl6qp'
-        Building C object CMakeFiles/cmTC_6a5f5.dir/CMakeCCompilerABI.c.obj
-        C:/Users/danya/gcc/bin/gcc.exe   -v -o CMakeFiles/cmTC_6a5f5.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c"
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/danya/gcc/bin/make.exe -f Makefile cmTC_cdc76/fast
+        C:/Users/danya/gcc/bin/make.exe  -f CMakeFiles/cmTC_cdc76.dir/build.make CMakeFiles/cmTC_cdc76.dir/build
+        make[1]: Entering directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-y3t3mj'
+        Building C object CMakeFiles/cmTC_cdc76.dir/CMakeCCompilerABI.c.obj
+        C:/Users/danya/gcc/bin/gcc.exe   -v -o CMakeFiles/cmTC_cdc76.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c"
         Built by Equation Solution <http://www.Equation.com>.
         Using built-in specs.
         COLLECT_GCC=C:/Users/danya/gcc/bin/gcc.exe
@@ -86,8 +86,8 @@ events:
         Thread model: win32
         Supported LTO compression algorithms: zlib
         gcc version 14.2.0 (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6a5f5.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6a5f5.dir/'
-         C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1.exe -quiet -v -iprefix C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -U_REENTRANT C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_6a5f5.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\danya\\AppData\\Local\\Temp\\ccjo6qbi.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cdc76.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_cdc76.dir/'
+         C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1.exe -quiet -v -iprefix C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -U_REENTRANT C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_cdc76.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\danya\\AppData\\Local\\Temp\\ccT1kbRa.s
         GNU C17 (GCC) version 14.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 14.1.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -103,16 +103,16 @@ events:
          C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include
         End of search list.
         Compiler executable checksum: 9cb5df469d6e63be7b7800c5266d461e
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6a5f5.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6a5f5.dir/'
-         C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_6a5f5.dir/CMakeCCompilerABI.c.obj C:\\Users\\danya\\AppData\\Local\\Temp\\ccjo6qbi.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cdc76.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_cdc76.dir/'
+         C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_cdc76.dir/CMakeCCompilerABI.c.obj C:\\Users\\danya\\AppData\\Local\\Temp\\ccT1kbRa.s
         GNU assembler version 2.41 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.41
         COMPILER_PATH=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/danya/gcc/bin/../libexec/gcc/;C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/danya/gcc/bin/../lib/gcc/;C:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/../lib/;C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/;C:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/;C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6a5f5.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6a5f5.dir/CMakeCCompilerABI.c.'
-        Linking C executable cmTC_6a5f5.exe
-        "C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/cmTC_6a5f5.dir/objects.a
-        C:/Users/danya/gcc/bin/ar.exe qc CMakeFiles/cmTC_6a5f5.dir/objects.a @CMakeFiles/cmTC_6a5f5.dir/objects1.rsp
-        C:/Users/danya/gcc/bin/gcc.exe -v -Wl,-v -Wl,--whole-archive CMakeFiles/cmTC_6a5f5.dir/objects.a -Wl,--no-whole-archive -o cmTC_6a5f5.exe -Wl,--out-implib,libcmTC_6a5f5.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cdc76.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_cdc76.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_cdc76.exe
+        "C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/cmTC_cdc76.dir/objects.a
+        C:/Users/danya/gcc/bin/ar.exe qc CMakeFiles/cmTC_cdc76.dir/objects.a @CMakeFiles/cmTC_cdc76.dir/objects1.rsp
+        C:/Users/danya/gcc/bin/gcc.exe -v -Wl,-v -Wl,--whole-archive CMakeFiles/cmTC_cdc76.dir/objects.a -Wl,--no-whole-archive -o cmTC_cdc76.exe -Wl,--out-implib,libcmTC_cdc76.dll.a -Wl,--major-image-version,0,--minor-image-version,0
         Built by Equation Solution <http://www.Equation.com>.
         Using built-in specs.
         COLLECT_GCC=C:/Users/danya/gcc/bin/gcc.exe
@@ -124,13 +124,13 @@ events:
         gcc version 14.2.0 (GCC) 
         COMPILER_PATH=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/danya/gcc/bin/../libexec/gcc/;C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/danya/gcc/bin/../lib/gcc/;C:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/../lib/;C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/;C:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/;C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6a5f5.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_6a5f5.'
-         C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\danya\\AppData\\Local\\Temp\\cc6ajiUS.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_6a5f5.exe C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/danya/gcc/bin/../lib/gcc -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles/cmTC_6a5f5.dir/objects.a --no-whole-archive --out-implib libcmTC_6a5f5.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cdc76.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_cdc76.'
+         C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\danya\\AppData\\Local\\Temp\\ccX10g5k.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_cdc76.exe C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/danya/gcc/bin/../lib/gcc -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles/cmTC_cdc76.dir/objects.a --no-whole-archive --out-implib libcmTC_cdc76.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
         collect2 version 14.2.0
-        C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\danya\\AppData\\Local\\Temp\\cc6ajiUS.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_6a5f5.exe C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/danya/gcc/bin/../lib/gcc -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles/cmTC_6a5f5.dir/objects.a --no-whole-archive --out-implib libcmTC_6a5f5.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
+        C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\danya\\AppData\\Local\\Temp\\ccX10g5k.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_cdc76.exe C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/danya/gcc/bin/../lib/gcc -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles/cmTC_cdc76.dir/objects.a --no-whole-archive --out-implib libcmTC_cdc76.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
         GNU ld (GNU Binutils) 2.41
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6a5f5.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_6a5f5.'
-        make[1]: Leaving directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-lyl6qp'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cdc76.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_cdc76.'
+        make[1]: Leaving directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-y3t3mj'
         
       exitCode: 0
   -
@@ -138,7 +138,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:191 (message)"
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:5 (project)"
+      - "CMakeLists.txt:4 (project)"
     message: |
       Parsed C implicit include dir info: rv=done
         found start of include info
@@ -158,18 +158,18 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:227 (message)"
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:5 (project)"
+      - "CMakeLists.txt:4 (project)"
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-lyl6qp']
+        ignore line: [Change Dir: 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-y3t3mj']
         ignore line: []
-        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/danya/gcc/bin/make.exe -f Makefile cmTC_6a5f5/fast]
-        ignore line: [C:/Users/danya/gcc/bin/make.exe  -f CMakeFiles/cmTC_6a5f5.dir/build.make CMakeFiles/cmTC_6a5f5.dir/build]
-        ignore line: [make[1]: Entering directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-lyl6qp']
-        ignore line: [Building C object CMakeFiles/cmTC_6a5f5.dir/CMakeCCompilerABI.c.obj]
-        ignore line: [C:/Users/danya/gcc/bin/gcc.exe   -v -o CMakeFiles/cmTC_6a5f5.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c"]
+        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/danya/gcc/bin/make.exe -f Makefile cmTC_cdc76/fast]
+        ignore line: [C:/Users/danya/gcc/bin/make.exe  -f CMakeFiles/cmTC_cdc76.dir/build.make CMakeFiles/cmTC_cdc76.dir/build]
+        ignore line: [make[1]: Entering directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-y3t3mj']
+        ignore line: [Building C object CMakeFiles/cmTC_cdc76.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [C:/Users/danya/gcc/bin/gcc.exe   -v -o CMakeFiles/cmTC_cdc76.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c"]
         ignore line: [Built by Equation Solution <http://www.Equation.com>.]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:/Users/danya/gcc/bin/gcc.exe]
@@ -178,8 +178,8 @@ events:
         ignore line: [Thread model: win32]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.2.0 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6a5f5.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6a5f5.dir/']
-        ignore line: [ C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1.exe -quiet -v -iprefix C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -U_REENTRANT C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_6a5f5.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\danya\\AppData\\Local\\Temp\\ccjo6qbi.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cdc76.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_cdc76.dir/']
+        ignore line: [ C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1.exe -quiet -v -iprefix C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -U_REENTRANT C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_cdc76.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\danya\\AppData\\Local\\Temp\\ccT1kbRa.s]
         ignore line: [GNU C17 (GCC) version 14.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 14.1.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -195,8 +195,8 @@ events:
         ignore line: [ C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 9cb5df469d6e63be7b7800c5266d461e]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6a5f5.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6a5f5.dir/']
-        ignore line: [ C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_6a5f5.dir/CMakeCCompilerABI.c.obj C:\\Users\\danya\\AppData\\Local\\Temp\\ccjo6qbi.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cdc76.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_cdc76.dir/']
+        ignore line: [ C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_cdc76.dir/CMakeCCompilerABI.c.obj C:\\Users\\danya\\AppData\\Local\\Temp\\ccT1kbRa.s]
         ignore line: [GNU assembler version 2.41 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.41]
         ignore line: [COMPILER_PATH=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/]
         ignore line: [C:/Users/danya/gcc/bin/../libexec/gcc/]
@@ -209,11 +209,11 @@ events:
         ignore line: [C:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/]
         ignore line: [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6a5f5.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6a5f5.dir/CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_6a5f5.exe]
-        ignore line: ["C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/cmTC_6a5f5.dir/objects.a]
-        ignore line: [C:/Users/danya/gcc/bin/ar.exe qc CMakeFiles/cmTC_6a5f5.dir/objects.a @CMakeFiles/cmTC_6a5f5.dir/objects1.rsp]
-        ignore line: [C:/Users/danya/gcc/bin/gcc.exe -v -Wl -v -Wl --whole-archive CMakeFiles/cmTC_6a5f5.dir/objects.a -Wl --no-whole-archive -o cmTC_6a5f5.exe -Wl --out-implib libcmTC_6a5f5.dll.a -Wl --major-image-version 0 --minor-image-version 0]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cdc76.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_cdc76.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_cdc76.exe]
+        ignore line: ["C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/cmTC_cdc76.dir/objects.a]
+        ignore line: [C:/Users/danya/gcc/bin/ar.exe qc CMakeFiles/cmTC_cdc76.dir/objects.a @CMakeFiles/cmTC_cdc76.dir/objects1.rsp]
+        ignore line: [C:/Users/danya/gcc/bin/gcc.exe -v -Wl -v -Wl --whole-archive CMakeFiles/cmTC_cdc76.dir/objects.a -Wl --no-whole-archive -o cmTC_cdc76.exe -Wl --out-implib libcmTC_cdc76.dll.a -Wl --major-image-version 0 --minor-image-version 0]
         ignore line: [Built by Equation Solution <http://www.Equation.com>.]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:/Users/danya/gcc/bin/gcc.exe]
@@ -234,13 +234,13 @@ events:
         ignore line: [C:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/]
         ignore line: [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6a5f5.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_6a5f5.']
-        link line: [ C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\danya\\AppData\\Local\\Temp\\cc6ajiUS.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_6a5f5.exe C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/danya/gcc/bin/../lib/gcc -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles/cmTC_6a5f5.dir/objects.a --no-whole-archive --out-implib libcmTC_6a5f5.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cdc76.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_cdc76.']
+        link line: [ C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\danya\\AppData\\Local\\Temp\\ccX10g5k.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_cdc76.exe C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/danya/gcc/bin/../lib/gcc -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles/cmTC_cdc76.dir/objects.a --no-whole-archive --out-implib libcmTC_cdc76.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
           arg [C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\danya\\AppData\\Local\\Temp\\cc6ajiUS.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\danya\\AppData\\Local\\Temp\\ccX10g5k.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
@@ -260,7 +260,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_6a5f5.exe] ==> ignore
+          arg [cmTC_cdc76.exe] ==> ignore
           arg [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o] ==> obj [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o]
           arg [-LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0] ==> dir [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0]
@@ -273,10 +273,10 @@ events:
           arg [-LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../..] ==> dir [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../..]
           arg [-v] ==> ignore
           arg [--whole-archive] ==> ignore
-          arg [CMakeFiles/cmTC_6a5f5.dir/objects.a] ==> ignore
+          arg [CMakeFiles/cmTC_cdc76.dir/objects.a] ==> ignore
           arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_6a5f5.dll.a] ==> ignore
+          arg [libcmTC_cdc76.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -297,7 +297,7 @@ events:
           arg [-lkernel32] ==> lib [kernel32]
           arg [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o] ==> obj [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
         ignore line: [collect2 version 14.2.0]
-        ignore line: [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\danya\\AppData\\Local\\Temp\\cc6ajiUS.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_6a5f5.exe C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/danya/gcc/bin/../lib/gcc -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles/cmTC_6a5f5.dir/objects.a --no-whole-archive --out-implib libcmTC_6a5f5.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
+        ignore line: [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\danya\\AppData\\Local\\Temp\\ccX10g5k.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_cdc76.exe C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/danya/gcc/bin/../lib/gcc -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles/cmTC_cdc76.dir/objects.a --no-whole-archive --out-implib libcmTC_cdc76.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
         linker tool for 'C': C:/Users/danya/gcc/x86_64-w64-mingw32/bin/ld.exe
         remove lib [msvcrt]
         remove lib [msvcrt]
@@ -324,7 +324,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:270 (cmake_determine_linker_id)"
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:5 (project)"
+      - "CMakeLists.txt:4 (project)"
     message: |
       Running the C compiler's linker: "C:/Users/danya/gcc/x86_64-w64-mingw32/bin/ld.exe" "-v"
       GNU ld (GNU Binutils) 2.41
@@ -333,12 +333,12 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:5 (project)"
+      - "CMakeLists.txt:4 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-be2d13"
-      binary: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-be2d13"
+      source: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-ci7vgd"
+      binary: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-ci7vgd"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -348,13 +348,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-be2d13'
+        Change Dir: 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-ci7vgd'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/danya/gcc/bin/make.exe -f Makefile cmTC_ccf90/fast
-        C:/Users/danya/gcc/bin/make.exe  -f CMakeFiles/cmTC_ccf90.dir/build.make CMakeFiles/cmTC_ccf90.dir/build
-        make[1]: Entering directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-be2d13'
-        Building CXX object CMakeFiles/cmTC_ccf90.dir/CMakeCXXCompilerABI.cpp.obj
-        C:/Users/danya/gcc/bin/g++.exe   -v -o CMakeFiles/cmTC_ccf90.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp"
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/danya/gcc/bin/make.exe -f Makefile cmTC_bdd99/fast
+        C:/Users/danya/gcc/bin/make.exe  -f CMakeFiles/cmTC_bdd99.dir/build.make CMakeFiles/cmTC_bdd99.dir/build
+        make[1]: Entering directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-ci7vgd'
+        Building CXX object CMakeFiles/cmTC_bdd99.dir/CMakeCXXCompilerABI.cpp.obj
+        C:/Users/danya/gcc/bin/g++.exe   -v -o CMakeFiles/cmTC_bdd99.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp"
         Built by Equation Solution <http://www.Equation.com>.
         Using built-in specs.
         COLLECT_GCC=C:/Users/danya/gcc/bin/g++.exe
@@ -363,8 +363,8 @@ events:
         Thread model: win32
         Supported LTO compression algorithms: zlib
         gcc version 14.2.0 (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ccf90.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ccf90.dir/'
-         C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1plus.exe -quiet -v -iprefix C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -U_REENTRANT C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_ccf90.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\danya\\AppData\\Local\\Temp\\ccViCoFw.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_bdd99.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_bdd99.dir/'
+         C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1plus.exe -quiet -v -iprefix C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -U_REENTRANT C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_bdd99.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\danya\\AppData\\Local\\Temp\\ccd0N8r6.s
         GNU C++17 (GCC) version 14.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 14.1.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -386,16 +386,16 @@ events:
          C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include
         End of search list.
         Compiler executable checksum: 2cdd3e89952d411c6c1bf705b5926036
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ccf90.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ccf90.dir/'
-         C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_ccf90.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\danya\\AppData\\Local\\Temp\\ccViCoFw.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_bdd99.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_bdd99.dir/'
+         C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_bdd99.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\danya\\AppData\\Local\\Temp\\ccd0N8r6.s
         GNU assembler version 2.41 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.41
         COMPILER_PATH=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/danya/gcc/bin/../libexec/gcc/;C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/danya/gcc/bin/../lib/gcc/;C:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/../lib/;C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/;C:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/;C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ccf90.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ccf90.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_ccf90.exe
-        "C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/cmTC_ccf90.dir/objects.a
-        C:/Users/danya/gcc/bin/ar.exe qc CMakeFiles/cmTC_ccf90.dir/objects.a @CMakeFiles/cmTC_ccf90.dir/objects1.rsp
-        C:/Users/danya/gcc/bin/g++.exe -v -Wl,-v -Wl,--whole-archive CMakeFiles/cmTC_ccf90.dir/objects.a -Wl,--no-whole-archive -o cmTC_ccf90.exe -Wl,--out-implib,libcmTC_ccf90.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_bdd99.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_bdd99.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_bdd99.exe
+        "C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/cmTC_bdd99.dir/objects.a
+        C:/Users/danya/gcc/bin/ar.exe qc CMakeFiles/cmTC_bdd99.dir/objects.a @CMakeFiles/cmTC_bdd99.dir/objects1.rsp
+        C:/Users/danya/gcc/bin/g++.exe -v -Wl,-v -Wl,--whole-archive CMakeFiles/cmTC_bdd99.dir/objects.a -Wl,--no-whole-archive -o cmTC_bdd99.exe -Wl,--out-implib,libcmTC_bdd99.dll.a -Wl,--major-image-version,0,--minor-image-version,0
         Built by Equation Solution <http://www.Equation.com>.
         Using built-in specs.
         COLLECT_GCC=C:/Users/danya/gcc/bin/g++.exe
@@ -407,13 +407,13 @@ events:
         gcc version 14.2.0 (GCC) 
         COMPILER_PATH=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/danya/gcc/bin/../libexec/gcc/;C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/;C:/Users/danya/gcc/bin/../lib/gcc/;C:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/../lib/;C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/;C:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/;C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ccf90.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_ccf90.'
-         C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\danya\\AppData\\Local\\Temp\\cctAMBLC.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_ccf90.exe C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/danya/gcc/bin/../lib/gcc -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles/cmTC_ccf90.dir/objects.a --no-whole-archive --out-implib libcmTC_ccf90.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bdd99.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_bdd99.'
+         C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\danya\\AppData\\Local\\Temp\\cc7wz6Xb.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_bdd99.exe C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/danya/gcc/bin/../lib/gcc -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles/cmTC_bdd99.dir/objects.a --no-whole-archive --out-implib libcmTC_bdd99.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
         collect2 version 14.2.0
-        C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\danya\\AppData\\Local\\Temp\\cctAMBLC.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_ccf90.exe C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/danya/gcc/bin/../lib/gcc -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles/cmTC_ccf90.dir/objects.a --no-whole-archive --out-implib libcmTC_ccf90.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
+        C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\danya\\AppData\\Local\\Temp\\cc7wz6Xb.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_bdd99.exe C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/danya/gcc/bin/../lib/gcc -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles/cmTC_bdd99.dir/objects.a --no-whole-archive --out-implib libcmTC_bdd99.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
         GNU ld (GNU Binutils) 2.41
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ccf90.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_ccf90.'
-        make[1]: Leaving directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-be2d13'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bdd99.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_bdd99.'
+        make[1]: Leaving directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-ci7vgd'
         
       exitCode: 0
   -
@@ -421,7 +421,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:191 (message)"
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:5 (project)"
+      - "CMakeLists.txt:4 (project)"
     message: |
       Parsed CXX implicit include dir info: rv=done
         found start of include info
@@ -447,18 +447,18 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:227 (message)"
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:5 (project)"
+      - "CMakeLists.txt:4 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-be2d13']
+        ignore line: [Change Dir: 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-ci7vgd']
         ignore line: []
-        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/danya/gcc/bin/make.exe -f Makefile cmTC_ccf90/fast]
-        ignore line: [C:/Users/danya/gcc/bin/make.exe  -f CMakeFiles/cmTC_ccf90.dir/build.make CMakeFiles/cmTC_ccf90.dir/build]
-        ignore line: [make[1]: Entering directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-be2d13']
-        ignore line: [Building CXX object CMakeFiles/cmTC_ccf90.dir/CMakeCXXCompilerABI.cpp.obj]
-        ignore line: [C:/Users/danya/gcc/bin/g++.exe   -v -o CMakeFiles/cmTC_ccf90.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp"]
+        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/danya/gcc/bin/make.exe -f Makefile cmTC_bdd99/fast]
+        ignore line: [C:/Users/danya/gcc/bin/make.exe  -f CMakeFiles/cmTC_bdd99.dir/build.make CMakeFiles/cmTC_bdd99.dir/build]
+        ignore line: [make[1]: Entering directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-ci7vgd']
+        ignore line: [Building CXX object CMakeFiles/cmTC_bdd99.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [C:/Users/danya/gcc/bin/g++.exe   -v -o CMakeFiles/cmTC_bdd99.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp"]
         ignore line: [Built by Equation Solution <http://www.Equation.com>.]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:/Users/danya/gcc/bin/g++.exe]
@@ -467,8 +467,8 @@ events:
         ignore line: [Thread model: win32]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.2.0 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ccf90.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ccf90.dir/']
-        ignore line: [ C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1plus.exe -quiet -v -iprefix C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -U_REENTRANT C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_ccf90.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\danya\\AppData\\Local\\Temp\\ccViCoFw.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_bdd99.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_bdd99.dir/']
+        ignore line: [ C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/cc1plus.exe -quiet -v -iprefix C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/ -U_REENTRANT C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_bdd99.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\danya\\AppData\\Local\\Temp\\ccd0N8r6.s]
         ignore line: [GNU C++17 (GCC) version 14.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 14.1.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -490,8 +490,8 @@ events:
         ignore line: [ C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 2cdd3e89952d411c6c1bf705b5926036]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ccf90.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ccf90.dir/']
-        ignore line: [ C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_ccf90.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\danya\\AppData\\Local\\Temp\\ccViCoFw.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_bdd99.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_bdd99.dir/']
+        ignore line: [ C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_bdd99.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\danya\\AppData\\Local\\Temp\\ccd0N8r6.s]
         ignore line: [GNU assembler version 2.41 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.41]
         ignore line: [COMPILER_PATH=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/]
         ignore line: [C:/Users/danya/gcc/bin/../libexec/gcc/]
@@ -504,11 +504,11 @@ events:
         ignore line: [C:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/]
         ignore line: [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ccf90.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ccf90.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_ccf90.exe]
-        ignore line: ["C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/cmTC_ccf90.dir/objects.a]
-        ignore line: [C:/Users/danya/gcc/bin/ar.exe qc CMakeFiles/cmTC_ccf90.dir/objects.a @CMakeFiles/cmTC_ccf90.dir/objects1.rsp]
-        ignore line: [C:/Users/danya/gcc/bin/g++.exe -v -Wl -v -Wl --whole-archive CMakeFiles/cmTC_ccf90.dir/objects.a -Wl --no-whole-archive -o cmTC_ccf90.exe -Wl --out-implib libcmTC_ccf90.dll.a -Wl --major-image-version 0 --minor-image-version 0]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_bdd99.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_bdd99.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_bdd99.exe]
+        ignore line: ["C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/cmTC_bdd99.dir/objects.a]
+        ignore line: [C:/Users/danya/gcc/bin/ar.exe qc CMakeFiles/cmTC_bdd99.dir/objects.a @CMakeFiles/cmTC_bdd99.dir/objects1.rsp]
+        ignore line: [C:/Users/danya/gcc/bin/g++.exe -v -Wl -v -Wl --whole-archive CMakeFiles/cmTC_bdd99.dir/objects.a -Wl --no-whole-archive -o cmTC_bdd99.exe -Wl --out-implib libcmTC_bdd99.dll.a -Wl --major-image-version 0 --minor-image-version 0]
         ignore line: [Built by Equation Solution <http://www.Equation.com>.]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:/Users/danya/gcc/bin/g++.exe]
@@ -529,13 +529,13 @@ events:
         ignore line: [C:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/]
         ignore line: [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ccf90.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_ccf90.']
-        link line: [ C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\danya\\AppData\\Local\\Temp\\cctAMBLC.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_ccf90.exe C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/danya/gcc/bin/../lib/gcc -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles/cmTC_ccf90.dir/objects.a --no-whole-archive --out-implib libcmTC_ccf90.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bdd99.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_bdd99.']
+        link line: [ C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe -plugin C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\danya\\AppData\\Local\\Temp\\cc7wz6Xb.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_bdd99.exe C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/danya/gcc/bin/../lib/gcc -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles/cmTC_bdd99.dir/objects.a --no-whole-archive --out-implib libcmTC_bdd99.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
           arg [C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\danya\\AppData\\Local\\Temp\\cctAMBLC.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\danya\\AppData\\Local\\Temp\\cc7wz6Xb.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
@@ -555,7 +555,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_ccf90.exe] ==> ignore
+          arg [cmTC_bdd99.exe] ==> ignore
           arg [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o] ==> obj [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o]
           arg [-LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0] ==> dir [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0]
@@ -568,10 +568,10 @@ events:
           arg [-LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../..] ==> dir [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../..]
           arg [-v] ==> ignore
           arg [--whole-archive] ==> ignore
-          arg [CMakeFiles/cmTC_ccf90.dir/objects.a] ==> ignore
+          arg [CMakeFiles/cmTC_bdd99.dir/objects.a] ==> ignore
           arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_ccf90.dll.a] ==> ignore
+          arg [libcmTC_bdd99.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -593,7 +593,7 @@ events:
           arg [-lkernel32] ==> lib [kernel32]
           arg [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o] ==> obj [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
         ignore line: [collect2 version 14.2.0]
-        ignore line: [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\danya\\AppData\\Local\\Temp\\cctAMBLC.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_ccf90.exe C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/danya/gcc/bin/../lib/gcc -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles/cmTC_ccf90.dir/objects.a --no-whole-archive --out-implib libcmTC_ccf90.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
+        ignore line: [C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/liblto_plugin.dll -plugin-opt=C:/Users/danya/gcc/bin/../libexec/gcc/x86_64-w64-mingw32/14.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\danya\\AppData\\Local\\Temp\\cc7wz6Xb.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/home/gfortran/gcc-home/binary/mingw32/cross/x86_64/gcc/14.1.0 -m i386pep -Bdynamic -o cmTC_bdd99.exe C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0 -LC:/Users/danya/gcc/bin/../lib/gcc -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib -LC:/Users/danya/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../.. -v --whole-archive CMakeFiles/cmTC_bdd99.dir/objects.a --no-whole-archive --out-implib libcmTC_bdd99.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
         linker tool for 'CXX': C:/Users/danya/gcc/x86_64-w64-mingw32/bin/ld.exe
         remove lib [msvcrt]
         remove lib [msvcrt]
@@ -620,7 +620,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:270 (cmake_determine_linker_id)"
       - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:5 (project)"
+      - "CMakeLists.txt:4 (project)"
     message: |
       Running the CXX compiler's linker: "C:/Users/danya/gcc/x86_64-w64-mingw32/bin/ld.exe" "-v"
       GNU ld (GNU Binutils) 2.41
@@ -635,8 +635,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-ogin17"
-      binary: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-ogin17"
+      source: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-tahton"
+      binary: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-tahton"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -646,21 +646,21 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-ogin17'
+        Change Dir: 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-tahton'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/danya/gcc/bin/make.exe -f Makefile cmTC_e3ea6/fast
-        C:/Users/danya/gcc/bin/make.exe  -f CMakeFiles/cmTC_e3ea6.dir/build.make CMakeFiles/cmTC_e3ea6.dir/build
-        make[1]: Entering directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-ogin17'
-        Building C object CMakeFiles/cmTC_e3ea6.dir/src.c.obj
-        C:/Users/danya/gcc/bin/gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_e3ea6.dir/src.c.obj -c Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-ogin17/src.c
-        Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-ogin17/src.c: In function 'main':
-        Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-ogin17/src.c:15:3: error: implicit declaration of function 'pthread_atfork'; did you mean 'pthread_join'? [-Wimplicit-function-declaration]
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/danya/gcc/bin/make.exe -f Makefile cmTC_d4205/fast
+        C:/Users/danya/gcc/bin/make.exe  -f CMakeFiles/cmTC_d4205.dir/build.make CMakeFiles/cmTC_d4205.dir/build
+        make[1]: Entering directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-tahton'
+        Building C object CMakeFiles/cmTC_d4205.dir/src.c.obj
+        C:/Users/danya/gcc/bin/gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_d4205.dir/src.c.obj -c Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-tahton/src.c
+        Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-tahton/src.c: In function 'main':
+        Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-tahton/src.c:15:3: error: implicit declaration of function 'pthread_atfork'; did you mean 'pthread_join'? [-Wimplicit-function-declaration]
            15 |   pthread_atfork(NULL, NULL, NULL);
               |   ^~~~~~~~~~~~~~
               |   pthread_join
-        make[1]: *** [CMakeFiles/cmTC_e3ea6.dir/build.make:81: CMakeFiles/cmTC_e3ea6.dir/src.c.obj] Error 1
-        make[1]: Leaving directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-ogin17'
-        make: *** [Makefile:134: cmTC_e3ea6/fast] Error 2
+        make[1]: *** [CMakeFiles/cmTC_d4205.dir/build.make:81: CMakeFiles/cmTC_d4205.dir/src.c.obj] Error 1
+        make[1]: Leaving directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-tahton'
+        make: *** [Makefile:134: cmTC_d4205/fast] Error 2
         
       exitCode: 2
   -
@@ -673,8 +673,8 @@ events:
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-p07nuq"
-      binary: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-p07nuq"
+      source: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-gm78e5"
+      binary: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-gm78e5"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -684,22 +684,22 @@ events:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-p07nuq'
+        Change Dir: 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-gm78e5'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/danya/gcc/bin/make.exe -f Makefile cmTC_0d17c/fast
-        C:/Users/danya/gcc/bin/make.exe  -f CMakeFiles/cmTC_0d17c.dir/build.make CMakeFiles/cmTC_0d17c.dir/build
-        make[1]: Entering directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-p07nuq'
-        Building C object CMakeFiles/cmTC_0d17c.dir/CheckFunctionExists.c.obj
-        C:/Users/danya/gcc/bin/gcc.exe   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_0d17c.dir/CheckFunctionExists.c.obj -c Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-p07nuq/CheckFunctionExists.c
-        Linking C executable cmTC_0d17c.exe
-        "C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/cmTC_0d17c.dir/objects.a
-        C:/Users/danya/gcc/bin/ar.exe qc CMakeFiles/cmTC_0d17c.dir/objects.a @CMakeFiles/cmTC_0d17c.dir/objects1.rsp
-        C:/Users/danya/gcc/bin/gcc.exe  -DCHECK_FUNCTION_EXISTS=pthread_create -Wl,--whole-archive CMakeFiles/cmTC_0d17c.dir/objects.a -Wl,--no-whole-archive -o cmTC_0d17c.exe -Wl,--out-implib,libcmTC_0d17c.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/cmTC_0d17c.dir/linkLibs.rsp
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/danya/gcc/bin/make.exe -f Makefile cmTC_cdacc/fast
+        C:/Users/danya/gcc/bin/make.exe  -f CMakeFiles/cmTC_cdacc.dir/build.make CMakeFiles/cmTC_cdacc.dir/build
+        make[1]: Entering directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-gm78e5'
+        Building C object CMakeFiles/cmTC_cdacc.dir/CheckFunctionExists.c.obj
+        C:/Users/danya/gcc/bin/gcc.exe   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_cdacc.dir/CheckFunctionExists.c.obj -c Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-gm78e5/CheckFunctionExists.c
+        Linking C executable cmTC_cdacc.exe
+        "C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/cmTC_cdacc.dir/objects.a
+        C:/Users/danya/gcc/bin/ar.exe qc CMakeFiles/cmTC_cdacc.dir/objects.a @CMakeFiles/cmTC_cdacc.dir/objects1.rsp
+        C:/Users/danya/gcc/bin/gcc.exe  -DCHECK_FUNCTION_EXISTS=pthread_create -Wl,--whole-archive CMakeFiles/cmTC_cdacc.dir/objects.a -Wl,--no-whole-archive -o cmTC_cdacc.exe -Wl,--out-implib,libcmTC_cdacc.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/cmTC_cdacc.dir/linkLibs.rsp
         C:/Users/danya/gcc/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find -lpthreads: No such file or directory
         collect2.exe: error: ld returned 1 exit status
-        make[1]: *** [CMakeFiles/cmTC_0d17c.dir/build.make:105: cmTC_0d17c.exe] Error 1
-        make[1]: Leaving directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-p07nuq'
-        make: *** [Makefile:134: cmTC_0d17c/fast] Error 2
+        make[1]: *** [CMakeFiles/cmTC_cdacc.dir/build.make:105: cmTC_cdacc.exe] Error 1
+        make[1]: Leaving directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-gm78e5'
+        make: *** [Makefile:134: cmTC_cdacc/fast] Error 2
         
       exitCode: 2
   -
@@ -712,8 +712,8 @@ events:
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-sg6buj"
-      binary: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-sg6buj"
+      source: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-dk6ywd"
+      binary: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-dk6ywd"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -723,18 +723,18 @@ events:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-sg6buj'
+        Change Dir: 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-dk6ywd'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/danya/gcc/bin/make.exe -f Makefile cmTC_6c1f7/fast
-        C:/Users/danya/gcc/bin/make.exe  -f CMakeFiles/cmTC_6c1f7.dir/build.make CMakeFiles/cmTC_6c1f7.dir/build
-        make[1]: Entering directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-sg6buj'
-        Building C object CMakeFiles/cmTC_6c1f7.dir/CheckFunctionExists.c.obj
-        C:/Users/danya/gcc/bin/gcc.exe   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_6c1f7.dir/CheckFunctionExists.c.obj -c Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-sg6buj/CheckFunctionExists.c
-        Linking C executable cmTC_6c1f7.exe
-        "C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/cmTC_6c1f7.dir/objects.a
-        C:/Users/danya/gcc/bin/ar.exe qc CMakeFiles/cmTC_6c1f7.dir/objects.a @CMakeFiles/cmTC_6c1f7.dir/objects1.rsp
-        C:/Users/danya/gcc/bin/gcc.exe  -DCHECK_FUNCTION_EXISTS=pthread_create -Wl,--whole-archive CMakeFiles/cmTC_6c1f7.dir/objects.a -Wl,--no-whole-archive -o cmTC_6c1f7.exe -Wl,--out-implib,libcmTC_6c1f7.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/cmTC_6c1f7.dir/linkLibs.rsp
-        make[1]: Leaving directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-sg6buj'
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/danya/gcc/bin/make.exe -f Makefile cmTC_c6804/fast
+        C:/Users/danya/gcc/bin/make.exe  -f CMakeFiles/cmTC_c6804.dir/build.make CMakeFiles/cmTC_c6804.dir/build
+        make[1]: Entering directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-dk6ywd'
+        Building C object CMakeFiles/cmTC_c6804.dir/CheckFunctionExists.c.obj
+        C:/Users/danya/gcc/bin/gcc.exe   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_c6804.dir/CheckFunctionExists.c.obj -c Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-dk6ywd/CheckFunctionExists.c
+        Linking C executable cmTC_c6804.exe
+        "C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/cmTC_c6804.dir/objects.a
+        C:/Users/danya/gcc/bin/ar.exe qc CMakeFiles/cmTC_c6804.dir/objects.a @CMakeFiles/cmTC_c6804.dir/objects1.rsp
+        C:/Users/danya/gcc/bin/gcc.exe  -DCHECK_FUNCTION_EXISTS=pthread_create -Wl,--whole-archive CMakeFiles/cmTC_c6804.dir/objects.a -Wl,--no-whole-archive -o cmTC_c6804.exe -Wl,--out-implib,libcmTC_c6804.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/cmTC_c6804.dir/linkLibs.rsp
+        make[1]: Leaving directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-dk6ywd'
         
       exitCode: 0
   -
@@ -745,8 +745,8 @@ events:
     checks:
       - "Looking for dinput.h"
     directories:
-      source: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-k0jv0a"
-      binary: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-k0jv0a"
+      source: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-peqjgv"
+      binary: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-peqjgv"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -756,18 +756,18 @@ events:
       variable: "DINPUT_H_FOUND"
       cached: true
       stdout: |
-        Change Dir: 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-k0jv0a'
+        Change Dir: 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-peqjgv'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/danya/gcc/bin/make.exe -f Makefile cmTC_e1e69/fast
-        C:/Users/danya/gcc/bin/make.exe  -f CMakeFiles/cmTC_e1e69.dir/build.make CMakeFiles/cmTC_e1e69.dir/build
-        make[1]: Entering directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-k0jv0a'
-        Building C object CMakeFiles/cmTC_e1e69.dir/CheckIncludeFile.c.obj
-        C:/Users/danya/gcc/bin/gcc.exe    -o CMakeFiles/cmTC_e1e69.dir/CheckIncludeFile.c.obj -c Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-k0jv0a/CheckIncludeFile.c
-        Linking C executable cmTC_e1e69.exe
-        "C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/cmTC_e1e69.dir/objects.a
-        C:/Users/danya/gcc/bin/ar.exe qc CMakeFiles/cmTC_e1e69.dir/objects.a @CMakeFiles/cmTC_e1e69.dir/objects1.rsp
-        C:/Users/danya/gcc/bin/gcc.exe -Wl,--whole-archive CMakeFiles/cmTC_e1e69.dir/objects.a -Wl,--no-whole-archive -o cmTC_e1e69.exe -Wl,--out-implib,libcmTC_e1e69.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/cmTC_e1e69.dir/linkLibs.rsp
-        make[1]: Leaving directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-k0jv0a'
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/danya/gcc/bin/make.exe -f Makefile cmTC_4e98e/fast
+        C:/Users/danya/gcc/bin/make.exe  -f CMakeFiles/cmTC_4e98e.dir/build.make CMakeFiles/cmTC_4e98e.dir/build
+        make[1]: Entering directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-peqjgv'
+        Building C object CMakeFiles/cmTC_4e98e.dir/CheckIncludeFile.c.obj
+        C:/Users/danya/gcc/bin/gcc.exe    -o CMakeFiles/cmTC_4e98e.dir/CheckIncludeFile.c.obj -c Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-peqjgv/CheckIncludeFile.c
+        Linking C executable cmTC_4e98e.exe
+        "C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/cmTC_4e98e.dir/objects.a
+        C:/Users/danya/gcc/bin/ar.exe qc CMakeFiles/cmTC_4e98e.dir/objects.a @CMakeFiles/cmTC_4e98e.dir/objects1.rsp
+        C:/Users/danya/gcc/bin/gcc.exe -Wl,--whole-archive CMakeFiles/cmTC_4e98e.dir/objects.a -Wl,--no-whole-archive -o cmTC_4e98e.exe -Wl,--out-implib,libcmTC_4e98e.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/cmTC_4e98e.dir/linkLibs.rsp
+        make[1]: Leaving directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-peqjgv'
         
       exitCode: 0
   -
@@ -778,8 +778,8 @@ events:
     checks:
       - "Looking for xinput.h"
     directories:
-      source: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-tw3sc5"
-      binary: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-tw3sc5"
+      source: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-d4v6xb"
+      binary: "Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-d4v6xb"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -789,18 +789,18 @@ events:
       variable: "XINPUT_H_FOUND"
       cached: true
       stdout: |
-        Change Dir: 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-tw3sc5'
+        Change Dir: 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-d4v6xb'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/danya/gcc/bin/make.exe -f Makefile cmTC_b9ef8/fast
-        C:/Users/danya/gcc/bin/make.exe  -f CMakeFiles/cmTC_b9ef8.dir/build.make CMakeFiles/cmTC_b9ef8.dir/build
-        make[1]: Entering directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-tw3sc5'
-        Building C object CMakeFiles/cmTC_b9ef8.dir/CheckIncludeFile.c.obj
-        C:/Users/danya/gcc/bin/gcc.exe    -o CMakeFiles/cmTC_b9ef8.dir/CheckIncludeFile.c.obj -c Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-tw3sc5/CheckIncludeFile.c
-        Linking C executable cmTC_b9ef8.exe
-        "C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/cmTC_b9ef8.dir/objects.a
-        C:/Users/danya/gcc/bin/ar.exe qc CMakeFiles/cmTC_b9ef8.dir/objects.a @CMakeFiles/cmTC_b9ef8.dir/objects1.rsp
-        C:/Users/danya/gcc/bin/gcc.exe -Wl,--whole-archive CMakeFiles/cmTC_b9ef8.dir/objects.a -Wl,--no-whole-archive -o cmTC_b9ef8.exe -Wl,--out-implib,libcmTC_b9ef8.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/cmTC_b9ef8.dir/linkLibs.rsp
-        make[1]: Leaving directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-tw3sc5'
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/Users/danya/gcc/bin/make.exe -f Makefile cmTC_8207a/fast
+        C:/Users/danya/gcc/bin/make.exe  -f CMakeFiles/cmTC_8207a.dir/build.make CMakeFiles/cmTC_8207a.dir/build
+        make[1]: Entering directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-d4v6xb'
+        Building C object CMakeFiles/cmTC_8207a.dir/CheckIncludeFile.c.obj
+        C:/Users/danya/gcc/bin/gcc.exe    -o CMakeFiles/cmTC_8207a.dir/CheckIncludeFile.c.obj -c Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-d4v6xb/CheckIncludeFile.c
+        Linking C executable cmTC_8207a.exe
+        "C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/cmTC_8207a.dir/objects.a
+        C:/Users/danya/gcc/bin/ar.exe qc CMakeFiles/cmTC_8207a.dir/objects.a @CMakeFiles/cmTC_8207a.dir/objects1.rsp
+        C:/Users/danya/gcc/bin/gcc.exe -Wl,--whole-archive CMakeFiles/cmTC_8207a.dir/objects.a -Wl,--no-whole-archive -o cmTC_8207a.exe -Wl,--out-implib,libcmTC_8207a.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/cmTC_8207a.dir/linkLibs.rsp
+        make[1]: Leaving directory 'Z:/dev/cpp/Vladot/build/CMakeFiles/CMakeScratch/TryCompile-d4v6xb'
         
       exitCode: 0
 ...

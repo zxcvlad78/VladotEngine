@@ -351,77 +351,29 @@ src/mod_loader/ModLoader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/mod_loader/ModLoader.cpp.s
 .PHONY : src/mod_loader/ModLoader.cpp.s
 
-src/object/Object.obj: src/object/Object.cpp.obj
-.PHONY : src/object/Object.obj
+src/object/game_object/game_object_2d/custom_mesh/CustomMesh.obj: src/object/game_object/game_object_2d/custom_mesh/CustomMesh.cpp.obj
+.PHONY : src/object/game_object/game_object_2d/custom_mesh/CustomMesh.obj
 
 # target to build an object file
-src/object/Object.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/Object.cpp.obj
-.PHONY : src/object/Object.cpp.obj
+src/object/game_object/game_object_2d/custom_mesh/CustomMesh.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/custom_mesh/CustomMesh.cpp.obj
+.PHONY : src/object/game_object/game_object_2d/custom_mesh/CustomMesh.cpp.obj
 
-src/object/Object.i: src/object/Object.cpp.i
-.PHONY : src/object/Object.i
-
-# target to preprocess a source file
-src/object/Object.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/Object.cpp.i
-.PHONY : src/object/Object.cpp.i
-
-src/object/Object.s: src/object/Object.cpp.s
-.PHONY : src/object/Object.s
-
-# target to generate assembly for a file
-src/object/Object.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/Object.cpp.s
-.PHONY : src/object/Object.cpp.s
-
-src/object/game_object/GameObject.obj: src/object/game_object/GameObject.cpp.obj
-.PHONY : src/object/game_object/GameObject.obj
-
-# target to build an object file
-src/object/game_object/GameObject.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.obj
-.PHONY : src/object/game_object/GameObject.cpp.obj
-
-src/object/game_object/GameObject.i: src/object/game_object/GameObject.cpp.i
-.PHONY : src/object/game_object/GameObject.i
+src/object/game_object/game_object_2d/custom_mesh/CustomMesh.i: src/object/game_object/game_object_2d/custom_mesh/CustomMesh.cpp.i
+.PHONY : src/object/game_object/game_object_2d/custom_mesh/CustomMesh.i
 
 # target to preprocess a source file
-src/object/game_object/GameObject.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.i
-.PHONY : src/object/game_object/GameObject.cpp.i
+src/object/game_object/game_object_2d/custom_mesh/CustomMesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/custom_mesh/CustomMesh.cpp.i
+.PHONY : src/object/game_object/game_object_2d/custom_mesh/CustomMesh.cpp.i
 
-src/object/game_object/GameObject.s: src/object/game_object/GameObject.cpp.s
-.PHONY : src/object/game_object/GameObject.s
-
-# target to generate assembly for a file
-src/object/game_object/GameObject.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/game_object/GameObject.cpp.s
-.PHONY : src/object/game_object/GameObject.cpp.s
-
-src/object/game_object/game_object_2d/GameObject2D.obj: src/object/game_object/game_object_2d/GameObject2D.cpp.obj
-.PHONY : src/object/game_object/game_object_2d/GameObject2D.obj
-
-# target to build an object file
-src/object/game_object/game_object_2d/GameObject2D.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.obj
-.PHONY : src/object/game_object/game_object_2d/GameObject2D.cpp.obj
-
-src/object/game_object/game_object_2d/GameObject2D.i: src/object/game_object/game_object_2d/GameObject2D.cpp.i
-.PHONY : src/object/game_object/game_object_2d/GameObject2D.i
-
-# target to preprocess a source file
-src/object/game_object/game_object_2d/GameObject2D.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.i
-.PHONY : src/object/game_object/game_object_2d/GameObject2D.cpp.i
-
-src/object/game_object/game_object_2d/GameObject2D.s: src/object/game_object/game_object_2d/GameObject2D.cpp.s
-.PHONY : src/object/game_object/game_object_2d/GameObject2D.s
+src/object/game_object/game_object_2d/custom_mesh/CustomMesh.s: src/object/game_object/game_object_2d/custom_mesh/CustomMesh.cpp.s
+.PHONY : src/object/game_object/game_object_2d/custom_mesh/CustomMesh.s
 
 # target to generate assembly for a file
-src/object/game_object/game_object_2d/GameObject2D.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/GameObject2D.cpp.s
-.PHONY : src/object/game_object/game_object_2d/GameObject2D.cpp.s
+src/object/game_object/game_object_2d/custom_mesh/CustomMesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VladotEngine.dir/build.make CMakeFiles/VladotEngine.dir/src/object/game_object/game_object_2d/custom_mesh/CustomMesh.cpp.s
+.PHONY : src/object/game_object/game_object_2d/custom_mesh/CustomMesh.cpp.s
 
 src/object/game_object/game_object_2d/sprite_2d/Sprite2D.obj: src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp.obj
 .PHONY : src/object/game_object/game_object_2d/sprite_2d/Sprite2D.obj
@@ -574,15 +526,9 @@ help:
 	@echo "... src/mod_loader/ModLoader.obj"
 	@echo "... src/mod_loader/ModLoader.i"
 	@echo "... src/mod_loader/ModLoader.s"
-	@echo "... src/object/Object.obj"
-	@echo "... src/object/Object.i"
-	@echo "... src/object/Object.s"
-	@echo "... src/object/game_object/GameObject.obj"
-	@echo "... src/object/game_object/GameObject.i"
-	@echo "... src/object/game_object/GameObject.s"
-	@echo "... src/object/game_object/game_object_2d/GameObject2D.obj"
-	@echo "... src/object/game_object/game_object_2d/GameObject2D.i"
-	@echo "... src/object/game_object/game_object_2d/GameObject2D.s"
+	@echo "... src/object/game_object/game_object_2d/custom_mesh/CustomMesh.obj"
+	@echo "... src/object/game_object/game_object_2d/custom_mesh/CustomMesh.i"
+	@echo "... src/object/game_object/game_object_2d/custom_mesh/CustomMesh.s"
 	@echo "... src/object/game_object/game_object_2d/sprite_2d/Sprite2D.obj"
 	@echo "... src/object/game_object/game_object_2d/sprite_2d/Sprite2D.i"
 	@echo "... src/object/game_object/game_object_2d/sprite_2d/Sprite2D.s"

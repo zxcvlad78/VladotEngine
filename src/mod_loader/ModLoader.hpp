@@ -17,6 +17,7 @@ class ModLoader {
     struct ModEntry {
         std::string name;
         std::string version;
+        std::string author;
         std::vector<std::string> dependencies;
         std::filesystem::path path;
         bool enabled = true;
@@ -31,5 +32,5 @@ public:
     ModLoader() = default;
     void scan_mods(const std::filesystem::path& folder, VirtualFS* vfs);
     void load_data_stage(sol::state& lua, Engine::IRegistry* registry, VirtualFS* vfs); 
-    void load_control_stage(sol::state& lua, Engine::IGameplayAPI* gameplay, Engine::EventSystem* events, VirtualFS* vfs);
+    void load_control_stage(sol::state& lua, Engine::EventSystem* events, VirtualFS* vfs);
 };

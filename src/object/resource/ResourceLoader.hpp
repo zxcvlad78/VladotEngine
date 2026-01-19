@@ -9,6 +9,9 @@
 #include "Resource.hpp"
 #include "virtual_fs/VirtualFS.hpp"
 
+template <typename T>
+using Ref = std::shared_ptr<T>;
+
 class ResourceLoader {
 public:
     using ResourceFactory = std::function<Ref<Resource>(const std::string&)>;
@@ -25,11 +28,8 @@ public:
     template <typename T>
     static Ref<T> load(const std::string& p_path) {
         auto& cache = get_cache();
-        // Замена contains на find для совместимости
         auto it_cache = cache.find(p_path);
-        if (it_cache != cache.end()) {
-            return std::static_pointer_cast<T>(it_cache->second);
-        }
+        if (it_cache != cache.end()) return std::static_pointer_cast<T>(it_cache->second);
 
         auto& factories = get_factories();
         auto it = factories.find(std::type_index(typeid(T)));
@@ -54,12 +54,3 @@ private:
     static std::map<std::string, Ref<Resource>>& get_cache() { static std::map<std::string, Ref<Resource>> c; return c; }
     static std::map<std::type_index, ResourceFactory>& get_factories() { static std::map<std::type_index, ResourceFactory> f; return f; }
 };
-
-// Исправленный макрос без лишних символов в конце
-#define REGISTER_RESOURCE_TYPE(m_type) \
-    namespace { \
-        struct m_type##Registrar { \
-            m_type##Registrar() { ResourceLoader::register_resource_type<m_type>(); } \
-        }; \
-        static m_type##Registrar m_type##_reg_instance; \
-    }
