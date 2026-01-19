@@ -33,7 +33,7 @@ int main() {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    GLFWwindow* window = glfwCreateWindow(Settings::WINDOW_WIDTH, Settings::WINDOW_HEIGHT, "VladotEngine 2026", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(Settings::WINDOW_WIDTH, Settings::WINDOW_HEIGHT, "VladotEngine", NULL, NULL);
     if (!window) {
         glfwTerminate();
         return -1;
@@ -45,6 +45,7 @@ int main() {
     glViewport(0, 0, Settings::WINDOW_WIDTH, Settings::WINDOW_HEIGHT);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
 
     sol::state lua;
     lua.open_libraries(sol::lib::base, sol::lib::package, sol::lib::table, sol::lib::string, sol::lib::math);

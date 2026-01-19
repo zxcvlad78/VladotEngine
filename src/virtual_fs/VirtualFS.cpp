@@ -47,6 +47,7 @@ std::vector<unsigned char> VirtualFS::read_file(const std::string& virtualPath) 
                 file.read(reinterpret_cast<char*>(buffer.data()), size);
                 return buffer;
             }
+            std::cout << "[VFS] Cant open file at path: " << virtualPath << std::endl;
         } else if (sources[i].type == Type::ZIP) {
             mz_zip_archive* zip = &sources[i].zipArchive;
             size_t uncompressed_size;

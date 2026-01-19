@@ -29,11 +29,17 @@ public:
     static Ref<T> load(const std::string& p_path) {
         auto& cache = get_cache();
         auto it_cache = cache.find(p_path);
-        if (it_cache != cache.end()) return std::static_pointer_cast<T>(it_cache->second);
+        if (it_cache != cache.end()) {
+            std::cout << "[ResourceLoader] Loaded resource from cache: " << p_path << std::endl;
+            return std::static_pointer_cast<T>(it_cache->second);
+        }
 
         auto& factories = get_factories();
         auto it = factories.find(std::type_index(typeid(T)));
-        if (it == factories.end()) return nullptr;
+        if (it == factories.end()) {
+            std::cout << "[ResourceLoader] Cant load resource at path: " << p_path << "'it == factories.end()'" << std::endl;
+            return nullptr;
+        }
 
         VirtualFS* vfs = get_vfs_ptr();
         if (!vfs) return nullptr;
@@ -45,7 +51,9 @@ public:
         if (res && res->load_from_data(raw_data)) {
             cache[p_path] = res;
             return std::static_pointer_cast<T>(res);
+            std::cout << "[ResourceLoader] Loaded resource: " << p_path << std::endl;
         }
+        std::cout << "[ResourceLoader] Cant load resource at path: " << p_path << std::endl;
         return nullptr;
     }
 
@@ -54,3 +62,9 @@ private:
     static std::map<std::string, Ref<Resource>>& get_cache() { static std::map<std::string, Ref<Resource>> c; return c; }
     static std::map<std::type_index, ResourceFactory>& get_factories() { static std::map<std::type_index, ResourceFactory> f; return f; }
 };
+
+#define REGISTER_RESOURCE_TYPE(T) \
+static inline bool _res_register_##T = []() { \
+    ResourceLoader::register_resource_type<T>(); \
+    return true; \
+}();

@@ -7,6 +7,7 @@
 #endif
 #include "stb_image.h"
 
+REGISTER_RESOURCE_TYPE(TextureResource)
 
 TextureResource::TextureResource(std::string p_path) : Resource(std::move(p_path)) {
     m_width = 0;

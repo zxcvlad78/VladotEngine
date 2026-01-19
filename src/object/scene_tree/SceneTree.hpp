@@ -26,6 +26,15 @@ public:
         return m_nodes;
     }
 
+    int get_child_count() {
+        return m_nodes.size();
+    }
+
+    Ref<GameObject> get_child(size_t index) {
+        if (index < m_nodes.size()) return m_nodes[index];
+        return nullptr;
+    }
+
     void update(float p_delta) {
         for (auto& node : m_nodes) {
             if (node) node->_process(p_delta);

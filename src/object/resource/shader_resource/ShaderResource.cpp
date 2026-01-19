@@ -3,6 +3,8 @@
 #include <iostream>
 #include <sstream>
 
+REGISTER_RESOURCE_TYPE(ShaderResource)
+
 ShaderResource::ShaderResource(std::string p_path) : Resource(std::move(p_path)) {}
 
 ShaderResource::~ShaderResource() {

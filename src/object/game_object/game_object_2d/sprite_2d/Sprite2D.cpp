@@ -36,6 +36,19 @@ void Sprite2D::_draw() {
 
     m_shader->use();
     
+    if (!m_shader) {
+        m_shader = ResourceLoader::load<ShaderResource>("res/shader/sprite.glsl");
+        
+        if (!m_shader) {
+            static bool error_shown = false;
+            if (!error_shown) {
+                std::cerr << "[Sprite2D] Error: Default shader 'res/shader/sprite.glsl' not found!" << std::endl;
+                error_shown = true;
+            }
+            return;
+        }
+    }
+
     int window_width, window_height;
     glfwGetWindowSize(glfwGetCurrentContext(), &window_width, &window_height);
 

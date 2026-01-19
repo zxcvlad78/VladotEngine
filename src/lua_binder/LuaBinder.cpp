@@ -9,6 +9,23 @@
 #include "object/game_object/game_object_2d/sprite_2d/Sprite2D.hpp"
 #include "object/scene_tree/SceneTree.hpp"
 
+template<typename Base>
+Ref<Base> cast_from_lua(sol::object obj) {
+    if (obj.is<Ref<Base>>()) {
+        return obj.as<Ref<Base>>();
+    }
+
+    if (obj.is<sol::userdata>()) {
+        sol::userdata ud = obj;
+        try {
+            return obj.as<Ref<Base>>();
+        } catch (...) {
+            return nullptr;
+        }
+    }
+    return nullptr;
+}
+
 void LuaBinder::bind_all(lua_State* L) {
     sol::state_view lua(L);
 
@@ -26,13 +43,16 @@ void LuaBinder::bind_all(lua_State* L) {
         }
     );
 
+
     lua.new_usertype<Object>("Object",
         "new", sol::factories([]() { return Ref<Object>(new Object()); } ),
         sol::call_constructor, sol::factories([]() { return Ref<Object>(new Object()); }),
 
         "get_class_name", [](Object& self) {
             return self.get_class_name();
-        }
+        },
+
+        "to_string", &Object::to_string
     );
 
     lua.new_usertype<GameObject>("GameObject", 
@@ -81,8 +101,12 @@ void LuaBinder::bind_all(lua_State* L) {
     lua.new_usertype<SceneTree>("SceneTree",
         sol::base_classes, sol::bases<Object>(),
 
-        "get_chidren", &SceneTree::get_children,
+        "get_children", &SceneTree::get_children,
         
+        "get_child_count", &SceneTree::get_child_count,
+        
+        "get_child", &SceneTree::get_child,
+
         "add_child", [](SceneTree& self, GameObject* obj) {
             if (obj) {
                 self.add_child(Ref<GameObject>(obj, [](GameObject*){}));
