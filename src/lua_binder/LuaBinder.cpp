@@ -77,14 +77,8 @@ void LuaBinder::bind_all(lua_State* L) {
         sol::call_constructor, sol::factories([]() { return Ref<Sprite2D>(new Sprite2D()); }),
         sol::base_classes, sol::bases<GameObject2D, GameObject, Object>(),
         
-        "set_texture", [](Sprite2D& self, const std::string& path) {
-            auto res = ResourceLoader::load<TextureResource>(path);
-            if (res) self.set_texture(res);
-        },
-        "set_shader", [](Sprite2D& self, const std::string& path) {
-            auto res = ResourceLoader::load<ShaderResource>(path);
-            if (res) self.set_shader(res);
-        }
+        "texture", sol::property(&Sprite2D::get_texture, &Sprite2D::set_texture),
+        "shader", sol::property(&Sprite2D::get_shader, &Sprite2D::set_shader)
     );
 
     lua.new_usertype<TextureResource>("TextureResource",
@@ -96,6 +90,9 @@ void LuaBinder::bind_all(lua_State* L) {
     auto resource_loader = lua.create_named_table("ResourceLoader");
     resource_loader["load_texture"] = [](const std::string& path) {
         return ResourceLoader::load<TextureResource>(path);
+    };
+    resource_loader["load_shader"] = [](const std::string& path) {
+        return ResourceLoader::load<ShaderResource>(path);
     };
 
     lua.new_usertype<SceneTree>("SceneTree",

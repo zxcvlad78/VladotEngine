@@ -92,8 +92,14 @@ void ModLoader::load_data_stage(sol::state& lua, Engine::IRegistry* registry, Vi
 }
 
 void ModLoader::load_control_stage(sol::state& lua, Engine::EventSystem* events, VirtualFS* vfs) {
-    lua["event_system"] = events; 
+    auto events_table = lua.create_table();
+
+    events_table["on"] = [events](sol::table self, const std::string& eventName, sol::function callback) {
+        events->on(eventName, std::move(callback));
+    };
     
+    lua["event_system"] = events_table;
+
     for (auto* mod : sortedLoadOrder) {
         std::string script = vfs->read_file_string("control.lua");
         
