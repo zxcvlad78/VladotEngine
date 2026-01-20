@@ -2,12 +2,15 @@
 #define SOL_ALL_SAFETIES_ON 1
 #include <sol/sol.hpp>
 #include <glm/glm.hpp>
+#include <filesystem>
 
 #include "engine_api/EngineAPI.hpp"
 #include "object/Object.hpp"
 #include "object/resource/ResourceLoader.hpp"
 #include "object/game_object/game_object_2d/sprite_2d/Sprite2D.hpp"
 #include "object/scene_tree/SceneTree.hpp"
+
+#include <GLFW/glfw3.h>
 
 template<typename Base>
 Ref<Base> cast_from_lua(sol::object obj) {
@@ -26,7 +29,7 @@ Ref<Base> cast_from_lua(sol::object obj) {
     return nullptr;
 }
 
-void LuaBinder::bind_all(lua_State* L) {
+void LuaBinder::bind_all(lua_State* L, GLFWwindow* window) {
     sol::state_view lua(L);
 
     std::cout << "[C++] Binding lua" << std::endl;
@@ -81,10 +84,24 @@ void LuaBinder::bind_all(lua_State* L) {
         "shader", sol::property(&Sprite2D::get_shader, &Sprite2D::set_shader)
     );
 
+    lua.new_usertype<Resource>("Resource",
+        sol::base_classes, sol::bases<RefCounted, Object>(),
+        "get_path", [](Resource& self) {
+            return self.get_path();
+        },
+        "get_rid", [](Resource& self) {
+            return self.get_rid();
+        }
+    );
+
     lua.new_usertype<TextureResource>("TextureResource",
         sol::base_classes, sol::bases<Resource, RefCounted, Object>(),
-        "width",  sol::readonly(&TextureResource::get_width),
-        "height", sol::readonly(&TextureResource::get_height)
+        "get_width",  [](TextureResource& self) {
+            return self.get_width();
+        },
+        "get_height",  [](TextureResource& self) {
+            return self.get_height();
+        }
     );
 
     auto resource_loader = lua.create_named_table("ResourceLoader");
@@ -94,6 +111,7 @@ void LuaBinder::bind_all(lua_State* L) {
     resource_loader["load_shader"] = [](const std::string& path) {
         return ResourceLoader::load<ShaderResource>(path);
     };
+
 
     lua.new_usertype<SceneTree>("SceneTree",
         sol::base_classes, sol::bases<Object>(),
@@ -116,5 +134,58 @@ void LuaBinder::bind_all(lua_State* L) {
 
     
     lua["Scene"] = SceneTree::get_singleton(); 
+
+    auto input_bind = lua.create_named_table("Input");
+
+    input_bind["is_key_pressed"] = [window](int key_code) {
+        return glfwGetKey(window, key_code) == GLFW_PRESS;
+    };
+
+    input_bind["is_mouse_pressed"] = [window](int button) {
+        return glfwGetMouseButton(window, button) == GLFW_PRESS;
+    };
+
+    auto keys = lua.create_named_table("Key");
+
+    for (char c = 'A'; c <= 'Z'; ++c) {
+        keys[std::string(1, c)] = (int)c; 
+    }
+
+    for (char c = '0'; c <= '9'; ++c) {
+        keys[std::string(1, c)] = (int)c;
+    }
+
+    for (int i = 1; i <= 12; ++i) {
+        keys["F" + std::to_string(i)] = GLFW_KEY_F1 + (i - 1);
+    }
+
+    keys["SPACE"]    = GLFW_KEY_SPACE;
+    keys["ENTER"]    = GLFW_KEY_ENTER;
+    keys["ESCAPE"]   = GLFW_KEY_ESCAPE;
+    keys["BACKSPACE"] = GLFW_KEY_BACKSPACE;
+    keys["TAB"]      = GLFW_KEY_TAB;
+    keys["LEFT"]     = GLFW_KEY_LEFT;
+    keys["RIGHT"]    = GLFW_KEY_RIGHT;
+    keys["UP"]       = GLFW_KEY_UP;
+    keys["DOWN"]     = GLFW_KEY_DOWN;
+    keys["LSHIFT"]   = GLFW_KEY_LEFT_SHIFT;
+    keys["RSHIFT"]   = GLFW_KEY_RIGHT_SHIFT;
+    keys["LCTRL"]    = GLFW_KEY_LEFT_CONTROL;
+    keys["RCTRL"]    = GLFW_KEY_RIGHT_CONTROL;
+    keys["LALT"]     = GLFW_KEY_LEFT_ALT;
+    keys["RALT"]     = GLFW_KEY_RIGHT_ALT;
+    keys["INSERT"]   = GLFW_KEY_INSERT;
+    keys["DELETE"]   = GLFW_KEY_DELETE;
+    keys["PAGE_UP"]  = GLFW_KEY_PAGE_UP;
+    keys["PAGE_DOWN"] = GLFW_KEY_PAGE_DOWN;
+    keys["HOME"]     = GLFW_KEY_HOME;
+    keys["END"]      = GLFW_KEY_END;
+    keys["CAPS_LOCK"] = GLFW_KEY_CAPS_LOCK;
+    keys["PRINT_SCREEN"] = GLFW_KEY_PRINT_SCREEN;
+    keys["PAUSE"]    = GLFW_KEY_PAUSE;
+
+    keys["MOUSE_1"]  = GLFW_MOUSE_BUTTON_1; // LMB
+    keys["MOUSE_2"]  = GLFW_MOUSE_BUTTON_2; // RMB
+    keys["MOUSE_3"]  = GLFW_MOUSE_BUTTON_3; // MWHEEL
 }
 

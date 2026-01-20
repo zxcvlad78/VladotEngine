@@ -5,6 +5,9 @@ project(${PROJECT_NAME})
 
 add_definitions(-DLUA_VERSION_NUM=504) 
 
+if(MINGW OR CMAKE_COMPILER_IS_GNUCXX)
+    add_compile_options("-Wa,-mbig-obj")
+endif()
 set(GLFW_BUILDS_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILDS_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
@@ -59,6 +62,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/external/sol2/include
     ${CMAKE_SOURCE_DIR}/external/json/include
     ${CMAKE_SOURCE_DIR}/external/miniz
+    ${CMAKE_SOURCE_DIR}/external/termcolor/include
 )
 ##
 
@@ -70,3 +74,17 @@ add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD 
                     COMMAND ${CMAKE_COMMAND} -E copy_directory
                     ${CMAKE_SOURCE_DIR}/mods $<TARGET_FILE_DIR:${PROJECT_NAME}>/mods)
+
+
+target_precompile_headers(${PROJECT_NAME} PRIVATE
+    <sol/sol.hpp>
+    <glm/glm.hpp>
+    <glm/gtc/matrix_transform.hpp>
+    <glm/gtc/type_ptr.hpp>
+    <string>
+    <vector>
+    <memory>
+    <filesystem>
+    <iostream>
+    <algorithm>
+)

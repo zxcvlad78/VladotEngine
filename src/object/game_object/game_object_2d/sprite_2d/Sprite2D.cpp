@@ -5,12 +5,15 @@
 #include "object/game_object/game_object_2d/sprite_2d/Sprite2D.hpp"
 #include "object/resource/ResourceLoader.hpp"
 #include "object/game_object/GameObject.hpp"
-#include "object/game_object/game_object_2d/sprite_2d/Sprite2D.hpp"
 
 uint32_t Sprite2D::s_quad_vao = 0;
 uint32_t Sprite2D::s_quad_vbo = 0;
 
-Sprite2D::Sprite2D() : GameObject2D() {}
+Sprite2D::Sprite2D() : GameObject2D() {
+    if (!m_shader) {
+        set_shader(ResourceLoader::load<ShaderResource>("res/shaders/sprite.glsl"));
+    }
+}
 
 Sprite2D::~Sprite2D() {}
 
@@ -25,6 +28,7 @@ void Sprite2D::set_shader(Ref<ShaderResource> p_shader) {
     if (p_shader) {
         m_shader = p_shader;
     } else {
+        m_shader = ResourceLoader::load<ShaderResource>("res/shaders/sprite.glsl");
         std::cerr << "Warning: Cannot set null shader." << std::endl;
     }
 }
@@ -35,19 +39,6 @@ void Sprite2D::_draw() {
     if (!m_texture || !m_shader) return;
 
     m_shader->use();
-    
-    if (!m_shader) {
-        m_shader = ResourceLoader::load<ShaderResource>("res/shader/sprite.glsl");
-        
-        if (!m_shader) {
-            static bool error_shown = false;
-            if (!error_shown) {
-                std::cerr << "[Sprite2D] Error: Default shader 'res/shader/sprite.glsl' not found!" << std::endl;
-                error_shown = true;
-            }
-            return;
-        }
-    }
 
     int window_width, window_height;
     glfwGetWindowSize(glfwGetCurrentContext(), &window_width, &window_height);

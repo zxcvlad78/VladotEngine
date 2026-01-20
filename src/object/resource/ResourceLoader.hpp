@@ -12,6 +12,7 @@
 template <typename T>
 using Ref = std::shared_ptr<T>;
 
+
 class ResourceLoader {
 public:
     using ResourceFactory = std::function<Ref<Resource>(const std::string&)>;
@@ -44,14 +45,16 @@ public:
         VirtualFS* vfs = get_vfs_ptr();
         if (!vfs) return nullptr;
 
+        std::cout << "[ResourceLoader] Loading resource at '" << vfs->normalize_path(p_path) << "'" << std::endl;
+
         std::vector<unsigned char> raw_data = vfs->read_file(p_path);
         if (raw_data.empty()) return nullptr;
 
         Ref<Resource> res = it->second(p_path);
         if (res && res->load_from_data(raw_data)) {
             cache[p_path] = res;
-            return std::static_pointer_cast<T>(res);
             std::cout << "[ResourceLoader] Loaded resource: " << p_path << std::endl;
+            return std::static_pointer_cast<T>(res);
         }
         std::cout << "[ResourceLoader] Cant load resource at path: " << p_path << std::endl;
         return nullptr;

@@ -13,6 +13,8 @@
 #include "lua_binder/LuaBinder.hpp"
 #include "engine_api/EngineAPI.hpp"
 
+#include <termcolor.hpp>
+
 class Game : public Engine::IRegistry {
 public:
     void register_prototype(sol::table prototype) override {
@@ -39,6 +41,8 @@ int main() {
         return -1;
     }
     
+    
+
     glfwMakeContextCurrent(window);
     gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 
@@ -49,10 +53,22 @@ int main() {
 
     sol::state lua;
     lua.open_libraries(sol::lib::base, sol::lib::package, sol::lib::table, sol::lib::string, sol::lib::math);
-    LuaBinder::bind_all(lua.lua_state());
+    LuaBinder::bind_all(lua.lua_state(), window);
+
+    auto lua_window_bind = lua.create_named_table("Window");
+    lua_window_bind["get_width"] = [window]() {
+        int width, height;
+        glfwGetWindowSize(window, &width, &height);
+        return width;
+    };
+    lua_window_bind["get_height"] = [window]() {
+        int width, height;
+        glfwGetWindowSize(window, &width, &height);
+        return height;
+    };
 
     VirtualFS vfs;
-    vfs.mount("./res", VirtualFS::FOLDER);
+    vfs.mount("./", VirtualFS::FOLDER);
     ResourceLoader::initialize(&vfs);
 
     
@@ -65,18 +81,19 @@ int main() {
     modLoader.load_control_stage(lua, &eventSystem, &vfs);
     
     eventSystem.emit("ready");
-    
+
     auto last_time = std::chrono::high_resolution_clock::now();
     float accumulator = 0.0f;
 
     while (!glfwWindowShouldClose(window)) {
+        
+
         auto current_time = std::chrono::high_resolution_clock::now();
         float delta = std::chrono::duration<float>(current_time - last_time).count();
         last_time = current_time;
         accumulator += std::min(delta, 0.25f);
 
         while (accumulator >= Settings::FIXED_DELTA_TIME) {
-            // Исправлено: событие on_tick для Lua
             eventSystem.emit("on_tick", Settings::FIXED_DELTA_TIME);
             
             SceneTree::get_singleton()->update(Settings::FIXED_DELTA_TIME);
