@@ -24,8 +24,13 @@ public:
 
 namespace Settings {
     const float FIXED_DELTA_TIME = 1.0f / 60.0f;
-    const int WINDOW_WIDTH = 1280;
-    const int WINDOW_HEIGHT = 720;
+    int window_width = 1280;
+    int window_height = 720;
+}
+
+void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
+    glViewport(0, 0, width, height);
+    
 }
 
 int main() {
@@ -35,7 +40,7 @@ int main() {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    GLFWwindow* window = glfwCreateWindow(Settings::WINDOW_WIDTH, Settings::WINDOW_HEIGHT, "VladotEngine", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(Settings::window_width, Settings::window_height, "VladotEngine", NULL, NULL);
     if (!window) {
         glfwTerminate();
         return -1;
@@ -46,7 +51,9 @@ int main() {
     glfwMakeContextCurrent(window);
     gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 
-    glViewport(0, 0, Settings::WINDOW_WIDTH, Settings::WINDOW_HEIGHT);
+    glViewport(0, 0, Settings::window_width, Settings::window_height);
+    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
@@ -71,7 +78,6 @@ int main() {
     vfs.mount("./", VirtualFS::FOLDER);
     ResourceLoader::initialize(&vfs);
 
-    
     Game gameInstance;
     Engine::EventSystem eventSystem;
     
@@ -86,8 +92,6 @@ int main() {
     float accumulator = 0.0f;
 
     while (!glfwWindowShouldClose(window)) {
-        
-
         auto current_time = std::chrono::high_resolution_clock::now();
         float delta = std::chrono::duration<float>(current_time - last_time).count();
         last_time = current_time;
@@ -103,7 +107,9 @@ int main() {
         glClearColor(0.1f, 0.1f, 0.12f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         
-        SceneTree::get_singleton()->render();
+        if (auto* scene_tree = SceneTree::get_singleton()) {
+            scene_tree->render();
+        }
 
         glfwSwapBuffers(window);
         glfwPollEvents();

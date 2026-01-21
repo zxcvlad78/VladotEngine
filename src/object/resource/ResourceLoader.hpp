@@ -31,33 +31,32 @@ public:
         auto& cache = get_cache();
         auto it_cache = cache.find(p_path);
         if (it_cache != cache.end()) {
-            std::cout << "[ResourceLoader] Loaded resource from cache: " << p_path << std::endl;
             return std::static_pointer_cast<T>(it_cache->second);
         }
 
         auto& factories = get_factories();
         auto it = factories.find(std::type_index(typeid(T)));
         if (it == factories.end()) {
-            std::cout << "[ResourceLoader] Cant load resource at path: " << p_path << "'it == factories.end()'" << std::endl;
+            std::cerr << "[ResourceLoader] Factory not found for type: " << typeid(T).name() << std::endl;
             return nullptr;
         }
 
         VirtualFS* vfs = get_vfs_ptr();
         if (!vfs) return nullptr;
 
-        std::cout << "[ResourceLoader] Loading resource at '" << vfs->normalize_path(p_path) << "'" << std::endl;
-
         std::vector<unsigned char> raw_data = vfs->read_file(p_path);
-        if (raw_data.empty()) return nullptr;
+        if (raw_data.empty()) {
+            std::cerr << "[ResourceLoader] Failed to read file: " << p_path << std::endl;
+            return nullptr;
+        }
 
         Ref<Resource> res = it->second(p_path);
         if (res && res->load_from_data(raw_data)) {
             cache[p_path] = res;
-            std::cout << "[ResourceLoader] Loaded resource: " << p_path << std::endl;
+            std::cout << "[ResourceLoader] Successfully loaded: " << p_path << std::endl; // Исправлено положение лога
             return std::static_pointer_cast<T>(res);
         }
-        std::cout << "[ResourceLoader] Cant load resource at path: " << p_path << std::endl;
-        return nullptr;
+    return nullptr;
     }
 
 private:

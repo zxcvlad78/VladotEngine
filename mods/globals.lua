@@ -1,84 +1,142 @@
--- ==========================================
--- ОСНОВНЫЕ ГЛОБАЛЬНЫЕ СИСТЕМЫ
--- ==========================================
+-- globals.lua
 
--- Синглтоны (сокращения для удобства)
-SceneTreeSingleton = SceneTree.get_singleton()
-
--- Математические обертки (если vec2 был привязан как класс)
--- Позволяет писать v = vec2(10, 20) вместо vec2.new(10, 20)
-setmetatable(_G, {
-    __index = function(t, key)
-        if key == "vec2" then
-            return function(x, y) return vec2.new(x or 0, y or 0) end
-        end
-    end
-})
-
--- ==========================================
--- ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ (API для модов)
--- ==========================================
-
---- Создает спрайт и сразу добавляет его в мир (опционально)
---- @param texture_path string Путь к текстуре
---- @param pos table (vec2) Позиция
-function spawn_sprite(texture_path, pos)
-    local sprite = Sprite2D.new()
-    local tex = ResourceLoader.load_texture(texture_path)
+-- COLORS
+Color = {
+    white      = {1.0, 1.0, 1.0, 1.0},
+    black      = {0.0, 0.0, 0.0, 1.0},
+    transparent= {0.0, 0.0, 0.0, 0.0},
     
-    if tex then
-        sprite:set_texture(tex)
-    else
-        print("[Lua Error] Failed to load texture: " .. texture_path)
-    end
+    red        = {1.0, 0.0, 0.0, 1.0},
+    green      = {0.0, 1.0, 0.0, 1.0},
+    blue       = {0.0, 0.0, 1.0, 1.0},
+    yellow     = {1.0, 1.0, 0.0, 1.0},
+    magenta    = {1.0, 0.0, 1.0, 1.0},
+    cyan       = {0.0, 1.0, 1.0, 1.0},
     
-    if pos then
-        sprite:set_position(pos)
-    end
+    orange     = {1.0, 0.65, 0.0, 1.0},
+    purple     = {0.5, 0.0, 0.5, 1.0},
+    pink       = {1.0, 0.75, 0.8, 1.0},
+    gray       = {0.5, 0.5, 0.5, 1.0},
+    dark_gray  = {0.2, 0.2, 0.2, 1.0},
+    light_gray = {0.8, 0.8, 0.8, 1.0},
+    brown      = {0.6, 0.3, 0.1, 1.0},
     
-    World:add_child(sprite)
-    return sprite
-end
-
---- Глобальная таблица данных (то, что заполняет data_extend)
-data = {
-    prototypes = {}
+    skyblue    = {0.53, 0.81, 0.98, 1.0},
+    mint       = {0.6, 1.0, 0.6, 1.0},
+    gold       = {1.0, 0.84, 0.0, 1.0},
+    crimson    = {0.86, 0.08, 0.24, 1.0}
 }
 
---- Функция для регистрации прототипов (используется в data.lua модов)
-function data_extend(table_list)
-    for _, item in ipairs(table_list) do
-        if item.type and item.name then
-            data.prototypes[item.name] = item
-            print("[Data] Registered prototype: " .. item.type .. " -> " .. item.name)
-        end
+function Color.from_hex(hex)
+    local r = ((hex >> 16) & 0xFF) / 255.0
+    local g = ((hex >> 8) & 0xFF) / 255.0
+    local b = (hex & 0xFF) / 255.0
+    return {r, g, b, 1.0}
+end
+
+function Color.alpha(color, a)
+    return {color[1], color[2], color[3], a}
+end
+
+function Color.lerp(c1, c2, t)
+    return {
+        c1[1] + (c2[1] - c1[1]) * t,
+        c1[2] + (c2[2] - c1[2]) * t,
+        c1[3] + (c2[3] - c1[3]) * t,
+        c1[4] + (c2[4] - c1[4]) * t
+    }
+end
+
+-- END
+
+---@class Object
+local Object = {}
+---@return string
+function Object:get_class_name() end
+---@return string
+function Object:to_string() end
+
+function Object.new() end
+
+---@class RefCounted : Object
+local RefCounted = {}
+
+---@class Resource : Object
+---@field virtual_path string
+---@field rid integer
+local Resource = {}
+---@return string
+function Resource:get_path() end
+---@return integer
+function Resource:get_rid() end
+
+---@class TextureResource : Resource
+local TextureResource = {}
+---@return integer
+function TextureResource:get_width() end
+---@return integer
+function TextureResource:get_height() end
+
+---@class AudioResource : Resource
+local AudioResource = {}
+
+
+---@class GameObject : Object
+local GameObject = {}
+
+---@class GameObject2D : GameObject
+---@field position vec2
+---@field scale vec2
+---@field rotation number
+local GameObject2D = {}
+
+---@class Sprite2D : GameObject2D
+---@field texture TextureResource
+---@field shader any
+local Sprite2D = {}
+---@return Sprite2D
+function Sprite2D.new() end
+
+---@class Input
+Input = {}
+---@param key_code integer
+---@return boolean
+function Input.is_key_pressed(key_code) end
+---@param button_code integer
+---@return boolean
+function Input.is_mouse_pressed(button_code) end
+
+---@class EventSystem
+event_system = {}
+---@param event_name string
+---@param callback function
+function event_system:on(event_name, callback) end
+---@param event_name string
+---@param ... any 
+function event_system:emit(event_name, ...) end
+
+---@type SceneTree
+Scene = {}
+
+---@class SceneTree : Object
+local SceneTree = {}
+---@param child GameObject
+function SceneTree:add_child(child) end
+---@return integer
+function SceneTree:get_child_count() end
+---@param index integer
+---@return GameObject
+function SceneTree:get_child(index) end
+
+function OnTick(callback)
+    if event_system then
+        event_system:on("on_tick", callback)
     end
 end
 
--- ==========================================
--- СИСТЕМА СОБЫТИЙ (Улучшенная)
--- ==========================================
-local _listeners = {}
-
---- Подписка на событие
-function subscribe(event_name, callback)
-    if not _listeners[event_name] then
-        _listeners[event_name] = {}
-    end
-    table.insert(_listeners[event_name], callback)
-end
-
---- Вызов события из C++ (движок дергает эту функцию)
-function emit_event(event_name, ...)
-    local callbacks = _listeners[event_name]
-    if callbacks then
-        for _, cb in ipairs(callbacks) do
-            local status, err = pcall(cb, ...)
-            if not status then
-                print("[Event Error] " .. event_name .. ": " .. tostring(err))
-            end
-        end
+function OnReady(callback)
+    if event_system then
+        event_system:on("ready", callback)
     end
 end
 
-print("[Globals] Base API initialized.")

@@ -9,6 +9,17 @@
 
 class VirtualFS {
 public:
+    ~VirtualFS() { release_sources(); }
+
+    void release_sources() {
+        for (auto& source : sources) {
+            if (source.type == ZIP) {
+                mz_zip_reader_end(&source.zipArchive);
+            }
+        }
+        sources.clear();
+    }
+
     enum Type { FOLDER, ZIP };
     struct DataSource {
         Type type;

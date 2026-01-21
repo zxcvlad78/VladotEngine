@@ -4,6 +4,7 @@ local run_multiplier = 2.0
 
 event_system:on("ready", function()
     player.texture = ResourceLoader.load_texture("textures/fredi.png")
+    player.scale = vec2.new(0.5, 0.5)
     player.position = vec2.new(400, 300)
     
     Scene:add_child(player)
@@ -37,14 +38,6 @@ event_system:on("on_tick", function(delta)
     pos.x = pos.x + (velocity.x * current_speed * delta)
     pos.y = pos.y + (velocity.y * current_speed * delta)
 
-    -- Простая проверка границ экрана (используя наше окно)
-    local win_w = Window.get_width()
-    local win_h = Window.get_height()
-
-    if pos.x < 0 then pos.x = 0 end
-    if pos.y < 0 then pos.y = 0 end
-    if pos.x > win_w then pos.x = win_w end
-    if pos.y > win_h then pos.y = win_h end
 
     player.position = pos
 end)

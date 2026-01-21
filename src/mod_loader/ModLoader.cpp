@@ -93,19 +93,17 @@ void ModLoader::load_data_stage(sol::state& lua, Engine::IRegistry* registry, Vi
 
 void ModLoader::load_control_stage(sol::state& lua, Engine::EventSystem* events, VirtualFS* vfs) {
     auto events_table = lua.create_table();
-
     events_table["on"] = [events](sol::table self, const std::string& eventName, sol::function callback) {
         events->on(eventName, std::move(callback));
     };
-    
     lua["event_system"] = events_table;
 
     for (auto* mod : sortedLoadOrder) {
-        std::string script = vfs->read_file_string("control.lua");
+        std::filesystem::path controlPath = mod->path / "control.lua";
         
-        if (!script.empty()) {
+        if (std::filesystem::exists(controlPath)) {
             std::cout << "[ModLoader] Loading control.lua for: " << mod->name << std::endl;
-            auto result = lua.safe_script(script, sol::script_default_on_error);
+            auto result = lua.safe_script_file(controlPath.string(), sol::script_default_on_error);
             if (!result.valid()) {
                 sol::error err = result;
                 std::cerr << "[Lua Error Control Stage] " << mod->name << ": " << err.what() << std::endl;

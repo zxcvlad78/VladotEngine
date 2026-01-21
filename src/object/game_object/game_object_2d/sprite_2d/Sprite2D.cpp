@@ -43,19 +43,17 @@ void Sprite2D::_draw() {
     int window_width, window_height;
     glfwGetWindowSize(glfwGetCurrentContext(), &window_width, &window_height);
 
-
     glm::mat4 projection = glm::ortho(0.0f, (float)window_width, (float)window_height, 0.0f, -1.0f, 1.0f);
     m_shader->set_uniform("uProjection", projection);
 
     glm::mat4 model = glm::mat4(1.0f);
-    model = glm::translate(model, glm::vec3(m_position, 0.0f));
-    model = glm::rotate(model, glm::radians(m_rotation), glm::vec3(0, 0, 1));
     
-    glm::vec2 final_scale = m_scale;
-    if (final_scale == glm::vec2(1.0f) && m_texture) {
-        final_scale = m_texture->get_size();
-    }
-    model = glm::scale(model, glm::vec3(final_scale, 1.0f));
+    model = glm::translate(model, glm::vec3(m_position, 0.0f));
+    
+    model = glm::rotate(model, glm::radians(m_rotation), glm::vec3(0, 0, 1));
+
+    glm::vec2 size_in_pixels = glm::vec2(m_texture->get_width(), m_texture->get_height());
+    model = glm::scale(model, glm::vec3(size_in_pixels * m_scale, 1.0f));
 
     m_shader->set_uniform("uModel", model);
     

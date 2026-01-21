@@ -10,7 +10,6 @@ out vec2 vTexCoord;
 
 void main() { 
     vTexCoord = aTexCoord;
-    // Умножаем на модель для позиции/масштаба и на проекцию для экранных координат
     gl_Position = uProjection * uModel * vec4(aPos, 0.0, 1.0); 
 }
 
