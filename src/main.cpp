@@ -98,7 +98,7 @@ int main() {
         accumulator += std::min(delta, 0.25f);
 
         while (accumulator >= Settings::FIXED_DELTA_TIME) {
-            eventSystem.emit("on_tick", Settings::FIXED_DELTA_TIME);
+            eventSystem.emit("tick", Settings::FIXED_DELTA_TIME);
             
             SceneTree::get_singleton()->update(Settings::FIXED_DELTA_TIME);
             accumulator -= Settings::FIXED_DELTA_TIME;

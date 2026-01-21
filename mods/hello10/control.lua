@@ -15,7 +15,7 @@ event_system:on("ready", function()
     Scene:add_child(player2)
 end)
 
-event_system:on("on_tick", function(delta)
+event_system:on("tick", function(delta)
     if player then
         local pos = player.position
         pos.x = pos.x + (speed * delta)

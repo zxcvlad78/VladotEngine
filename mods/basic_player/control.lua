@@ -10,7 +10,7 @@ event_system:on("ready", function()
     Scene:add_child(player)
 end)
 
-event_system:on("on_tick", function(delta)
+event_system:on("tick", function(delta)
     if not player then return end
 
     local velocity = vec2.new(0, 0)
