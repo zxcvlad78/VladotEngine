@@ -1,3 +1,5 @@
+//ShaderResource.cpp
+
 #include "ShaderResource.hpp"
 #include "object/resource/ResourceLoader.hpp"
 #include <iostream>

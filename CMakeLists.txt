@@ -31,14 +31,13 @@ add_subdirectory(external/enet)
 add_executable(${PROJECT_NAME} 
     src/main.cpp
     src/networking/network/Network.cpp
-    src/virtual_fs/VirtualFS.cpp
+    #src/virtual_fs/VirtualFS.cpp
     src/lua_binder/LuaBinder.cpp
     src/mod_loader/ModLoader.cpp
     src/object/scene_tree/SceneTree.cpp
     src/object/resource/texture_resource/TextureResource.cpp
     src/object/resource/shader_resource/ShaderResource.cpp
     src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp
-    src/object/game_object/game_object_2d/custom_mesh/CustomMesh.cpp
 )
 
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_20) 

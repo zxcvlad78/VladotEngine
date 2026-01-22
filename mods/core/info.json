@@ -2,5 +2,5 @@
     "name": "Core",
     "version": "0.0.1",
     "author": "zxcvlxd",
-    "dependencies": ["VladotNetwork"]
+    "dependencies": []
 }

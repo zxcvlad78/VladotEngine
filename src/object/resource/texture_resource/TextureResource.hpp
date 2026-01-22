@@ -1,3 +1,5 @@
+//TextureResource.hpp
+
 #pragma once
 #include "object/resource/Resource.hpp"
 #include <glad/glad.h>

@@ -1,3 +1,5 @@
+//GameObject2D.hpp
+
 #pragma once
 #include "object/game_object/GameObject.hpp"
 #include <glm/glm.hpp>

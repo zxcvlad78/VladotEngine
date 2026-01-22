@@ -1,3 +1,5 @@
+//TextureResource.cpp
+
 #include "object/resource/texture_resource/TextureResource.hpp"
 #include "object/resource/ResourceLoader.hpp"
 #include <iostream>

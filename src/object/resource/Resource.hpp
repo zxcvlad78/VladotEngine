@@ -1,3 +1,5 @@
+//Resource.hpp
+
 #pragma once
 #include "object/ref_counted/RefCounted.hpp"
 #include <vector>

@@ -1,3 +1,4 @@
+// main.cpp
 #include "networking/network/Network.hpp"
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
@@ -31,7 +32,7 @@ namespace Settings {
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     glViewport(0, 0, width, height);
-    
+    SceneTree::current_projection = glm::ortho(0.0f, (float)width, (float)height, 0.0f, -1.0f, 1.0f);
 }
 
 int main() {
@@ -47,8 +48,6 @@ int main() {
         return -1;
     }
     
-    
-
     glfwMakeContextCurrent(window);
     gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 
@@ -78,6 +77,7 @@ int main() {
         glfwGetWindowSize(window, &width, &height);
         return height;
     };
+    // -------------------------------------------------------------------------
 
     VirtualFS vfs;
     vfs.mount("./", VirtualFS::FOLDER);
@@ -97,6 +97,10 @@ int main() {
     float accumulator = 0.0f;
 
     while (!glfwWindowShouldClose(window)) {
+        int w, h;
+        glfwGetFramebufferSize(window, &w, &h);
+        SceneTree::current_projection = glm::ortho(0.0f, (float)w, (float)h, 0.0f, -1.0f, 1.0f);
+
         auto current_time = std::chrono::high_resolution_clock::now();
         float delta = std::chrono::duration<float>(current_time - last_time).count();
         last_time = current_time;
@@ -107,7 +111,6 @@ int main() {
 
         while (accumulator >= Settings::FIXED_DELTA_TIME) {
             eventSystem.emit("tick", Settings::FIXED_DELTA_TIME);
-            
             SceneTree::get_singleton()->update(Settings::FIXED_DELTA_TIME);
             accumulator -= Settings::FIXED_DELTA_TIME;
         }
@@ -115,9 +118,7 @@ int main() {
         glClearColor(0.1f, 0.1f, 0.12f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         
-        if (SceneTree* scene_tree = SceneTree::get_singleton()) {
-            scene_tree->render();
-        }
+        SceneTree::get_singleton()->render();
 
         glfwSwapBuffers(window);
         glfwPollEvents();

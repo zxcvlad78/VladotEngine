@@ -5,13 +5,8 @@
 #include <typeindex>
 #include <functional>
 #include <iostream>
-#include <vector>
-#include "Resource.hpp"
+#include "object/resource/Resource.hpp"
 #include "virtual_fs/VirtualFS.hpp"
-
-template <typename T>
-using Ref = std::shared_ptr<T>;
-
 
 class ResourceLoader {
 public:
@@ -29,40 +24,40 @@ public:
     template <typename T>
     static Ref<T> load(const std::string& p_path) {
         auto& cache = get_cache();
-        auto it_cache = cache.find(p_path);
-        if (it_cache != cache.end()) {
-            return std::static_pointer_cast<T>(it_cache->second);
+        
+        // Пытаемся получить из кэша через weak_ptr
+        if (cache.count(p_path)) {
+            if (auto shared = cache[p_path].lock()) {
+                return std::static_pointer_cast<T>(shared);
+            }
         }
 
         auto& factories = get_factories();
         auto it = factories.find(std::type_index(typeid(T)));
-        if (it == factories.end()) {
-            std::cerr << "[ResourceLoader] Factory not found for type: " << typeid(T).name() << std::endl;
-            return nullptr;
-        }
+        if (it == factories.end()) return nullptr;
 
         VirtualFS* vfs = get_vfs_ptr();
-        if (!vfs) return nullptr;
-
-        std::vector<unsigned char> raw_data = vfs->read_file(p_path);
-        if (raw_data.empty()) {
-            std::cerr << "[ResourceLoader] Failed to read file: " << p_path << std::endl;
-            return nullptr;
-        }
+        auto raw_data = vfs->read_file(p_path);
+        if (raw_data.empty()) return nullptr;
 
         Ref<Resource> res = it->second(p_path);
         if (res && res->load_from_data(raw_data)) {
-            cache[p_path] = res;
-            std::cout << "[ResourceLoader] Successfully loaded: " << p_path << std::endl; // Исправлено положение лога
+            cache[p_path] = res; // Сохраняем как weak_ptr
             return std::static_pointer_cast<T>(res);
         }
-    return nullptr;
+        return nullptr;
     }
 
 private:
     static VirtualFS*& get_vfs_ptr() { static VirtualFS* v = nullptr; return v; }
-    static std::map<std::string, Ref<Resource>>& get_cache() { static std::map<std::string, Ref<Resource>> c; return c; }
-    static std::map<std::type_index, ResourceFactory>& get_factories() { static std::map<std::type_index, ResourceFactory> f; return f; }
+    static std::map<std::string, std::weak_ptr<Resource>>& get_cache() { 
+        static std::map<std::string, std::weak_ptr<Resource>> c; 
+        return c; 
+    }
+    static std::map<std::type_index, ResourceFactory>& get_factories() { 
+        static std::map<std::type_index, ResourceFactory> f; 
+        return f; 
+    }
 };
 
 #define REGISTER_RESOURCE_TYPE(T) \
