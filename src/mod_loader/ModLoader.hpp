@@ -20,6 +20,8 @@ class ModLoader {
         std::string author;
         std::vector<std::string> dependencies;
         std::filesystem::path path;
+        std::string data_script_name = "data.lua";
+        std::string control_script_name = "control.lua";
         bool enabled = true;
     };
 

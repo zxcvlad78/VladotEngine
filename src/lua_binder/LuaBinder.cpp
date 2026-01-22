@@ -9,6 +9,7 @@
 #include "object/resource/ResourceLoader.hpp"
 #include "object/game_object/game_object_2d/sprite_2d/Sprite2D.hpp"
 #include "object/scene_tree/SceneTree.hpp"
+#include "networking/network/Network.hpp"
 
 #include <GLFW/glfw3.h>
 
@@ -46,6 +47,60 @@ void LuaBinder::bind_all(lua_State* L, GLFWwindow* window) {
         }
     );
 
+    auto net_table = lua.create_named_table("Network");
+    net_table["start_server"] = [](int port) { return Network::get().start_server(port); };
+    net_table["connect"] = [](std::string ip, int port) { return Network::get().connect(ip, port); };
+    net_table["get_my_id"] = []() { return Network::get().get_my_peer_id(); };
+    net_table["get_last_sender_id"] = []() { return Network::get().get_last_sender_id(); };
+    
+    net_table["send_rpc"] = [](std::string func_name, sol::table args_table, 
+                           sol::optional<int> target_obj_id, 
+                           sol::optional<int> target_peer_id) {
+        
+        nlohmann::json j_args;
+        for (auto const& [key, val] : args_table) {
+            if (key.is<std::string>()) {
+                std::string k_str = key.as<std::string>();
+                if (val.is<std::string>()) {
+                    j_args[k_str] = val.as<std::string>();
+                } else if (val.is<float>()) {
+                    j_args[k_str] = val.as<float>();
+                } else if (val.is<int>()) {
+                    j_args[k_str] = val.as<int>();
+                }
+            }
+        }
+
+        int obj_id_val = target_obj_id.value_or(-1);
+        int peer_id_val = target_peer_id.value_or(-1);
+
+        Network::get().send_rpc(func_name, j_args, obj_id_val, peer_id_val);
+    };
+    
+    net_table["generate_next_object_id"] = []() {
+        if (Network::get().get_my_peer_id() == 0) {
+            return Network::get().generate_next_object_id();
+        }
+        return -1;
+    };
+
+
+    net_table["find_object_by_id"] = [](int id) -> Ref<Object> {
+        return Network::get().get_object_by_id(id);
+    };
+
+    Network::get().set_rpc_handler([L](std::string name, nlohmann::json args_json, int obj_id, int sender_id) {
+        sol::state_view lua(L);
+        if (lua[name].valid()) {
+           lua[name](args_json.dump(), obj_id, sender_id); 
+        }
+    });
+
+    net_table["register_object"] = [](Ref<Object> obj) {
+        Network::get().register_object(obj);
+    };
+
+    //-----
 
     lua.new_usertype<Object>("Object",
         "new", sol::factories([]() { return Ref<Object>(new Object()); } ),

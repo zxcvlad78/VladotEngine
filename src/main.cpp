@@ -1,3 +1,4 @@
+#include "networking/network/Network.hpp"
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <sol/sol.hpp>
@@ -57,6 +58,10 @@ int main() {
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
+    if (!Network::get().init()) {
+        std::cerr << "Failed to init networking!" << std::endl;
+        return -1;
+    }
 
     sol::state lua;
     lua.open_libraries(sol::lib::base, sol::lib::package, sol::lib::table, sol::lib::string, sol::lib::math);
@@ -95,6 +100,9 @@ int main() {
         auto current_time = std::chrono::high_resolution_clock::now();
         float delta = std::chrono::duration<float>(current_time - last_time).count();
         last_time = current_time;
+
+        Network::get().update(delta);
+
         accumulator += std::min(delta, 0.25f);
 
         while (accumulator >= Settings::FIXED_DELTA_TIME) {
@@ -107,7 +115,7 @@ int main() {
         glClearColor(0.1f, 0.1f, 0.12f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         
-        if (auto* scene_tree = SceneTree::get_singleton()) {
+        if (SceneTree* scene_tree = SceneTree::get_singleton()) {
             scene_tree->render();
         }
 
@@ -115,6 +123,7 @@ int main() {
         glfwPollEvents();
     }
 
+    Network::get().shutdown();
     glfwTerminate();
     return 0;
 }

@@ -1,0 +1,8 @@
+{
+  "name": "VladotNetwork",
+  "version": "1.0.0",
+  "dependencies": [],
+  "scripts": {
+    "control": "init.lua" 
+  }
+}
