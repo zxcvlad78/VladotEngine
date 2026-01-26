@@ -15,7 +15,6 @@
 #include "lua_binder/LuaBinder.hpp"
 #include "engine_api/EngineAPI.hpp"
 
-#include <termcolor.hpp>
 
 class Game : public Engine::IRegistry {
 public:

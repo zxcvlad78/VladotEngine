@@ -12,7 +12,6 @@ namespace Engine {
     class IRegistry {
     public:
         virtual ~IRegistry() = default;
-        // Используем sol::table для автоматического управления ссылкой на таблицу
         virtual void register_prototype(sol::table prototype) = 0;
     };
 
@@ -25,7 +24,6 @@ namespace Engine {
         public:
             std::map<std::string, std::vector<sol::function>> listeners;
 
-            // Метод 'on' для Lua
             void on(const std::string& event_name, sol::function callback) {
                 listeners[event_name].push_back(std::move(callback));
             }

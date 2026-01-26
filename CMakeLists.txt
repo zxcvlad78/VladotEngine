@@ -1,37 +1,35 @@
-cmake_minimum_required(VERSION 4.0.2 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.25)
 
-if(NOT CMAKE_TOOLCHAIN_FILE)
-    set(CMAKE_TOOLCHAIN_FILE "Z:/dev/cpp/Vladot/vcpkg/scripts/buildsystems/vcpkg.cmake" CACHE STRING "")
+if(NOT CMAKE_TOOLCHAIN_FILE AND EXISTS "${CMAKE_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake")
+    set(CMAKE_TOOLCHAIN_FILE "${CMAKE_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake" CACHE STRING "")
 endif()
 
-set(PROJECT_NAME VladotEngine)
-project(${PROJECT_NAME})
+set(X_VCPKG_APPLOCAL_DEPS OFF CACHE BOOL "" FORCE)
 
-add_definitions(-DLUA_VERSION_NUM=504) 
+project(VladotEngine LANGUAGES CXX C)
 
-if(MINGW OR CMAKE_COMPILER_IS_GNUCXX)
-    add_compile_options("-Wa,-mbig-obj")
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+if(MSVC)
+    add_compile_options(/MP /utf-8)
+    add_definitions(-D_CRT_SECURE_NO_WARNINGS)
 endif()
 
-# GLFW Settings
-set(GLFW_BUILDS_DOCS OFF CACHE BOOL "" FORCE)
-set(GLFW_BUILDS_TESTS OFF CACHE BOOL "" FORCE)
-set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
-set(GLFW_INSTALL OFF CACHE BOOL "" FORCE)
+find_package(glfw3 CONFIG REQUIRED)
+find_package(glad CONFIG REQUIRED)
+find_package(Freetype REQUIRED)
+find_package(Lua REQUIRED)
+find_package(glm CONFIG REQUIRED)
+find_package(nlohmann_json CONFIG REQUIRED)
+find_package(sol2 CONFIG REQUIRED)
+find_package(unofficial-enet CONFIG REQUIRED)
+find_package(miniz CONFIG REQUIRED)
+find_package(OpenGL REQUIRED)
 
-# SubDirs
-add_subdirectory(external/glfw)
-add_subdirectory(external/glad)
-add_subdirectory(external/freetype)
-add_subdirectory(external/lua)
-add_subdirectory(external/miniz)
-add_subdirectory(external/enet)
-
-## Exec
 add_executable(${PROJECT_NAME} 
     src/main.cpp
     src/networking/network/Network.cpp
-    #src/virtual_fs/VirtualFS.cpp
     src/lua_binder/LuaBinder.cpp
     src/mod_loader/ModLoader.cpp
     src/object/scene_tree/SceneTree.cpp
@@ -40,56 +38,39 @@ add_executable(${PROJECT_NAME}
     src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp
 )
 
-target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_20) 
-
-target_link_libraries(${PROJECT_NAME} 
-    glfw 
-    glad 
-    freetype
-    lua
-    opengl32
-    miniz
-    enet
-    ws2_32
-    winmm
+target_link_libraries(${PROJECT_NAME} PRIVATE
+    glfw
+    glad::glad
+    Freetype::Freetype
+    ${LUA_LIBRARIES}
+    OpenGL::GL
+    ws2_32.lib
+    winmm.lib
+    glm::glm
+    nlohmann_json::nlohmann_json
+    sol2::sol2
+    unofficial::enet::enet
+    miniz::miniz
 )
 
-# INCLUDE DIRS
 target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/src
-    ${CMAKE_SOURCE_DIR}/external/glad/include
-    ${CMAKE_SOURCE_DIR}/external/freetype/include
-    ${CMAKE_SOURCE_DIR}/external/glm
     ${CMAKE_SOURCE_DIR}/external/stb
-    ${CMAKE_SOURCE_DIR}/external/lua
-    ${CMAKE_SOURCE_DIR}/external/lua/src
-    ${CMAKE_SOURCE_DIR}/external/sol2/include
-    ${CMAKE_SOURCE_DIR}/external/json/include
-    ${CMAKE_SOURCE_DIR}/external/miniz
-    ${CMAKE_SOURCE_DIR}/external/termcolor/include
-    ${CMAKE_SOURCE_DIR}/external/enet/include
+    ${LUA_INCLUDE_DIR}
 )
 
-set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/)
-
-add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD 
-                    COMMAND ${CMAKE_COMMAND} -E copy_directory
-                    ${CMAKE_SOURCE_DIR}/res $<TARGET_FILE_DIR:${PROJECT_NAME}>/res)
-add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD 
-                    COMMAND ${CMAKE_COMMAND} -E copy_directory
-                    ${CMAKE_SOURCE_DIR}/mods $<TARGET_FILE_DIR:${PROJECT_NAME}>/mods)
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:${PROJECT_NAME}>"
+    COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/res" "$<TARGET_FILE_DIR:${PROJECT_NAME}>/res"
+    COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/mods" "$<TARGET_FILE_DIR:${PROJECT_NAME}>/mods"
+    COMMENT "Resources copied successfully to build directory."
+)
 
 target_precompile_headers(${PROJECT_NAME} PRIVATE
-    <sol/sol.hpp>
-    <glm/glm.hpp>
-    <glm/gtc/matrix_transform.hpp>
-    <glm/gtc/type_ptr.hpp>
     <string>
     <vector>
     <memory>
     <filesystem>
     <iostream>
     <algorithm>
-    <nlohmann/json.hpp>
-    <enet/enet.h>
 )

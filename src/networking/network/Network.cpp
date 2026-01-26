@@ -14,6 +14,7 @@ bool Network::init() {
     return true;
 }
 
+
 void Network::shutdown() {
     if (m_host) enet_host_destroy(m_host);
     enet_deinitialize();

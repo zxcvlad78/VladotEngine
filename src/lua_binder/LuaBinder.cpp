@@ -79,6 +79,8 @@ void LuaBinder::bind_all(lua_State* L, GLFWwindow* window) {
         Network::get().send_rpc(func_name, j_args, obj_id_val, peer_id_val);
     };
     
+    
+
     net_table["generate_next_object_id"] = []() {
         if (Network::get().get_my_peer_id() == 0) {
             return Network::get().generate_next_object_id();
