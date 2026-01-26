@@ -40,7 +40,7 @@ end)
 ## Building form source
 1. Clone the repository:
 ```bash
-git clone https://github.com
+git clone https://github.com/zxcvlad78/VladotEngine.git
 ```
 2. Ensure you have a C++20 compatible compiler.
 
