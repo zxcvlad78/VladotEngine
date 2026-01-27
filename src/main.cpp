@@ -128,6 +128,15 @@ int main() {
         {
             ImGui::Begin("Debug Panel");
             ImGui::Text("FPS: %.1f", io.Framerate);
+            ImGui::BeginGroup();
+            if (ImGui::Button("Start Host")) {
+                Network::get().start_server(8080);
+            }
+            if (ImGui::Button("Connect to localhost")) {
+                Network::get().connect("localhost", 8080);
+            }
+
+            ImGui::EndGroup();
             if (ImGui::Button("Reset Scene")) {
                 // Твоя логика
             }
