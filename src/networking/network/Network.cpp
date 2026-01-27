@@ -104,8 +104,13 @@ void Network::handle_packet(ENetPacket* packet, ENetPeer* sender) {
         nlohmann::json j = nlohmann::json::from_cbor(packet->data, packet->data + packet->dataLength);
         if (j.contains("f") && j.contains("a") && j.contains("id") && m_rpc_handler) {
             m_rpc_handler(j["f"], j["a"], j["id"], m_last_sender_id);
+
+            Ref<Object> object = get_object_by_id((int)j["id"]);
+            
+
         }
         m_last_sender_id = 0;
+
     }
     catch (...) {
         // Не CBOR — возможно, бинарный пакет обрабатывается вне через шаблон
