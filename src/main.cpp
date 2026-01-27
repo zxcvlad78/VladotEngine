@@ -2,6 +2,11 @@
 #include "networking/network/Network.hpp"
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+
+#include "imgui.h"
+#include "imgui_impl_glfw.h"
+#include "imgui_impl_opengl3.h"
+
 #include <sol/sol.hpp>
 #include <iostream>
 #include <chrono>
@@ -59,6 +64,14 @@ int main() {
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
+    IMGUI_CHECKVERSION();
+    ImGui::CreateContext();
+    ImGuiIO& io = ImGui::GetIO(); (void)io;
+    ImGui::StyleColorsDark();
+
+    ImGui_ImplGlfw_InitForOpenGL(window, true);
+    ImGui_ImplOpenGL3_Init("#version 330");
+
     if (!Network::get().init()) {
         std::cerr << "Failed to init networking!" << std::endl;
         return -1;
@@ -108,6 +121,19 @@ int main() {
         float delta = std::chrono::duration<float>(current_time - last_time).count();
         last_time = current_time;
 
+        ImGui_ImplOpenGL3_NewFrame();
+        ImGui_ImplGlfw_NewFrame();
+        ImGui::NewFrame();
+
+        {
+            ImGui::Begin("Debug Panel");
+            ImGui::Text("FPS: %.1f", io.Framerate);
+            if (ImGui::Button("Reset Scene")) {
+                // Твоя логика
+            }
+            ImGui::End();
+        }
+
         Network::get().update(delta);
 
         accumulator += std::min(delta, 0.25f);
@@ -122,6 +148,9 @@ int main() {
         glClear(GL_COLOR_BUFFER_BIT);
         
         SceneTree::get_singleton()->render();
+
+        ImGui::Render();
+        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
         glfwSwapBuffers(window);
         glfwPollEvents();

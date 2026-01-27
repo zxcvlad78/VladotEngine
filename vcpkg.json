@@ -13,7 +13,14 @@
     "stb",
     "sol2",
     "nlohmann-json",
-    "termcolor"
+    "termcolor",
+      {
+      "name": "imgui",
+      "features": [
+        "glfw-binding",
+        "opengl3-binding"
+      ]
+    }
   ],
   "overrides": [
     {

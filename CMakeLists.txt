@@ -18,6 +18,7 @@ else()
     add_compile_options(-Wall -Wextra -Wpedantic -Werror)
 endif()
 
+
 find_package(glfw3 CONFIG REQUIRED)
 find_package(glad CONFIG REQUIRED)
 find_package(Freetype REQUIRED)
@@ -29,6 +30,7 @@ find_package(unofficial-enet CONFIG REQUIRED)
 find_package(miniz CONFIG REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(Stb REQUIRED)
+find_package(imgui CONFIG REQUIRED)
 
 add_executable(${PROJECT_NAME} 
     src/main.cpp
@@ -40,7 +42,7 @@ add_executable(${PROJECT_NAME}
     src/object/resource/shader_resource/ShaderResource.cpp
 
     src/object/game_object/game_object_2d/GameObject2D.cpp
-    
+
 
     src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp
     src/object/resource/material/Material.cpp
@@ -59,6 +61,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     sol2::sol2
     unofficial::enet::enet
     miniz::miniz
+    imgui::imgui
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE
