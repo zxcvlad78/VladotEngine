@@ -1,14 +1,21 @@
 //GameObject2D.hpp
 
 #pragma once
+#include "object/ref_counted/RefCounted.hpp"
 #include "object/game_object/GameObject.hpp"
 #include <glm/glm.hpp>
 #include <cstdint>
 
+
+class Material;
+
 class GameObject2D : public GameObject {
 public:
-    GameObject2D() = default;
+    GameObject2D();
     virtual ~GameObject2D() = default;
+
+    virtual void set_material(Ref<Material> p_material);
+    Ref<Material> get_material() const { return m_material; }
 
     void SetPosition(glm::vec2 p_pos) { m_position = p_pos; }
     glm::vec2 GetPosition() const { return m_position; }
@@ -25,6 +32,8 @@ public:
     static void bind_lua(lua_State* L);
 
 protected:
+    Ref<Material> m_material;
+
     glm::vec2 m_position{0.0f, 0.0f};
     glm::vec2 m_scale{1.0f, 1.0f};
     float m_rotation{0.0f};

@@ -10,6 +10,7 @@ event_system:on("ready", function()
     Scene:add_child(player)
 end)
 
+
 event_system:on("tick", function(delta)
     if not player then return end
 

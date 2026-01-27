@@ -9,9 +9,11 @@
 class ShaderResource : public Resource {
 public:
     ShaderResource(std::string p_path);
-    virtual ~ShaderResource() override;
+    ~ShaderResource();
 
-    virtual bool load_from_data(const std::vector<unsigned char>& data) override;
+    static Ref<ShaderResource> get_default_shader();
+
+    bool load_from_data(const std::vector<unsigned char>& data);
 
     void use() const;
 

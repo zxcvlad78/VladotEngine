@@ -8,6 +8,9 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
+#include "object/ref_counted/RefCounted.hpp"
+#include "object/resource/shader_resource/ShaderResource.hpp"
+
 #include "virtual_fs/VirtualFS.hpp"
 #include "object/resource/ResourceLoader.hpp"
 #include "object/scene_tree/SceneTree.hpp"
@@ -91,6 +94,7 @@ int main() {
     modLoader.load_control_stage(lua, &eventSystem, &vfs);
     
     eventSystem.emit("ready");
+
 
     auto last_time = std::chrono::high_resolution_clock::now();
     float accumulator = 0.0f;

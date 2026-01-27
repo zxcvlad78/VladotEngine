@@ -5,18 +5,16 @@
 
 #include "object/game_object/game_object_2d/GameObject2D.hpp" 
 #include "object/resource/texture_resource/TextureResource.hpp"
-#include "object/resource/shader_resource/ShaderResource.hpp"
 
 class Sprite2D : public GameObject2D {
 public:
     Sprite2D();
     virtual ~Sprite2D() override;
 
+    virtual void set_material(Ref<Material> p_material) override;
     void set_texture(Ref<TextureResource> p_texture);
-    void set_shader(Ref<ShaderResource> p_shader);
 
     Ref<TextureResource> get_texture() const { return m_texture; }
-    Ref<ShaderResource> get_shader() const { return m_shader; }
 
     virtual void _process(float p_delta) override;
     virtual void _draw() override;
@@ -25,7 +23,6 @@ public:
 
 private:
     Ref<TextureResource> m_texture;
-    Ref<ShaderResource> m_shader;
 
     static uint32_t s_quad_vao;
     static uint32_t s_quad_vbo;

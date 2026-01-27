@@ -1,41 +1,48 @@
 // Sprite2D.cpp
-#include "object/game_object/game_object_2d/sprite_2d/Sprite2D.hpp"
+#include "object/resource/material/Material.hpp"
+#include "Sprite2D.hpp"
 #include "object/resource/ResourceLoader.hpp"
+#include "object/resource/shader_resource/ShaderResource.hpp"
 #include "object/scene_tree/SceneTree.hpp"
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <glm/gtc/matrix_transform.hpp>
-#include <iostream>
 
 uint32_t Sprite2D::s_quad_vao = 0;
 uint32_t Sprite2D::s_quad_vbo = 0;
 
-Sprite2D::Sprite2D() : GameObject2D() {
-    m_shader = ResourceLoader::load<ShaderResource>("res/shaders/sprite.glsl");
+Sprite2D::Sprite2D() {
+    set_material(nullptr);
 }
 
 Sprite2D::~Sprite2D() {
+}
+
+void Sprite2D::set_material(Ref<Material> p_material) {
+    if (!p_material) {
+        Ref<ShaderResource> shader = ResourceLoader::load<ShaderResource>("res/shaders/sprite.glsl");
+        m_material = Material::get_default_material();
+        m_material->set_shader(shader);
+        return;
+    }
+    GameObject2D::set_material(p_material);
 }
 
 void Sprite2D::set_texture(Ref<TextureResource> p_texture) {
     m_texture = p_texture;
 }
 
-void Sprite2D::set_shader(Ref<ShaderResource> p_shader) {
-    if (p_shader) {
-        m_shader = p_shader;
-    }
-}
-
 void Sprite2D::_process(float p_delta) {
 }
 
 void Sprite2D::_draw() {
-    if (!m_texture || !m_shader) return;
+    if (!m_texture || !get_material()) return;
 
-    m_shader->use();
+    Ref<ShaderResource> shader = get_material()->get_shader();
 
-    m_shader->set_uniform("uProjection", SceneTree::current_projection);
+    shader->use();
+
+    shader->set_uniform("uProjection", SceneTree::current_projection);
 
     glm::mat4 model = glm::mat4(1.0f);
     
@@ -46,10 +53,10 @@ void Sprite2D::_draw() {
     glm::vec2 size_in_pixels = m_texture->get_size();
     model = glm::scale(model, glm::vec3(size_in_pixels * m_scale, 1.0f));
 
-    m_shader->set_uniform("uModel", model);
+    shader->set_uniform("uModel", model);
     
     m_texture->bind(0);
-    m_shader->set_uniform("uTexture", 0); 
+    shader->set_uniform("uTexture", 0); 
 
     if (s_quad_vao == 0) {
         _init_quad_data();

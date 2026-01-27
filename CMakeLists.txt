@@ -14,6 +14,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 if(MSVC)
     add_compile_options(/MP /utf-8)
     add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+else()
+    add_compile_options(-Wall -Wextra -Wpedantic -Werror)
 endif()
 
 find_package(glfw3 CONFIG REQUIRED)
@@ -26,6 +28,7 @@ find_package(sol2 CONFIG REQUIRED)
 find_package(unofficial-enet CONFIG REQUIRED)
 find_package(miniz CONFIG REQUIRED)
 find_package(OpenGL REQUIRED)
+find_package(Stb REQUIRED)
 
 add_executable(${PROJECT_NAME} 
     src/main.cpp
@@ -35,7 +38,12 @@ add_executable(${PROJECT_NAME}
     src/object/scene_tree/SceneTree.cpp
     src/object/resource/texture_resource/TextureResource.cpp
     src/object/resource/shader_resource/ShaderResource.cpp
+
+    src/object/game_object/game_object_2d/GameObject2D.cpp
+    
+
     src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp
+    src/object/resource/material/Material.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
@@ -55,8 +63,10 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
 
 target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/src
-    ${CMAKE_SOURCE_DIR}/external/stb
     ${LUA_INCLUDE_DIR}
+    ${SOL2_INCLUDE_DIRS}
+    ${TERMCOLOR_INCLUDE_DIRS}
+    ${Stb_INCLUDE_DIR}
 )
 
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
@@ -73,4 +83,7 @@ target_precompile_headers(${PROJECT_NAME} PRIVATE
     <filesystem>
     <iostream>
     <algorithm>
+    <functional>
+    <unordered_map>
+    <type_traits>
 )

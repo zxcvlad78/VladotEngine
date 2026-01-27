@@ -7,8 +7,18 @@
 #include <filesystem>
 
 #include "engine_api/EngineAPI.hpp"
-#include "object/Object.hpp"
 #include "object/resource/ResourceLoader.hpp"
+
+#include "object/Object.hpp"
+
+#include "object/resource/Resource.hpp"
+
+
+#include "object/resource/material/Material.hpp"
+
+#include "object/game_object/GameObject.hpp"
+#include "object/game_object/game_object_2d/GameObject2D.hpp"
+
 #include "object/game_object/game_object_2d/sprite_2d/Sprite2D.hpp"
 #include "object/scene_tree/SceneTree.hpp"
 #include "networking/network/Network.hpp"
@@ -131,7 +141,8 @@ void LuaBinder::bind_all(lua_State* L, GLFWwindow* window) {
 
         "position", sol::property(&GameObject2D::GetPosition, &GameObject2D::SetPosition),
         "scale",    sol::property(&GameObject2D::GetScale,    &GameObject2D::SetScale),
-        "rotation", sol::property(&GameObject2D::GetRotation, &GameObject2D::SetRotation)
+        "rotation", sol::property(&GameObject2D::GetRotation, &GameObject2D::SetRotation),
+        "material", sol::property(&GameObject2D::get_material, &GameObject2D::set_material)
     );
 
     lua.new_usertype<Sprite2D>("Sprite2D",
@@ -139,8 +150,7 @@ void LuaBinder::bind_all(lua_State* L, GLFWwindow* window) {
         sol::call_constructor, sol::factories([]() { return Ref<Sprite2D>(new Sprite2D()); }),
         sol::base_classes, sol::bases<GameObject2D, GameObject, Object>(),
         
-        "texture", sol::property(&Sprite2D::get_texture, &Sprite2D::set_texture),
-        "shader", sol::property(&Sprite2D::get_shader, &Sprite2D::set_shader)
+        "texture", sol::property(&Sprite2D::get_texture, &Sprite2D::set_texture)
     );
 
     lua.new_usertype<Resource>("Resource",

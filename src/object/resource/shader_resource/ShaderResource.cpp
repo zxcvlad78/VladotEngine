@@ -16,6 +16,11 @@ ShaderResource::~ShaderResource() {
     }
 }
 
+Ref<ShaderResource> ShaderResource::get_default_shader() {
+    auto shader = ResourceLoader::load<ShaderResource>("res/shaders/basic.glsl");
+    return shader;
+}
+
 bool ShaderResource::load_from_data(const std::vector<unsigned char>& data) {
     if (data.empty()) return false;
 

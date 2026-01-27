@@ -10,12 +10,19 @@ CustomMesh::CustomMesh() {
     glGenVertexArrays(1, &m_vao);
     glGenBuffers(1, &m_vbo);
     glGenBuffers(1, &m_ebo);
+    if (m_vao == 0 || m_vbo == 0 || m_ebo == 0) {
+        std::cerr << "[CustomMesh] CRITICAL: Failed to generate GL buffers." << std::endl;
+    }
+    if (!m_shader) set_shader(ResourceLoader::load<ShaderResource>("res/shaders/basic.glsl"));
 }
 
 CustomMesh::~CustomMesh() {
     glDeleteVertexArrays(1, &m_vao);
     glDeleteBuffers(1, &m_vbo);
     glDeleteBuffers(1, &m_ebo);
+    if (m_vao == 0 || m_vbo == 0 || m_ebo == 0) {
+        std::cerr << "[CustomMesh] CRITICAL: Failed to delete GL buffers." << std::endl;
+    }
 }
 void CustomMesh::add_vertex(glm::vec3 position, glm::vec4 color) {
     m_vertices.push_back({position, color});
@@ -24,11 +31,15 @@ void CustomMesh::add_index(uint32_t index) {
     m_indices.push_back(index);
 }
 void CustomMesh::set_draw_mode_points() { m_draw_mode = GL_POINTS; }
+void CustomMesh::set_draw_mode_lines() { m_draw_mode = GL_LINES; }
 void CustomMesh::set_draw_mode_triangles() { m_draw_mode = GL_TRIANGLES; }
 void CustomMesh::set_shader(Ref<ShaderResource> p_shader) { m_shader = p_shader; }
 
-
 void CustomMesh::update_buffers() {
+    if (m_vertices.empty()) {
+        std::cerr << "[CustomMesh] Warning: Updating buffers with empty vertex data." << std::endl;
+        return;
+    }
     glBindVertexArray(m_vao);
     glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
     glBufferData(GL_ARRAY_BUFFER, m_vertices.size() * sizeof(Vertex), m_vertices.data(), GL_STATIC_DRAW);

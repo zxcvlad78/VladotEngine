@@ -8,9 +8,9 @@
 class TextureResource : public Resource {
 public:
     TextureResource(std::string p_path);
-    virtual ~TextureResource() override;
+    ~TextureResource();
 
-    virtual bool load_from_data(const std::vector<unsigned char>& data) override;
+    bool load_from_data(const std::vector<unsigned char>& data);
 
     void bind(uint32_t p_slot = 0) const;
     

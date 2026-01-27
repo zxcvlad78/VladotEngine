@@ -12,10 +12,13 @@ public:
     CustomMesh();
     ~CustomMesh() override;
 
+    bool is_filled() { return m_filled; }
+    
     void add_vertex(glm::vec3 position, glm::vec4 color);
     void add_index(uint32_t index);
     void update_buffers();
     void set_draw_mode_points();
+    void set_draw_mode_lines();
     void set_draw_mode_triangles();
 
     void set_shader(Ref<ShaderResource> p_shader);
@@ -29,9 +32,10 @@ private:
         glm::vec4 color;
     };
 
+    bool m_filled = true;
     std::vector<Vertex> m_vertices;
     std::vector<uint32_t> m_indices;
     GLuint m_vao, m_vbo, m_ebo;
-    GLenum m_draw_mode = GL_POINTS;
+    GLenum m_draw_mode = GL_TRIANGLES;
     Ref<ShaderResource> m_shader;
 };

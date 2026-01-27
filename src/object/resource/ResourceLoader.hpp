@@ -25,7 +25,6 @@ public:
     static Ref<T> load(const std::string& p_path) {
         auto& cache = get_cache();
         
-        // Пытаемся получить из кэша через weak_ptr
         if (cache.count(p_path)) {
             if (auto shared = cache[p_path].lock()) {
                 return std::static_pointer_cast<T>(shared);
@@ -42,7 +41,7 @@ public:
 
         Ref<Resource> res = it->second(p_path);
         if (res && res->load_from_data(raw_data)) {
-            cache[p_path] = res; // Сохраняем как weak_ptr
+            cache[p_path] = res;
             return std::static_pointer_cast<T>(res);
         }
         return nullptr;
