@@ -1,19 +1,12 @@
-//Network.cpp
+// Network.cpp
 
 #include "Network.hpp"
 #include <iostream>
-#include <algorithm>
 #include <cstdint>
-#include <cstring>
 
 bool Network::init() {
-    if (enet_initialize() != 0) {
-        std::cerr << "[Network] Failed to initialize ENet!" << std::endl;
-        return false;
-    }
-    return true;
+    return enet_initialize() == 0;
 }
-
 
 void Network::shutdown() {
     if (m_host) enet_host_destroy(m_host);
@@ -21,21 +14,25 @@ void Network::shutdown() {
 }
 
 bool Network::start_server(int port, int max_clients) {
-    ENetAddress address = { ENET_HOST_ANY, (uint16_t)port };
-    m_host = enet_host_create(&address, max_clients, 2, 0, 0);
+    ENetAddress addr{ ENET_HOST_ANY, (uint16_t)port };
+    m_host = enet_host_create(&addr, max_clients, 2, 0, 0);
     if (m_host) m_my_peer_id = 0;
     return m_host != nullptr;
 }
 
 bool Network::connect(const std::string& ip, int port) {
-    m_host = enet_host_create(NULL, 1, 2, 0, 0);
+    m_host = enet_host_create(nullptr, 1, 2, 0, 0);
     if (!m_host) return false;
-    ENetAddress address;
-    enet_address_set_host(&address, ip.c_str());
-    address.port = port;
-    m_server_peer = enet_host_connect(m_host, &address, 2, 0);
+
+    ENetAddress addr;
+    enet_address_set_host(&addr, ip.c_str());
+    addr.port = port;
+
+    m_server_peer = enet_host_connect(m_host, &addr, 2, 0);
+    if (!m_server_peer) { enet_host_destroy(m_host); m_host = nullptr; return false; }
+
     m_my_peer_id = -1;
-    return m_server_peer != nullptr;
+    return true;
 }
 
 int Network::assign_new_peer_id(ENetPeer* peer) {
@@ -46,8 +43,8 @@ int Network::assign_new_peer_id(ENetPeer* peer) {
 }
 
 ENetPeer* Network::get_peer_by_id(int id) {
-    if (m_peers.count(id)) return m_peers[id];
-    return nullptr;
+    auto it = m_peers.find(id);
+    return it != m_peers.end() ? it->second : nullptr;
 }
 
 void Network::update(float dt) {
@@ -56,12 +53,13 @@ void Network::update(float dt) {
     while (enet_host_service(m_host, &event, 0) > 0) {
         switch (event.type) {
             case ENET_EVENT_TYPE_CONNECT:
-                if (!m_server_peer) { 
+                if (!m_server_peer) {
                     int id = assign_new_peer_id(event.peer);
-                    std::cout << "[Network] Peer ID " << id << " connected." << std::endl;
-                    // TODO: Отправить новому пиру его ID через RPC
+                    std::cout << "[Network] Peer ID " << id << " connected.\n";
+                    nlohmann::json args{{"peer_id", id}};
+                    send_rpc("on_peer_connected", args, -1, id, true);
                 } else {
-                    std::cout << "[Network] Connected to server." << std::endl;
+                    std::cout << "[Network] Connected to server.\n";
                 }
                 break;
             case ENET_EVENT_TYPE_RECEIVE:
@@ -69,35 +67,30 @@ void Network::update(float dt) {
                 enet_packet_destroy(event.packet);
                 break;
             case ENET_EVENT_TYPE_DISCONNECT:
-                if (!m_server_peer) { m_peers.erase((int)(intptr_t)event.peer->data); }
-                std::cout << "[Network] Peer disconnected." << std::endl;
+                if (!m_server_peer) {
+                    m_peers.erase((int)(intptr_t)event.peer->data);
+                }
+                std::cout << "[Network] Peer disconnected.\n";
                 break;
         }
     }
 }
 
-void Network::send_rpc(const std::string& func_name, const nlohmann::json& args, int target_object_id, int target_peer_id, bool reliable) {
+void Network::send_rpc(const std::string& func_name, const nlohmann::json& args,
+                       int target_object_id, int target_peer_id, bool reliable) {
     if (!m_host) return;
 
-    nlohmann::json packet_data;
-    packet_data["f"] = func_name;
-    packet_data["a"] = args;
-    packet_data["id"] = target_object_id;
-
-    std::vector<uint8_t> binary = nlohmann::json::to_cbor(packet_data);
-    ENetPacket* packet = enet_packet_create(binary.data(), binary.size(), reliable ? ENET_PACKET_FLAG_RELIABLE : 0);
+    nlohmann::json j{{"f", func_name}, {"a", args}, {"id", target_object_id}};
+    std::vector<uint8_t> data = nlohmann::json::to_cbor(j);
+    ENetPacket* packet = enet_packet_create(data.data(), data.size(),
+        reliable ? ENET_PACKET_FLAG_RELIABLE : 0);
 
     if (target_peer_id == -1) {
-        if (m_server_peer) { 
-            enet_peer_send(m_server_peer, 0, packet);
-        } else {
-            enet_host_broadcast(m_host, 0, packet);
-        }
+        if (m_server_peer) enet_peer_send(m_server_peer, 0, packet);
+        else enet_host_broadcast(m_host, 0, packet);
     } else {
         ENetPeer* peer = get_peer_by_id(target_peer_id);
-        if (peer) {
-            enet_peer_send(peer, 0, packet);
-        }
+        if (peer) enet_peer_send(peer, 0, packet);
     }
     enet_host_flush(m_host);
 }
@@ -105,24 +98,21 @@ void Network::send_rpc(const std::string& func_name, const nlohmann::json& args,
 void Network::handle_packet(ENetPacket* packet, ENetPeer* sender) {
     try {
         m_last_sender_id = (int)(intptr_t)sender->data;
-        if (packet->dataLength == 0) {
-             m_last_sender_id = 0;
-             return;
-        }
+        if (packet->dataLength == 0) { m_last_sender_id = 0; return; }
 
+        // Попробуем как CBOR (RPC)
         nlohmann::json j = nlohmann::json::from_cbor(packet->data, packet->data + packet->dataLength);
-        
-        if (m_rpc_handler && j.contains("f") && j.contains("a") && j.contains("id")) {
+        if (j.contains("f") && j.contains("a") && j.contains("id") && m_rpc_handler) {
             m_rpc_handler(j["f"], j["a"], j["id"], m_last_sender_id);
         }
         m_last_sender_id = 0;
-    } catch (...) {
-        std::cerr << "[Network] Failed to parse CBOR packet" << std::endl;
+    }
+    catch (...) {
+        // Не CBOR — возможно, бинарный пакет обрабатывается вне через шаблон
     }
 }
 
 int Network::generate_next_object_id() { return m_next_object_id++; }
-
 
 void Network::register_object(Ref<Object> obj) {
     if (obj && obj->network_id != -1) {
@@ -131,10 +121,8 @@ void Network::register_object(Ref<Object> obj) {
 }
 
 Ref<Object> Network::get_object_by_id(int id) {
-    if (m_objects.count(id)) {
-        return m_objects[id];
-    }
-    return nullptr;
+    auto it = m_objects.find(id);
+    return it != m_objects.end() ? it->second : nullptr;
 }
 
 void Network::unregister_object(int id) {
