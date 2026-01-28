@@ -5,7 +5,7 @@
 #include "object/game_object/GameObject.hpp"
 #include <glm/glm.hpp>
 #include <cstdint>
-
+#include <nlohmann/json.hpp>
 
 class Material;
 
@@ -30,6 +30,8 @@ public:
     int32_t GetZIndex() const { return m_zIndex; }
 
     static void bind_lua(lua_State* L);
+
+    virtual void handle_rpc(const std::string& func_name, const nlohmann::json& args) override;
 
 protected:
     Ref<Material> m_material;

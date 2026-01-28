@@ -3,6 +3,9 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+#include <AL/al.h>
+#include <AL/alc.h>
+
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
@@ -63,6 +66,10 @@ int main() {
 
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+    ALCdevice* device = alcOpenDevice(nullptr);
+    ALCcontext* context = alcCreateContext(device, nullptr);
+    alcMakeContextCurrent(context);
 
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
@@ -128,15 +135,20 @@ int main() {
         {
             ImGui::Begin("Debug Panel");
             ImGui::Text("FPS: %.1f", io.Framerate);
-            ImGui::BeginGroup();
+            ImGui::Text("My Network ID: %d", Network::get().get_my_peer_id());
+            ImGui::Text("My Network ID: %d", Network::get().get_my_peer_id());
+            //ImGui::BeginMenu("Sex");
             if (ImGui::Button("Start Host")) {
                 Network::get().start_server(8080);
+                std::cout << "[main] Server started on port 8080" << std::endl;
             }
             if (ImGui::Button("Connect to localhost")) {
                 Network::get().connect("localhost", 8080);
+                std::cout << "[main] Connecting to localhost:8080" << std::endl;
             }
+            //SEX
 
-            ImGui::EndGroup();
+           // ImGui::EndMenu();
             if (ImGui::Button("Reset Scene")) {
                 // Твоя логика
             }
@@ -166,6 +178,8 @@ int main() {
     }
 
     Network::get().shutdown();
+    alcDestroyContext(context);
+    alcCloseDevice(device);
     glfwTerminate();
     return 0;
 }

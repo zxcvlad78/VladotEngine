@@ -31,6 +31,7 @@ find_package(miniz CONFIG REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(Stb REQUIRED)
 find_package(imgui CONFIG REQUIRED)
+find_package(OpenAL REQUIRED)
 
 add_executable(${PROJECT_NAME} 
     src/main.cpp
@@ -62,6 +63,8 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     unofficial::enet::enet
     miniz::miniz
     imgui::imgui
+    OpenAL::OpenAL
+    
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE

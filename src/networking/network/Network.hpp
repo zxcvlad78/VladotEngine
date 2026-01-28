@@ -10,7 +10,7 @@
 #include "object/ref_counted/RefCounted.hpp"
 #include "object/Object.hpp"
 
-class Network {
+class Network { 
 public:
     static Network& get() {
         static Network instance;

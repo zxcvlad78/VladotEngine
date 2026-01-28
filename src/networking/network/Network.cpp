@@ -3,6 +3,8 @@
 #include "Network.hpp"
 #include <iostream>
 #include <cstdint>
+#include <glm/glm.hpp>
+#include <glm/glm.hpp>
 
 bool Network::init() {
     return enet_initialize() == 0;
@@ -57,7 +59,7 @@ void Network::update(float dt) {
                     int id = assign_new_peer_id(event.peer);
                     std::cout << "[Network] Peer ID " << id << " connected.\n";
                     nlohmann::json args{{"peer_id", id}};
-                    send_rpc("on_peer_connected", args, -1, id, true);
+                    send_rpc("on_peer_connected", args, -1, -1, true);
                 } else {
                     std::cout << "[Network] Connected to server.\n";
                 }
@@ -105,9 +107,13 @@ void Network::handle_packet(ENetPacket* packet, ENetPeer* sender) {
         if (j.contains("f") && j.contains("a") && j.contains("id") && m_rpc_handler) {
             m_rpc_handler(j["f"], j["a"], j["id"], m_last_sender_id);
 
-            Ref<Object> object = get_object_by_id((int)j["id"]);
-            
-
+            int object_id = (int)j["id"];
+            Ref<Object> object = get_object_by_id(object_id);
+            if (object) {
+                object->handle_rpc(j["f"], j["a"]);
+            } else {
+                std::cout << "[Network] Object with ID " << object_id << " not found for RPC " << j["f"] << std::endl;
+            }
         }
         m_last_sender_id = 0;
 

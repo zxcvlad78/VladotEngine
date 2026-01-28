@@ -110,8 +110,9 @@ void LuaBinder::bind_all(lua_State* L, GLFWwindow* window) {
         }
     });
 
-    net_table["register_object"] = [](Ref<Object> obj) {
-        Network::get().register_object(obj);
+    net_table["register_object"] = [](Object* obj) {
+        Ref<Object> object = Ref<Object>(obj, [](Object*){});
+        Network::get().register_object(object);
     };
 
     //-----

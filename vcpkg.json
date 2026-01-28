@@ -14,7 +14,8 @@
     "sol2",
     "nlohmann-json",
     "termcolor",
-      {
+    "openal-soft", 
+    {
       "name": "imgui",
       "features": [
         "glfw-binding",
