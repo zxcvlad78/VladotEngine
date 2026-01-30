@@ -180,7 +180,7 @@ int main() {
         {
             ImGui::Begin("Scene Tree");
             
-            std::string scene_tree_children;
+            std::string scene_tree_children = "SceneTree\n";
 
             for (auto child : SceneTree::get_singleton()->get_children_recursive()) {
                 int depth = 0;
@@ -199,14 +199,6 @@ int main() {
             ImGui::Text(scene_tree_children.c_str());
             ImGui::End();
         }
-        /*
-        scene_tree (child size: 4, parents: 0)
-            game_object (child size: 0, parents: 1)
-                game_object (child size: 0, parents: 2)
-            game_object (child size: 0, parents: 1)
-            game_object (child size: 0, parents: 1)
-            game_object (child size: 0, parents: 1)
-        */
         
         Network::get().update(delta);
 
