@@ -120,7 +120,8 @@ int main() {
     eventSystem.emit("ready");
 
     auto audio_player = Ref<AudioPlayer>(new AudioPlayer);
-    audio_player->set_stream(ResourceLoader::load<WAVStreamResource>("res/audio/sex.wav"));
+    auto wav_resource = ResourceLoader::load<WAVStreamResource>("res/audio/sex.wav");
+    audio_player->set_stream(wav_resource);
     audio_player->set_volume_db(-30.0f);
 
 
@@ -175,14 +176,45 @@ int main() {
 
             ImGui::End();
         }
+    
+        {
+            ImGui::Begin("Scene Tree");
+            
+            std::string scene_tree_children;
 
+            for (auto child : SceneTree::get_singleton()->get_children_recursive()) {
+                int depth = 0;
+                std::string tab = "";
+                
+                Ref<GameObject> current_parent = child->get_parent();
+                while (current_parent != nullptr) {
+                    depth++;
+                    tab += "  ";
+                    current_parent = current_parent->get_parent(); 
+                }
+
+                scene_tree_children += tab + child->get_name() + "\n";
+            }
+
+            ImGui::Text(scene_tree_children.c_str());
+            ImGui::End();
+        }
+        /*
+        scene_tree (child size: 4, parents: 0)
+            game_object (child size: 0, parents: 1)
+                game_object (child size: 0, parents: 2)
+            game_object (child size: 0, parents: 1)
+            game_object (child size: 0, parents: 1)
+            game_object (child size: 0, parents: 1)
+        */
+        
         Network::get().update(delta);
 
         accumulator += std::min(delta, 0.25f);
 
         while (accumulator >= Settings::FIXED_DELTA_TIME) {
             eventSystem.emit("tick", Settings::FIXED_DELTA_TIME);
-            SceneTree::get_singleton()->update(Settings::FIXED_DELTA_TIME);
+            SceneTree::get_singleton()->_process(Settings::FIXED_DELTA_TIME);
             accumulator -= Settings::FIXED_DELTA_TIME;
         }
 
@@ -199,8 +231,10 @@ int main() {
     }
 
     Network::get().shutdown();
+    
     alcDestroyContext(context);
     alcCloseDevice(device);
+    
     glfwTerminate();
     return 0;
 }

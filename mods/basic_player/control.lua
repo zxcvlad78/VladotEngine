@@ -10,6 +10,7 @@ local spawn_positions = {
 event_system:on("ready", function()
     -- Создаем нового игрока из прототипа
     player = Sprite2D.new()
+    player.name = "Player"
     player.texture = ResourceLoader.load_texture("textures/fredi.png")
     player.scale = vec2.new(0.5, 0.5)
 

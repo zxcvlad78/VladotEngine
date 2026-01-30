@@ -2,15 +2,32 @@
 #include <string>
 #include <lua.hpp>
 #include <nlohmann/json.hpp> 
+#include "vector"
 
 struct lua_State;
 
 class Object {
+private:
+    std::string m_name;
+    std::vector<Object> m_components;
+    
 public:
-    Object() = default;
+    Object() { set_name(""); }
+    Object(const std::string& p_name) {
+        set_name(p_name);
+    }
     virtual ~Object() = default;
-    std::string to_string() const { return get_class_name(); }
+
+    void set_name(const std::string& p_name) {
+        if (p_name.empty()) {
+            m_name = get_class_name();
+            return;
+        }
+        m_name = p_name; }
+    std::string get_name() const { return m_name; }
+
     virtual std::string get_class_name() const { return "Object"; }
+    std::string to_string() const { return get_class_name() + "::" + m_name; }
 
     /**
      * @brief Handle remote procedure call.

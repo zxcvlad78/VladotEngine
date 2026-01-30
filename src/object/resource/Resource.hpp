@@ -1,9 +1,9 @@
 //Resource.hpp
 
 #pragma once
-#include "object/ref_counted/RefCounted.hpp"
 #include <vector>
 #include <string>
+#include "object/ref_counted/RefCounted.hpp"
 
 class Resource : public RefCounted {
 public:

@@ -121,6 +121,8 @@ void LuaBinder::bind_all(lua_State* L, GLFWwindow* window) {
         "new", sol::factories([]() { return Ref<Object>(new Object()); } ),
         sol::call_constructor, sol::factories([]() { return Ref<Object>(new Object()); }),
 
+        "name", sol::property(&Object::get_name, &Object::set_name),
+
         "get_class_name", [](Object& self) {
             return self.get_class_name();
         },
@@ -130,8 +132,22 @@ void LuaBinder::bind_all(lua_State* L, GLFWwindow* window) {
 
     lua.new_usertype<GameObject>("GameObject", 
         "new", sol::factories([]() { return Ref<GameObject>(new GameObject()); } ),
+        
         sol::call_constructor, sol::factories([]() { return Ref<GameObject>(new GameObject()); }),
-        sol::base_classes, sol::bases<Object>()
+        sol::base_classes, sol::bases<Object>(),
+
+        "get_children", &GameObject::get_children,
+        
+        "get_child_count", &GameObject::get_child_count,
+        
+        "get_child", &GameObject::get_child,
+
+        "add_child", [](GameObject& self, GameObject* obj) {
+            if (obj) {
+                self.add_child(Ref<GameObject>(obj, [](GameObject*){}));
+            }
+        }
+
     );
 
 
@@ -184,19 +200,8 @@ void LuaBinder::bind_all(lua_State* L, GLFWwindow* window) {
 
 
     lua.new_usertype<SceneTree>("SceneTree",
-        sol::base_classes, sol::bases<Object>(),
+        sol::base_classes, sol::bases<GameObject, Object>(),
 
-        "get_children", &SceneTree::get_children,
-        
-        "get_child_count", &SceneTree::get_child_count,
-        
-        "get_child", &SceneTree::get_child,
-
-        "add_child", [](SceneTree& self, GameObject* obj) {
-            if (obj) {
-                self.add_child(Ref<GameObject>(obj, [](GameObject*){}));
-            }
-        },
         "get_singleton", [](SceneTree& self) {
             return self.get_singleton();
         }

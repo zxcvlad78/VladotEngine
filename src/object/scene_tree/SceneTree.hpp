@@ -3,11 +3,10 @@
 #pragma once
 #include <vector>
 #include <glm/glm.hpp>
-#include "object/Object.hpp"
 #include "object/game_object/GameObject.hpp"
 #include "object/ref_counted/RefCounted.hpp"
 
-class SceneTree : public Object {
+class SceneTree : public GameObject {
 public:
     static glm::mat4 current_projection;
 
@@ -17,36 +16,16 @@ public:
         return &instance;
     }
 
-
-    void add_child(Ref<GameObject> p_node) {
-        if (p_node) {
-            m_nodes.push_back(p_node);
-        }
-    }
-
-    std::vector<Ref<GameObject>> get_children() {
-        return m_nodes;
-    }
-
-    int get_child_count() {
-        return m_nodes.size();
-    }
-
-    Ref<GameObject> get_child(size_t index) {
-        if (index < m_nodes.size()) return m_nodes[index];
-        return nullptr;
-    }
-
-    void update(float p_delta) {
-        for (auto& node : m_nodes) {
-            if (node) node->_process(p_delta);
+    void _process(float p_delta) {
+        for (auto& child : get_children()) {
+            if (child) child->_process(p_delta);
         }
     }
 
     void render() {
-        for (auto& node : m_nodes) {
-            if (node) {
-                node->_draw(); 
+        for (auto& child : get_children()) {
+            if (child) {
+                child->_draw(); 
             }
         }
     }
@@ -55,5 +34,4 @@ public:
 
 private:
     SceneTree() = default;
-    std::vector<Ref<GameObject>> m_nodes;
 };
