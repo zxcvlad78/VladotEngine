@@ -47,26 +47,40 @@ void AudioPlayer::set_stream(Ref<AudioStreamResource> stream) {
         return;
     }
 
+    
     auto data = m_stream->get_data();
     auto sample_rate = m_stream->get_sample_rate();
-    auto channels = m_stream->get_channels();
-    auto bits_per_sample = m_stream->get_bits_per_sample();
-
-    ALenum format = get_al_format(channels, bits_per_sample);
+    ALenum format = m_stream->get_openal_format(); // Use the format determined by the resource
     if (format == 0) {
         std::cerr << "Unsupported audio format!" << std::endl;
         return;
     }
-
+    
     alBufferData(m_buffer, format, data.data(), static_cast<ALsizei>(data.size()), static_cast<ALsizei>(sample_rate));
-
+    
     ALenum error = alGetError();
     if (error != AL_NO_ERROR) {
         std::cerr << "OpenAL error when loading buffer: " << error << std::endl;
         return;
     }
-
+    
     alSourcei(m_source, AL_BUFFER, static_cast<ALint>(m_buffer));
+}
+
+void AudioPlayer::set_bus_name(const std::string& bus_name) {
+    m_bus_name = bus_name;
+}
+
+std::string AudioPlayer::get_bus_name() const {
+    return m_bus_name;
+}
+
+void AudioPlayer::set_volume_db(float p_volume_db) {
+    this->m_volume_db = p_volume_db;
+    alSourcef(m_source, AL_GAIN, std::pow(10.0f, m_volume_db / 20.0f));
+}
+float AudioPlayer::get_volume_db() const {
+    return m_volume_db;
 }
 
 void AudioPlayer::play() {

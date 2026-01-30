@@ -47,6 +47,13 @@ add_executable(${PROJECT_NAME}
 
     src/object/game_object/game_object_2d/sprite_2d/Sprite2D.cpp
     src/object/resource/material/Material.cpp
+
+    src/object/resource/audio_resource/AudioResource.cpp
+    src/object/resource/audio_resource/WAVStreamResource.cpp
+    #src/object/resource/audio_resource/MP3StreamResource.cpp
+    #src/object/resource/audio_resource/OGGStreamResource.cpp
+    src/object/resource/audio_resource/register_audio_types.cpp
+    src/object/game_object/audio_player/AudioPlayer.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} PRIVATE

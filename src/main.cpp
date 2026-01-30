@@ -26,6 +26,10 @@
 #include "lua_binder/LuaBinder.hpp"
 #include "engine_api/EngineAPI.hpp"
 
+#include "object/game_object/audio_player/AudioPlayer.hpp"
+#include "object/resource/audio_resource/AudioResource.hpp"
+#include "object/resource/audio_resource/WAVStreamResource.hpp"
+
 
 class Game : public Engine::IRegistry {
 public:
@@ -115,6 +119,10 @@ int main() {
     
     eventSystem.emit("ready");
 
+    auto audio_player = Ref<AudioPlayer>(new AudioPlayer);
+    audio_player->set_stream(ResourceLoader::load<WAVStreamResource>("res/audio/sex.wav"));
+    audio_player->set_volume_db(-30.0f);
+
 
     auto last_time = std::chrono::high_resolution_clock::now();
     float accumulator = 0.0f;
@@ -136,8 +144,8 @@ int main() {
             ImGui::Begin("Debug Panel");
             ImGui::Text("FPS: %.1f", io.Framerate);
             ImGui::Text("My Network ID: %d", Network::get().get_my_peer_id());
-            ImGui::Text("My Network ID: %d", Network::get().get_my_peer_id());
-            //ImGui::BeginMenu("Sex");
+            
+            
             if (ImGui::Button("Start Host")) {
                 Network::get().start_server(8080);
                 std::cout << "[main] Server started on port 8080" << std::endl;
@@ -148,10 +156,23 @@ int main() {
             }
             //SEX
 
-           // ImGui::EndMenu();
-            if (ImGui::Button("Reset Scene")) {
-                // Твоя логика
+            ImGui::BeginGroup();
+            ImGui::Text("AudioPlayer");
+            ImGui::LabelText("##volume", "Volume: %.1f", audio_player->get_volume_db());
+            if (ImGui::Button("Play audio_player")) {
+                audio_player->play();
             }
+            if (ImGui::Button("Stop audio_player")) {
+                audio_player->stop();
+            }
+            if (ImGui::Button("Increase audio_player volume by 1")) {
+                audio_player->set_volume_db( audio_player->get_volume_db() + 1.0f );
+            }
+            if (ImGui::Button("Decrease audio_player volume by 1")) {
+                audio_player->set_volume_db( audio_player->get_volume_db() - 1.0f );
+            }
+            ImGui::EndGroup();
+
             ImGui::End();
         }
 
