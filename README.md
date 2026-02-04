@@ -11,7 +11,7 @@ A lightweight, modular 2D game engine built with C++20, focusing on high extensi
 *   **Serialization:** [nlohmann/json](https://github.com)
 *   **Compression:** [miniz](https://github.com)
 
-## 🎮 Modding Guide
+## Modding Guide
 
 Mods can be distributed as folders in the `mods/` directory. Each mod requires an `info.json` file:
 
